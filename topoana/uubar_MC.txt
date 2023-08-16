@@ -1,0 +1,606 @@
+
+Decay trees and their respective initial-final states:
+
+rowNo:  1	iDcyTr:  78	nEtr:  7	nCEtr:  7
+  0  &  e+ e- --> pi0 pi+ pi- rho+ rho- K+ K- gammaI  &  -1
+  1  &  rho+ --> pi0 pi+  &  0
+  2  &  rho- --> pi0 pi-  &  0
+( e+ e- ---> pi0 pi0 pi0 pi+ pi+ pi- pi- K+ K- gammaI )
+
+rowNo:  2	iDcyTr:  246	nEtr:  6	nCEtr:  13
+  0  &  e+ e- --> pi0 pi+ pi+ pi- rho- omega K+ K- gammaI  &  -1
+  1  &  rho- --> pi0 pi-  &  0
+  2  &  omega --> pi0 pi+ pi-  &  0
+( e+ e- ---> pi0 pi0 pi0 pi+ pi+ pi+ pi- pi- pi- K+ K- gammaI )
+
+rowNo:  3	iDcyTr:  97	nEtr:  5	nCEtr:  18
+  0  &  e+ e- --> pi0 pi0 pi0 rho0 pi+ pi- K+ K-  &  -1
+  1  &  rho0 --> pi+ pi-  &  0
+( e+ e- ---> pi0 pi0 pi0 pi+ pi+ pi- pi- K+ K- )
+
+rowNo:  4	iDcyTr:  203	nEtr:  5	nCEtr:  23
+  0  &  e+ e- --> pi0 rho0 pi+ pi+ pi- rho- K+ K-  &  -1
+  1  &  rho0 --> pi+ pi-  &  0
+  2  &  rho- --> pi0 pi-  &  0
+( e+ e- ---> pi0 pi0 pi+ pi+ pi+ pi- pi- pi- K+ K- )
+
+rowNo:  5	iDcyTr:  352	nEtr:  5	nCEtr:  28
+  0  &  e+ e- --> pi0 pi0 pi0 pi+ pi+ pi- pi- K+ K- gammaI  &  -1
+( e+ e- ---> pi0 pi0 pi0 pi+ pi+ pi- pi- K+ K- gammaI )
+
+rowNo:  6	iDcyTr:  469	nEtr:  5	nCEtr:  33
+  0  &  e+ e- --> pi0 pi0 pi0 rho0 pi+ pi- K+ K- gammaI  &  -1
+  1  &  rho0 --> pi+ pi-  &  0
+( e+ e- ---> pi0 pi0 pi0 pi+ pi+ pi- pi- K+ K- gammaI )
+
+rowNo:  7	iDcyTr:  484	nEtr:  5	nCEtr:  38
+  0  &  e+ e- --> pi0 pi0 pi0 pi- rho+ omega K+ K- gammaI  &  -1
+  1  &  rho+ --> pi0 pi+  &  0
+  2  &  omega --> pi0 pi+ pi-  &  0
+( e+ e- ---> pi0 pi0 pi0 pi0 pi0 pi+ pi+ pi- pi- K+ K- gammaI )
+
+rowNo:  8	iDcyTr:  1080	nEtr:  5	nCEtr:  43
+  0  &  e+ e- --> pi0 pi0 pi+ pi+ pi- rho- K+ K-  &  -1
+  1  &  rho- --> pi0 pi-  &  0
+( e+ e- ---> pi0 pi0 pi0 pi+ pi+ pi- pi- K+ K- )
+
+rowNo:  9	iDcyTr:  1166	nEtr:  5	nCEtr:  48
+  0  &  e+ e- --> pi0 pi0 pi+ pi+ pi- pi- K+ K- gammaI  &  -1
+( e+ e- ---> pi0 pi0 pi+ pi+ pi- pi- K+ K- gammaI )
+
+rowNo:  10	iDcyTr:  1325	nEtr:  5	nCEtr:  53
+  0  &  e+ e- --> pi0 rho0 pi+ pi- rho+ rho- K+ K-  &  -1
+  1  &  rho0 --> pi+ pi-  &  0
+  2  &  rho+ --> pi0 pi+  &  0
+  3  &  rho- --> pi0 pi-  &  0
+( e+ e- ---> pi0 pi0 pi0 pi+ pi+ pi+ pi- pi- pi- K+ K- )
+
+rowNo:  11	iDcyTr:  144	nEtr:  4	nCEtr:  57
+  0  &  e+ e- --> pi0 pi0 pi0 pi+ pi+ pi- pi- K+ K-  &  -1
+( e+ e- ---> pi0 pi0 pi0 pi+ pi+ pi- pi- K+ K- )
+
+rowNo:  12	iDcyTr:  145	nEtr:  4	nCEtr:  61
+  0  &  e+ e- --> pi0 pi0 pi0 pi- rho+ omega K+ K-  &  -1
+  1  &  rho+ --> pi0 pi+  &  0
+  2  &  omega --> pi0 pi+ pi-  &  0
+( e+ e- ---> pi0 pi0 pi0 pi0 pi0 pi+ pi+ pi- pi- K+ K- )
+
+rowNo:  13	iDcyTr:  155	nEtr:  4	nCEtr:  65
+  0  &  e+ e- --> pi0 pi0 pi+ pi- omega K+ K- gammaI  &  -1
+  1  &  omega --> pi0 pi+ pi-  &  0
+( e+ e- ---> pi0 pi0 pi0 pi+ pi+ pi- pi- K+ K- gammaI )
+
+rowNo:  14	iDcyTr:  212	nEtr:  4	nCEtr:  69
+  0  &  e+ e- --> pi0 pi0 pi+ pi- pi- rho+ omega K+ K-  &  -1
+  1  &  rho+ --> pi0 pi+  &  0
+  2  &  omega --> pi0 pi+ pi-  &  0
+( e+ e- ---> pi0 pi0 pi0 pi0 pi+ pi+ pi+ pi- pi- pi- K+ K- )
+
+rowNo:  15	iDcyTr:  233	nEtr:  4	nCEtr:  73
+  0  &  e+ e- --> pi- rho+ K*0 anti-K*0 K- K*+ gammaI gammaI  &  -1
+  1  &  rho+ --> pi0 pi+  &  0
+  2  &  K*0 --> pi- K+  &  0
+  3  &  anti-K*0 --> pi+ K-  &  0
+  4  &  K*+ --> pi+ K0  &  0
+  5  &  K0 --> K_L0  &  4
+( e+ e- ---> pi0 K_L0 pi+ pi+ pi+ pi- pi- K+ K- K- gammaI gammaI )
+
+rowNo:  16	iDcyTr:  417	nEtr:  4	nCEtr:  77
+  0  &  e+ e- --> pi0 rho0 pi+ pi+ pi- pi- omega gammaI  &  -1
+  1  &  rho0 --> pi+ pi-  &  0
+  2  &  omega --> pi0 pi+ pi-  &  0
+( e+ e- ---> pi0 pi0 pi+ pi+ pi+ pi+ pi- pi- pi- pi- gammaI )
+
+rowNo:  17	iDcyTr:  518	nEtr:  4	nCEtr:  81
+  0  &  e+ e- --> pi0 pi0 pi+ pi+ pi- pi- K+ K-  &  -1
+( e+ e- ---> pi0 pi0 pi+ pi+ pi- pi- K+ K- )
+
+rowNo:  18	iDcyTr:  827	nEtr:  4	nCEtr:  85
+  0  &  e+ e- --> pi+ pi- rho+ rho- K+ K-  &  -1
+  1  &  rho+ --> pi0 pi+  &  0
+  2  &  rho- --> pi0 pi-  &  0
+( e+ e- ---> pi0 pi0 pi+ pi+ pi- pi- K+ K- )
+
+rowNo:  19	iDcyTr:  1007	nEtr:  4	nCEtr:  89
+  0  &  e+ e- --> pi0 pi+ pi+ rho- rho- K+ K- gammaI  &  -1
+  1  &  rho- --> pi0 pi-  &  0
+  2  &  rho- --> pi0 pi-  &  0
+( e+ e- ---> pi0 pi0 pi0 pi+ pi+ pi- pi- K+ K- gammaI )
+
+rowNo:  20	iDcyTr:  1278	nEtr:  4	nCEtr:  93
+  0  &  e+ e- --> pi0 pi0 pi+ pi- K+ K- p+ anti-p-  &  -1
+( e+ e- ---> pi0 pi0 pi+ pi- K+ K- p+ anti-p- )
+
+rowNo:  21	iDcyTr:  91	nEtr:  3	nCEtr:  96
+  0  &  e+ e- --> pi0 pi0 pi0 pi- pi- rho+ rho+ K+ K-  &  -1
+  1  &  rho+ --> pi0 pi+  &  0
+  2  &  rho+ --> pi0 pi+  &  0
+( e+ e- ---> pi0 pi0 pi0 pi0 pi0 pi+ pi+ pi- pi- K+ K- )
+
+rowNo:  22	iDcyTr:  45	nEtr:  3	nCEtr:  99
+  0  &  e+ e- --> pi0 rho0 pi+ rho- K+ K-  &  -1
+  1  &  rho0 --> pi+ pi-  &  0
+  2  &  rho- --> pi0 pi-  &  0
+( e+ e- ---> pi0 pi0 pi+ pi+ pi- pi- K+ K- )
+
+rowNo:  23	iDcyTr:  112	nEtr:  3	nCEtr:  102
+  0  &  e+ e- --> pi0 pi0 pi+ pi- pi- rho+ K+ K*-  &  -1
+  1  &  rho+ --> pi0 pi+  &  0
+  2  &  K*- --> pi0 K-  &  0
+( e+ e- ---> pi0 pi0 pi0 pi0 pi+ pi+ pi- pi- K+ K- )
+
+rowNo:  24	iDcyTr:  131	nEtr:  3	nCEtr:  105
+  0  &  e+ e- --> pi0 rho0 pi+ pi- K+ K- gammaI  &  -1
+  1  &  rho0 --> pi+ pi-  &  0
+( e+ e- ---> pi0 pi+ pi+ pi- pi- K+ K- gammaI )
+
+rowNo:  25	iDcyTr:  160	nEtr:  3	nCEtr:  108
+  0  &  e+ e- --> pi+ pi- rho+ rho- K+ K- gammaI  &  -1
+  1  &  rho+ --> pi0 pi+  &  0
+  2  &  rho- --> pi0 pi-  &  0
+( e+ e- ---> pi0 pi0 pi+ pi+ pi- pi- K+ K- gammaI )
+
+rowNo:  26	iDcyTr:  305	nEtr:  3	nCEtr:  111
+  0  &  e+ e- --> pi0 rho0 pi- rho+ K+ K- gammaI  &  -1
+  1  &  rho0 --> pi+ pi-  &  0
+  2  &  rho+ --> pi0 pi+  &  0
+( e+ e- ---> pi0 pi0 pi+ pi+ pi- pi- K+ K- gammaI )
+
+rowNo:  27	iDcyTr:  366	nEtr:  3	nCEtr:  114
+  0  &  e+ e- --> pi0 pi+ pi- K+ K+ K- K*-  &  -1
+  1  &  K*- --> pi0 K-  &  0
+( e+ e- ---> pi0 pi0 pi+ pi- K+ K+ K- K- )
+
+rowNo:  28	iDcyTr:  372	nEtr:  3	nCEtr:  117
+  0  &  e+ e- --> pi0 pi+ pi- rho+ rho- omega  &  -1
+  1  &  rho+ --> pi0 pi+  &  0
+  2  &  rho- --> pi0 pi-  &  0
+  3  &  omega --> pi0 pi+ pi-  &  0
+( e+ e- ---> pi0 pi0 pi0 pi0 pi+ pi+ pi+ pi- pi- pi- )
+
+rowNo:  29	iDcyTr:  445	nEtr:  3	nCEtr:  120
+  0  &  e+ e- --> rho0 pi+ pi+ pi- rho- K+ K-  &  -1
+  1  &  rho0 --> pi+ pi-  &  0
+  2  &  rho- --> pi0 pi-  &  0
+( e+ e- ---> pi0 pi+ pi+ pi+ pi- pi- pi- K+ K- )
+
+rowNo:  30	iDcyTr:  447	nEtr:  3	nCEtr:  123
+  0  &  e+ e- --> pi0 pi0 pi+ pi- rho+ K*0 K- gammaI gammaI  &  -1
+  1  &  rho+ --> pi0 pi+  &  0
+  2  &  K*0 --> pi- K+  &  0
+( e+ e- ---> pi0 pi0 pi0 pi+ pi+ pi- pi- K+ K- gammaI gammaI )
+
+rowNo:  31	iDcyTr:  631	nEtr:  3	nCEtr:  126
+  0  &  e+ e- --> pi0 rho0 pi+ rho- K- K*+ gammaI  &  -1
+  1  &  rho0 --> pi+ pi-  &  0
+  2  &  rho- --> pi0 pi-  &  0
+  3  &  K*+ --> pi0 K+  &  0
+( e+ e- ---> pi0 pi0 pi0 pi+ pi+ pi- pi- K+ K- gammaI )
+
+rowNo:  32	iDcyTr:  672	nEtr:  3	nCEtr:  129
+  0  &  e+ e- --> pi0 pi- rho+ K- p+ anti-Lambda0  &  -1
+  1  &  rho+ --> pi0 pi+  &  0
+  2  &  anti-Lambda0 --> pi0 anti-n0  &  0
+( e+ e- ---> pi0 pi0 pi0 pi+ pi- K- anti-n0 p+ )
+
+rowNo:  33	iDcyTr:  766	nEtr:  3	nCEtr:  132
+  0  &  e+ e- --> pi0 pi+ pi- pi- omega anti-K*0 K+ gammaI  &  -1
+  1  &  omega --> pi0 pi+ pi-  &  0
+  2  &  anti-K*0 --> pi+ K-  &  0
+( e+ e- ---> pi0 pi0 pi+ pi+ pi+ pi- pi- pi- K+ K- gammaI )
+
+rowNo:  34	iDcyTr:  839	nEtr:  3	nCEtr:  135
+  0  &  e+ e- --> pi0 pi0 pi0 pi0 rho0 pi+ pi- omega  &  -1
+  1  &  rho0 --> pi+ pi-  &  0
+  2  &  omega --> pi0 pi+ pi-  &  0
+( e+ e- ---> pi0 pi0 pi0 pi0 pi0 pi+ pi+ pi+ pi- pi- pi- )
+
+rowNo:  35	iDcyTr:  894	nEtr:  3	nCEtr:  138
+  0  &  e+ e- --> pi0 pi+ pi- omega K+ K*-  &  -1
+  1  &  omega --> pi0 pi+ pi-  &  0
+  2  &  K*- --> pi0 K-  &  0
+( e+ e- ---> pi0 pi0 pi0 pi+ pi+ pi- pi- K+ K- )
+
+rowNo:  36	iDcyTr:  1086	nEtr:  3	nCEtr:  141
+  0  &  e+ e- --> pi0 pi- pi- rho+ rho+ omega K+ K-  &  -1
+  1  &  rho+ --> pi0 pi+  &  0
+  2  &  rho+ --> pi0 pi+  &  0
+  3  &  omega --> pi0 pi+ pi-  &  0
+( e+ e- ---> pi0 pi0 pi0 pi0 pi+ pi+ pi+ pi- pi- pi- K+ K- )
+
+rowNo:  37	iDcyTr:  1232	nEtr:  3	nCEtr:  144
+  0  &  e+ e- --> pi0 pi+ pi+ pi- pi- omega K+ K- gammaI  &  -1
+  1  &  omega --> pi0 pi+ pi-  &  0
+( e+ e- ---> pi0 pi0 pi+ pi+ pi+ pi- pi- pi- K+ K- gammaI )
+
+rowNo:  38	iDcyTr:  1273	nEtr:  3	nCEtr:  147
+  0  &  e+ e- --> pi0 pi+ pi- pi- rho+ K- K*+ gammaI  &  -1
+  1  &  rho+ --> pi0 pi+  &  0
+  2  &  K*+ --> pi0 K+  &  0
+( e+ e- ---> pi0 pi0 pi0 pi+ pi+ pi- pi- K+ K- gammaI )
+
+rowNo:  39	iDcyTr:  1415	nEtr:  3	nCEtr:  150
+  0  &  e+ e- --> pi0 pi0 rho0 pi+ pi- K+ K- gammaI gammaI  &  -1
+  1  &  rho0 --> pi+ pi-  &  0
+( e+ e- ---> pi0 pi0 pi+ pi+ pi- pi- K+ K- gammaI gammaI )
+
+rowNo:  40	iDcyTr:  1491	nEtr:  3	nCEtr:  153
+  0  &  e+ e- --> pi0 pi+ pi+ pi- rho- omega gammaI  &  -1
+  1  &  rho- --> pi0 pi-  &  0
+  2  &  omega --> pi0 pi+ pi-  &  0
+( e+ e- ---> pi0 pi0 pi0 pi+ pi+ pi+ pi- pi- pi- gammaI )
+
+rowNo:  41	iDcyTr:  1494	nEtr:  3	nCEtr:  156
+  0  &  e+ e- --> pi0 rho0 pi+ pi- rho+ rho- K+ K- gammaI  &  -1
+  1  &  rho0 --> pi+ pi-  &  0
+  2  &  rho+ --> pi0 pi+  &  0
+  3  &  rho- --> pi0 pi-  &  0
+( e+ e- ---> pi0 pi0 pi0 pi+ pi+ pi+ pi- pi- pi- K+ K- gammaI )
+
+rowNo:  42	iDcyTr:  1508	nEtr:  3	nCEtr:  159
+  0  &  e+ e- --> pi0 pi0 pi0 pi- rho+ K+ K- gammaI  &  -1
+  1  &  rho+ --> pi0 pi+  &  0
+( e+ e- ---> pi0 pi0 pi0 pi0 pi+ pi- K+ K- gammaI )
+
+rowNo:  43	iDcyTr:  1581	nEtr:  3	nCEtr:  162
+  0  &  e+ e- --> pi0 rho0 pi+ pi- pi- rho+ K+ K- gammaI  &  -1
+  1  &  rho0 --> pi+ pi-  &  0
+  2  &  rho+ --> pi0 pi+  &  0
+( e+ e- ---> pi0 pi0 pi+ pi+ pi+ pi- pi- pi- K+ K- gammaI )
+
+rowNo:  44	iDcyTr:  1690	nEtr:  3	nCEtr:  165
+  0  &  e+ e- --> pi0 pi0 pi0 rho0 pi+ rho-  &  -1
+  1  &  rho0 --> pi+ pi-  &  0
+  2  &  rho- --> pi0 pi-  &  0
+( e+ e- ---> pi0 pi0 pi0 pi0 pi+ pi+ pi- pi- )
+
+rowNo:  45	iDcyTr:  1924	nEtr:  3	nCEtr:  168
+  0  &  e+ e- --> rho+ rho- K+ K- K- K*+  &  -1
+  1  &  rho+ --> pi0 pi+  &  0
+  2  &  rho- --> pi0 pi-  &  0
+  3  &  K*+ --> pi+ K0  &  0
+  4  &  K0 --> K_S0  &  3
+  5  &  K_S0 --> pi+ pi- gammaF  &  4
+( e+ e- ---> pi0 pi0 pi+ pi+ pi+ pi- pi- K+ K- K- gammaF )
+
+rowNo:  46	iDcyTr:  2022	nEtr:  3	nCEtr:  171
+  0  &  e+ e- --> pi0 pi0 pi+ rho- omega K+ K-  &  -1
+  1  &  rho- --> pi0 pi-  &  0
+  2  &  omega --> pi0 pi+ pi-  &  0
+( e+ e- ---> pi0 pi0 pi0 pi0 pi+ pi+ pi- pi- K+ K- )
+
+rowNo:  47	iDcyTr:  2081	nEtr:  3	nCEtr:  174
+  0  &  e+ e- --> pi+ pi- rho+ rho- K+ K- gammaI gammaI  &  -1
+  1  &  rho+ --> pi0 pi+  &  0
+  2  &  rho- --> pi0 pi-  &  0
+( e+ e- ---> pi0 pi0 pi+ pi+ pi- pi- K+ K- gammaI gammaI )
+
+rowNo:  48	iDcyTr:  2340	nEtr:  3	nCEtr:  177
+  0  &  e+ e- --> pi0 pi0 pi0 pi+ pi- omega K+ K- gammaI  &  -1
+  1  &  omega --> pi0 pi+ pi-  &  0
+( e+ e- ---> pi0 pi0 pi0 pi0 pi+ pi+ pi- pi- K+ K- gammaI )
+
+rowNo:  49	iDcyTr:  2366	nEtr:  3	nCEtr:  180
+  0  &  e+ e- --> pi0 pi0 pi+ rho- K+ K+ K- K-  &  -1
+  1  &  rho- --> pi0 pi-  &  0
+( e+ e- ---> pi0 pi0 pi0 pi+ pi- K+ K+ K- K- )
+
+rowNo:  50	iDcyTr:  2541	nEtr:  3	nCEtr:  183
+  0  &  e+ e- --> pi0 pi0 rho0 pi+ pi+ pi- pi- K+ K- gammaI gammaI  &  -1
+  1  &  rho0 --> pi+ pi-  &  0
+( e+ e- ---> pi0 pi0 pi+ pi+ pi+ pi- pi- pi- K+ K- gammaI gammaI )
+
+rowNo:  51	iDcyTr:  2601	nEtr:  3	nCEtr:  186
+  0  &  e+ e- --> pi0 pi0 pi0 rho0 pi+ pi- omega K+ K-  &  -1
+  1  &  rho0 --> pi+ pi-  &  0
+  2  &  omega --> pi0 pi+ pi-  &  0
+( e+ e- ---> pi0 pi0 pi0 pi0 pi+ pi+ pi+ pi- pi- pi- K+ K- )
+
+rowNo:  52	iDcyTr:  2788	nEtr:  3	nCEtr:  189
+  0  &  e+ e- --> pi0 pi0 pi- rho+ K- K*+ gammaI  &  -1
+  1  &  rho+ --> pi0 pi+  &  0
+  2  &  K*+ --> pi0 K+  &  0
+( e+ e- ---> pi0 pi0 pi0 pi0 pi+ pi- K+ K- gammaI )
+
+rowNo:  53	iDcyTr:  2980	nEtr:  3	nCEtr:  192
+  0  &  e+ e- --> pi0 pi+ pi- pi- anti-K*0 K+ K+ K-  &  -1
+  1  &  anti-K*0 --> pi+ K-  &  0
+( e+ e- ---> pi0 pi+ pi+ pi- pi- K+ K+ K- K- )
+
+rowNo:  54	iDcyTr:  3010	nEtr:  3	nCEtr:  195
+  0  &  e+ e- --> rho- eta anti-K*0 K+ phi  &  -1
+  1  &  rho- --> pi0 pi-  &  0
+  2  &  eta --> pi0 pi+ pi-  &  0
+  3  &  anti-K*0 --> pi+ K-  &  0
+  4  &  phi --> K+ K-  &  0
+( e+ e- ---> pi0 pi0 pi+ pi+ pi- pi- K+ K+ K- K- )
+
+rowNo:  55	iDcyTr:  3165	nEtr:  3	nCEtr:  198
+  0  &  e+ e- --> pi0 pi0 pi+ pi- K+ K- gammaI  &  -1
+( e+ e- ---> pi0 pi0 pi+ pi- K+ K- gammaI )
+
+rowNo:  56	iDcyTr:  3322	nEtr:  3	nCEtr:  201
+  0  &  e+ e- --> pi0 pi0 pi- rho+ rho- omega anti-K*0 K+ gammaI  &  -1
+  1  &  rho+ --> pi0 pi+  &  0
+  2  &  rho- --> pi0 pi-  &  0
+  3  &  omega --> pi0 pi+ pi-  &  0
+  4  &  anti-K*0 --> pi+ K-  &  0
+( e+ e- ---> pi0 pi0 pi0 pi0 pi0 pi+ pi+ pi+ pi- pi- pi- K+ K- gammaI )
+
+rowNo:  57	iDcyTr:  19	nEtr:  2	nCEtr:  203
+  0  &  e+ e- --> pi0 pi0 rho0 rho0 rho0 pi+ pi+ pi- pi-  &  -1
+  1  &  rho0 --> pi+ pi-  &  0
+  2  &  rho0 --> pi+ pi-  &  0
+  3  &  rho0 --> pi+ pi- gammaF  &  0
+( e+ e- ---> pi0 pi0 pi+ pi+ pi+ pi+ pi+ pi- pi- pi- pi- pi- gammaF )
+
+rowNo:  58	iDcyTr:  25	nEtr:  2	nCEtr:  205
+  0  &  e+ e- --> pi0 pi0 pi0 rho0 pi+ rho- omega gammaI  &  -1
+  1  &  rho0 --> pi+ pi- gammaF  &  0
+  2  &  rho- --> pi0 pi-  &  0
+  3  &  omega --> pi0 pi+ pi-  &  0
+( e+ e- ---> pi0 pi0 pi0 pi0 pi0 pi+ pi+ pi+ pi- pi- pi- gammaI gammaF )
+
+rowNo:  59	iDcyTr:  28	nEtr:  2	nCEtr:  207
+  0  &  e+ e- --> pi0 pi0 pi0 rho- anti-K*0 K+ K+ K- gammaI  &  -1
+  1  &  rho- --> pi0 pi-  &  0
+  2  &  anti-K*0 --> pi0 anti-K0  &  0
+  3  &  anti-K0 --> K_L0  &  2
+  4  &  K_L0 --> pi0 pi0 pi0  &  3
+( e+ e- ---> pi0 pi0 pi0 pi0 pi0 pi0 pi0 pi0 pi- K+ K+ K- gammaI )
+
+rowNo:  60	iDcyTr:  35	nEtr:  2	nCEtr:  209
+  0  &  e+ e- --> pi0 pi0 pi- rho+ rho+ K*0 K- gammaI  &  -1
+  1  &  rho+ --> pi0 pi+  &  0
+  2  &  rho+ --> pi0 pi+  &  0
+  3  &  K*0 --> pi- K+  &  0
+( e+ e- ---> pi0 pi0 pi0 pi0 pi+ pi+ pi- pi- K+ K- gammaI )
+
+rowNo:  61	iDcyTr:  38	nEtr:  2	nCEtr:  211
+  0  &  e+ e- --> pi0 rho0 pi- rho+ K- K*+  &  -1
+  1  &  rho0 --> pi+ pi-  &  0
+  2  &  rho+ --> pi0 pi+  &  0
+  3  &  K*+ --> pi0 K+  &  0
+( e+ e- ---> pi0 pi0 pi0 pi+ pi+ pi- pi- K+ K- )
+
+rowNo:  62	iDcyTr:  0	nEtr:  2	nCEtr:  213
+  0  &  e+ e- --> pi0 pi0 pi- rho+ omega K+ K-  &  -1
+  1  &  rho+ --> pi0 pi+  &  0
+  2  &  omega --> pi0 pi+ pi-  &  0
+( e+ e- ---> pi0 pi0 pi0 pi0 pi+ pi+ pi- pi- K+ K- )
+
+rowNo:  63	iDcyTr:  2	nEtr:  2	nCEtr:  215
+  0  &  e+ e- --> pi+ pi+ pi+ pi- rho- omega K*0 K- gammaI  &  -1
+  1  &  rho- --> pi0 pi-  &  0
+  2  &  omega --> pi0 pi+ pi-  &  0
+  3  &  K*0 --> pi- K+  &  0
+( e+ e- ---> pi0 pi0 pi+ pi+ pi+ pi+ pi- pi- pi- pi- K+ K- gammaI )
+
+rowNo:  64	iDcyTr:  82	nEtr:  2	nCEtr:  217
+  0  &  e+ e- --> pi0 rho0 pi+ pi+ pi- rho- gammaI gammaI  &  -1
+  1  &  rho0 --> pi+ pi-  &  0
+  2  &  rho- --> pi0 pi-  &  0
+( e+ e- ---> pi0 pi0 pi+ pi+ pi+ pi- pi- pi- gammaI gammaI )
+
+rowNo:  65	iDcyTr:  83	nEtr:  2	nCEtr:  219
+  0  &  e+ e- --> pi0 pi+ pi- pi- rho+ K+ K- phi  &  -1
+  1  &  rho+ --> pi0 pi+  &  0
+  2  &  phi --> K+ K-  &  0
+( e+ e- ---> pi0 pi0 pi+ pi+ pi- pi- K+ K+ K- K- )
+
+rowNo:  66	iDcyTr:  87	nEtr:  2	nCEtr:  221
+  0  &  e+ e- --> pi0 pi0 pi+ pi+ rho- rho- K+ K- gammaI  &  -1
+  1  &  rho- --> pi0 pi-  &  0
+  2  &  rho- --> pi0 pi-  &  0
+( e+ e- ---> pi0 pi0 pi0 pi0 pi+ pi+ pi- pi- K+ K- gammaI )
+
+rowNo:  67	iDcyTr:  6	nEtr:  2	nCEtr:  223
+  0  &  e+ e- --> pi0 pi0 pi+ pi+ pi- omega K*0 K- gammaI  &  -1
+  1  &  omega --> pi0 pi+ pi-  &  0
+  2  &  K*0 --> pi- K+  &  0
+( e+ e- ---> pi0 pi0 pi0 pi+ pi+ pi+ pi- pi- pi- K+ K- gammaI )
+
+rowNo:  68	iDcyTr:  95	nEtr:  2	nCEtr:  225
+  0  &  e+ e- --> pi0 pi0 pi+ pi+ pi- rho- K+ K- gammaI  &  -1
+  1  &  rho- --> pi0 pi- gammaF  &  0
+( e+ e- ---> pi0 pi0 pi0 pi+ pi+ pi- pi- K+ K- gammaI gammaF )
+
+rowNo:  69	iDcyTr:  13	nEtr:  2	nCEtr:  227
+  0  &  e+ e- --> pi0 pi0 pi+ pi+ pi- rho- K+ K- gammaI  &  -1
+  1  &  rho- --> pi0 pi-  &  0
+( e+ e- ---> pi0 pi0 pi0 pi+ pi+ pi- pi- K+ K- gammaI )
+
+rowNo:  70	iDcyTr:  98	nEtr:  2	nCEtr:  229
+  0  &  e+ e- --> pi0 pi0 pi0 pi+ pi+ pi- pi- omega omega gammaI gammaI  &  -1
+  1  &  omega --> pi0 pi+ pi-  &  0
+  2  &  omega --> pi0 pi+ pi-  &  0
+( e+ e- ---> pi0 pi0 pi0 pi0 pi0 pi+ pi+ pi+ pi+ pi- pi- pi- pi- gammaI gammaI )
+
+rowNo:  71	iDcyTr:  111	nEtr:  2	nCEtr:  231
+  0  &  e+ e- --> pi0 pi0 rho0 pi+ pi- K*0 anti-K*0  &  -1
+  1  &  rho0 --> pi+ pi-  &  0
+  2  &  K*0 --> pi- K+  &  0
+  3  &  anti-K*0 --> pi+ K-  &  0
+( e+ e- ---> pi0 pi0 pi+ pi+ pi+ pi- pi- pi- K+ K- )
+
+rowNo:  72	iDcyTr:  116	nEtr:  2	nCEtr:  233
+  0  &  e+ e- --> pi0 pi0 rho0 pi+ pi- K- K*+  &  -1
+  1  &  rho0 --> pi+ pi-  &  0
+  2  &  K*+ --> pi0 K+  &  0
+( e+ e- ---> pi0 pi0 pi0 pi+ pi+ pi- pi- K+ K- )
+
+rowNo:  73	iDcyTr:  130	nEtr:  2	nCEtr:  235
+  0  &  e+ e- --> pi0 pi0 pi0 pi+ pi+ pi- pi- omega K+ K-  &  -1
+  1  &  omega --> pi0 pi+ pi-  &  0
+( e+ e- ---> pi0 pi0 pi0 pi0 pi+ pi+ pi+ pi- pi- pi- K+ K- )
+
+rowNo:  74	iDcyTr:  133	nEtr:  2	nCEtr:  237
+  0  &  e+ e- --> pi0 pi+ pi+ pi- rho- K+ K- gammaI  &  -1
+  1  &  rho- --> pi0 pi-  &  0
+( e+ e- ---> pi0 pi0 pi+ pi+ pi- pi- K+ K- gammaI )
+
+rowNo:  75	iDcyTr:  171	nEtr:  2	nCEtr:  239
+  0  &  e+ e- --> pi0 pi+ pi+ rho- rho- omega K+ K-  &  -1
+  1  &  rho- --> pi0 pi-  &  0
+  2  &  rho- --> pi0 pi-  &  0
+  3  &  omega --> pi0 pi+ pi-  &  0
+( e+ e- ---> pi0 pi0 pi0 pi0 pi+ pi+ pi+ pi- pi- pi- K+ K- )
+
+rowNo:  76	iDcyTr:  180	nEtr:  2	nCEtr:  241
+  0  &  e+ e- --> pi0 pi0 pi0 rho0 pi+ pi- K+ K-  &  -1
+  1  &  rho0 --> pi+ pi- gammaF  &  0
+( e+ e- ---> pi0 pi0 pi0 pi+ pi+ pi- pi- K+ K- gammaF )
+
+rowNo:  77	iDcyTr:  187	nEtr:  2	nCEtr:  243
+  0  &  e+ e- --> pi0 pi0 pi0 pi+ pi- rho- anti-K*0 K+  &  -1
+  1  &  rho- --> pi0 pi-  &  0
+  2  &  anti-K*0 --> pi+ K-  &  0
+( e+ e- ---> pi0 pi0 pi0 pi0 pi+ pi+ pi- pi- K+ K- )
+
+rowNo:  78	iDcyTr:  216	nEtr:  2	nCEtr:  245
+  0  &  e+ e- --> pi- rho+ omega K+ K- gammaI gammaI gammaI  &  -1
+  1  &  rho+ --> pi0 pi+  &  0
+  2  &  omega --> pi0 pi+ pi-  &  0
+( e+ e- ---> pi0 pi0 pi+ pi+ pi- pi- K+ K- gammaI gammaI gammaI )
+
+rowNo:  79	iDcyTr:  229	nEtr:  2	nCEtr:  247
+  0  &  e+ e- --> pi0 pi0 pi0 pi+ pi+ pi- pi- K- K*+ gammaI  &  -1
+  1  &  K*+ --> pi0 K+  &  0
+( e+ e- ---> pi0 pi0 pi0 pi0 pi+ pi+ pi- pi- K+ K- gammaI )
+
+rowNo:  80	iDcyTr:  253	nEtr:  2	nCEtr:  249
+  0  &  e+ e- --> pi0 pi0 pi+ rho- K+ K- gammaI gammaI  &  -1
+  1  &  rho- --> pi0 pi-  &  0
+( e+ e- ---> pi0 pi0 pi0 pi+ pi- K+ K- gammaI gammaI )
+
+rowNo:  81	iDcyTr:  307	nEtr:  2	nCEtr:  251
+  0  &  e+ e- --> pi0 pi0 pi+ pi- pi- rho+ omega gammaI  &  -1
+  1  &  rho+ --> pi0 pi+  &  0
+  2  &  omega --> pi0 pi+ pi-  &  0
+( e+ e- ---> pi0 pi0 pi0 pi0 pi+ pi+ pi+ pi- pi- pi- gammaI )
+
+rowNo:  82	iDcyTr:  309	nEtr:  2	nCEtr:  253
+  0  &  e+ e- --> pi0 pi+ pi- pi- rho+ K+ K*-  &  -1
+  1  &  rho+ --> pi0 pi+  &  0
+  2  &  K*- --> pi0 K-  &  0
+( e+ e- ---> pi0 pi0 pi0 pi+ pi+ pi- pi- K+ K- )
+
+rowNo:  83	iDcyTr:  320	nEtr:  2	nCEtr:  255
+  0  &  e+ e- --> pi0 pi0 pi+ pi- K*0 anti-K*0 K- K*+  &  -1
+  1  &  K*0 --> pi- K+  &  0
+  2  &  anti-K*0 --> pi+ K-  &  0
+  3  &  K*+ --> pi0 K+  &  0
+( e+ e- ---> pi0 pi0 pi0 pi+ pi+ pi- pi- K+ K+ K- K- )
+
+rowNo:  84	iDcyTr:  339	nEtr:  2	nCEtr:  257
+  0  &  e+ e- --> pi0 pi0 pi+ pi- rho+ K*0 K- gammaI  &  -1
+  1  &  rho+ --> pi0 pi+  &  0
+  2  &  K*0 --> pi- K+  &  0
+( e+ e- ---> pi0 pi0 pi0 pi+ pi+ pi- pi- K+ K- gammaI )
+
+rowNo:  85	iDcyTr:  364	nEtr:  2	nCEtr:  259
+  0  &  e+ e- --> pi0 pi+ rho- K+ K+ K- K- gammaI gammaI  &  -1
+  1  &  rho- --> pi0 pi-  &  0
+( e+ e- ---> pi0 pi0 pi+ pi- K+ K+ K- K- gammaI gammaI )
+
+rowNo:  86	iDcyTr:  377	nEtr:  2	nCEtr:  261
+  0  &  e+ e- --> pi0 pi0 pi+ rho+ rho- K0 K- gammaI gammaI  &  -1
+  1  &  rho+ --> pi0 pi+  &  0
+  2  &  rho- --> pi0 pi-  &  0
+  3  &  K0 --> K_L0  &  0
+( e+ e- ---> pi0 pi0 pi0 pi0 K_L0 pi+ pi+ pi- K- gammaI gammaI )
+
+rowNo:  87	iDcyTr:  379	nEtr:  2	nCEtr:  263
+  0  &  e+ e- --> pi+ pi- rho+ rho- K- K*+ gammaI  &  -1
+  1  &  rho+ --> pi0 pi+  &  0
+  2  &  rho- --> pi0 pi-  &  0
+  3  &  K*+ --> pi0 K+  &  0
+( e+ e- ---> pi0 pi0 pi0 pi+ pi+ pi- pi- K+ K- gammaI )
+
+rowNo:  88	iDcyTr:  383	nEtr:  2	nCEtr:  265
+  0  &  e+ e- --> pi0 pi+ pi- pi- K+ K- anti-n0 p+  &  -1
+( e+ e- ---> pi0 pi+ pi- pi- K+ K- anti-n0 p+ )
+
+rowNo:  89	iDcyTr:  394	nEtr:  2	nCEtr:  267
+  0  &  e+ e- --> rho0 pi- rho+ K+ K*- gammaI gammaI  &  -1
+  1  &  rho0 --> pi+ pi-  &  0
+  2  &  rho+ --> pi0 pi+  &  0
+  3  &  K*- --> pi0 K-  &  0
+( e+ e- ---> pi0 pi0 pi+ pi+ pi- pi- K+ K- gammaI gammaI )
+
+rowNo:  90	iDcyTr:  399	nEtr:  2	nCEtr:  269
+  0  &  e+ e- --> pi0 pi0 rho0 rho0 omega K+ K- gammaI  &  -1
+  1  &  rho0 --> pi+ pi-  &  0
+  2  &  rho0 --> pi+ pi-  &  0
+  3  &  omega --> pi0 pi+ pi-  &  0
+( e+ e- ---> pi0 pi0 pi0 pi+ pi+ pi+ pi- pi- pi- K+ K- gammaI )
+
+rowNo:  91	iDcyTr:  401	nEtr:  2	nCEtr:  271
+  0  &  e+ e- --> pi0 pi+ pi- anti-K0 K*0 K+ K- phi gammaI  &  -1
+  1  &  anti-K0 --> K_L0  &  0
+  2  &  K*0 --> pi- K+ gammaF  &  0
+  3  &  phi --> K+ K-  &  0
+( e+ e- ---> pi0 K_L0 pi+ pi- pi- K+ K+ K+ K- K- gammaI gammaF )
+
+rowNo:  92	iDcyTr:  409	nEtr:  2	nCEtr:  273
+  0  &  e+ e- --> pi+ pi- rho- K+ K- anti-n0 p+  &  -1
+  1  &  rho- --> pi0 pi-  &  0
+( e+ e- ---> pi0 pi+ pi- pi- K+ K- anti-n0 p+ )
+
+rowNo:  93	iDcyTr:  413	nEtr:  2	nCEtr:  275
+  0  &  e+ e- --> pi0 pi0 pi0 pi0 pi+ pi- eta K+ K-  &  -1
+  1  &  eta --> pi0 pi+ pi- gammaF  &  0
+( e+ e- ---> pi0 pi0 pi0 pi0 pi0 pi+ pi+ pi- pi- K+ K- gammaF )
+
+rowNo:  94	iDcyTr:  421	nEtr:  2	nCEtr:  277
+  0  &  e+ e- --> pi0 pi0 pi0 pi+ pi+ pi+ pi- pi- rho-  &  -1
+  1  &  rho- --> pi0 pi-  &  0
+( e+ e- ---> pi0 pi0 pi0 pi0 pi+ pi+ pi+ pi- pi- pi- )
+
+rowNo:  95	iDcyTr:  428	nEtr:  2	nCEtr:  279
+  0  &  e+ e- --> pi0 pi0 pi+ pi- rho+ rho- omega  &  -1
+  1  &  rho+ --> pi0 pi+  &  0
+  2  &  rho- --> pi0 pi-  &  0
+  3  &  omega --> pi0 pi+ pi-  &  0
+( e+ e- ---> pi0 pi0 pi0 pi0 pi0 pi+ pi+ pi+ pi- pi- pi- )
+
+rowNo:  96	iDcyTr:  433	nEtr:  2	nCEtr:  281
+  0  &  e+ e- --> pi0 pi0 pi+ rho- omega K- K*+  &  -1
+  1  &  rho- --> pi0 pi-  &  0
+  2  &  omega --> pi0 pi+ pi-  &  0
+  3  &  K*+ --> pi0 K+  &  0
+( e+ e- ---> pi0 pi0 pi0 pi0 pi0 pi+ pi+ pi- pi- K+ K- )
+
+rowNo:  97	iDcyTr:  437	nEtr:  2	nCEtr:  283
+  0  &  e+ e- --> rho0 pi+ pi- pi- rho+ omega gammaI gammaI  &  -1
+  1  &  rho0 --> pi+ pi-  &  0
+  2  &  rho+ --> pi0 pi+  &  0
+  3  &  omega --> pi0 pi+ pi-  &  0
+( e+ e- ---> pi0 pi0 pi+ pi+ pi+ pi+ pi- pi- pi- pi- gammaI gammaI )
+
+rowNo:  98	iDcyTr:  462	nEtr:  2	nCEtr:  285
+  0  &  e+ e- --> pi0 pi0 pi+ pi+ pi- rho- K+ K- gammaI gammaI gammaI  &  -1
+  1  &  rho- --> pi0 pi-  &  0
+( e+ e- ---> pi0 pi0 pi0 pi+ pi+ pi- pi- K+ K- gammaI gammaI gammaI )
+
+rowNo:  99	iDcyTr:  463	nEtr:  2	nCEtr:  287
+  0  &  e+ e- --> pi0 pi0 pi0 pi+ K*0 K+ K- K- phi gammaI gammaI  &  -1
+  1  &  K*0 --> pi- K+  &  0
+  2  &  phi --> K+ K-  &  0
+( e+ e- ---> pi0 pi0 pi0 pi+ pi- K+ K+ K+ K- K- K- gammaI gammaI )
+
+rowNo:  100	iDcyTr:  474	nEtr:  2	nCEtr:  289
+  0  &  e+ e- --> pi0 pi0 pi+ pi+ pi+ pi- pi- rho- gammaI  &  -1
+  1  &  rho- --> pi0 pi-  &  0
+( e+ e- ---> pi0 pi0 pi0 pi+ pi+ pi+ pi- pi- pi- gammaI )
+
+rowNo:  rest	iDcyTr:  ---	nEtr:  4164	nCEtr:  4453
+  e+ e- --> others (3956 in total)
+( e+ e- ---> corresponding to others )
+
+
+Decay branches of B0:
+
+
+Cascade decay branches of B0 (only the first ten hierarchies are involved):
+

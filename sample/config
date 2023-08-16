@@ -1,0 +1,9 @@
+#list:branch:output:copy vars
+#for FBDT traning
+#sigMC.list:B0:/home/belle2/yuanmk/data/B2KKpi/sample/cs/sigMC_sample.root
+#uubar.list:B0:/home/belle2/yuanmk/data/B2KKpi/sample/cs/uubar_sample.root
+#ddbar.list:B0:/home/belle2/yuanmk/data/B2KKpi/sample/cs/ddbar_sample.root
+#ssbar.list:B0:/home/belle2/yuanmk/data/B2KKpi/sample/cs/ssbar_sample.root
+ccbar.list:B0:/home/belle2/yuanmk/data/B2KKpi/sample/cs/ccbar_sample.root
+#mixed.list:B0:/home/belle2/yuanmk/data/B2KKpi/sample/mixed_sample.root
+#charged.list:B0:/home/belle2/yuanmk/data/B2KKpi/sample/charged_sample.root

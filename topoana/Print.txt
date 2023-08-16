@@ -1,0 +1,2278 @@
+
+Processing print_tree.C...
+******************************************************************************
+*Chain   :B0        : bbar_MC.root                                           *
+******************************************************************************
+******************************************************************************
+*Tree    :B0        :                                                        *
+*Entries :     1373 : Total =         6798544 bytes  File  Size =    1658475 *
+*        :          : Tree compression factor =   4.04                       *
+******************************************************************************
+*Br    0 :__experiment__ : __experiment__/I                                  *
+*Entries :     1373 : Total  Size=       6329 bytes  File Size  =        459 *
+*Baskets :        4 : Basket Size=       1600 bytes  Compression=  12.65     *
+*............................................................................*
+*Br    1 :__run__   : __run__/I                                              *
+*Entries :     1373 : Total  Size=       6273 bytes  File Size  =        415 *
+*Baskets :        4 : Basket Size=       1600 bytes  Compression=  13.93     *
+*............................................................................*
+*Br    2 :__event__ : __event__/I                                            *
+*Entries :     1373 : Total  Size=       6289 bytes  File Size  =       5298 *
+*Baskets :        4 : Basket Size=       1600 bytes  Compression=   1.09     *
+*............................................................................*
+*Br    3 :__production__ : __production__/I                                  *
+*Entries :     1373 : Total  Size=       6329 bytes  File Size  =        507 *
+*Baskets :        4 : Basket Size=       1600 bytes  Compression=  11.46     *
+*............................................................................*
+*Br    4 :__candidate__ : __candidate__/I                                    *
+*Entries :     1373 : Total  Size=       6321 bytes  File Size  =        842 *
+*Baskets :        4 : Basket Size=       1600 bytes  Compression=   6.89     *
+*............................................................................*
+*Br    5 :__ncandidates__ : __ncandidates__/I                                *
+*Entries :     1373 : Total  Size=       6337 bytes  File Size  =        910 *
+*Baskets :        4 : Basket Size=       1600 bytes  Compression=   6.39     *
+*............................................................................*
+*Br    6 :__weight__ : __weight__/D                                          *
+*Entries :     1373 : Total  Size=      12097 bytes  File Size  =        921 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.58     *
+*............................................................................*
+*Br    7 :FBDT_qrCombined : FBDT_qrCombined/D                                *
+*Entries :     1373 : Total  Size=      12157 bytes  File Size  =       7103 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.64     *
+*............................................................................*
+*Br    8 :FANN_qrCombined : FANN_qrCombined/D                                *
+*Entries :     1373 : Total  Size=      12157 bytes  File Size  =       7248 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.60     *
+*............................................................................*
+*Br    9 :qrMC      : qrMC/D                                                 *
+*Entries :     1373 : Total  Size=      12025 bytes  File Size  =       1406 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   8.20     *
+*............................................................................*
+*Br   10 :mcFlavorOfOtherB : mcFlavorOfOtherB/D                              *
+*Entries :     1373 : Total  Size=      12169 bytes  File Size  =       1926 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   6.04     *
+*............................................................................*
+*Br   11 :qpElectron : qpElectron/D                                          *
+*Entries :     1373 : Total  Size=      12097 bytes  File Size  =       7913 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.46     *
+*............................................................................*
+*Br   12 :hasTrueTargetElectron : hasTrueTargetElectron/D                    *
+*Entries :     1373 : Total  Size=      12229 bytes  File Size  =       1569 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   7.44     *
+*............................................................................*
+*Br   13 :isRightCategoryElectron : isRightCategoryElectron/D                *
+*Entries :     1373 : Total  Size=      12253 bytes  File Size  =        958 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.20     *
+*............................................................................*
+*Br   14 :qpIntermediateElectron : qpIntermediateElectron/D                  *
+*Entries :     1373 : Total  Size=      12241 bytes  File Size  =       7913 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.48     *
+*............................................................................*
+*Br   15 :hasTrueTargetIntermediateElectron :                                *
+*         | hasTrueTargetIntermediateElectron/D                              *
+*Entries :     1373 : Total  Size=      12373 bytes  File Size  =       1649 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   7.14     *
+*............................................................................*
+*Br   16 :isRightCategoryIntermediateElectron :                              *
+*         | isRightCategoryIntermediateElectron/D                            *
+*Entries :     1373 : Total  Size=      12397 bytes  File Size  =       1665 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   7.08     *
+*............................................................................*
+*Br   17 :qpMuon    : qpMuon/D                                               *
+*Entries :     1373 : Total  Size=      12049 bytes  File Size  =       7848 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.47     *
+*............................................................................*
+*Br   18 :hasTrueTargetMuon : hasTrueTargetMuon/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1531 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   7.60     *
+*............................................................................*
+*Br   19 :isRightCategoryMuon : isRightCategoryMuon/D                        *
+*Entries :     1373 : Total  Size=      12205 bytes  File Size  =        926 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.59     *
+*............................................................................*
+*Br   20 :qpIntermediateMuon : qpIntermediateMuon/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =       7877 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.48     *
+*............................................................................*
+*Br   21 :hasTrueTargetIntermediateMuon : hasTrueTargetIntermediateMuon/D    *
+*Entries :     1373 : Total  Size=      12325 bytes  File Size  =       1740 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   6.74     *
+*............................................................................*
+*Br   22 :isRightCategoryIntermediateMuon : isRightCategoryIntermediateMuon/D*
+*Entries :     1373 : Total  Size=      12349 bytes  File Size  =       1764 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   6.66     *
+*............................................................................*
+*Br   23 :qpKinLepton : qpKinLepton/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       7839 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.48     *
+*............................................................................*
+*Br   24 :hasTrueTargetKinLepton : hasTrueTargetKinLepton/D                  *
+*Entries :     1373 : Total  Size=      12241 bytes  File Size  =       1766 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   6.61     *
+*............................................................................*
+*Br   25 :isRightCategoryKinLepton : isRightCategoryKinLepton/D              *
+*Entries :     1373 : Total  Size=      12265 bytes  File Size  =        966 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.11     *
+*............................................................................*
+*Br   26 :qpIntermediateKinLepton : qpIntermediateKinLepton/D                *
+*Entries :     1373 : Total  Size=      12253 bytes  File Size  =       7883 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.48     *
+*............................................................................*
+*Br   27 :hasTrueTargetIntermediateKinLepton :                               *
+*         | hasTrueTargetIntermediateKinLepton/D                             *
+*Entries :     1373 : Total  Size=      12385 bytes  File Size  =       1885 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   6.25     *
+*............................................................................*
+*Br   28 :isRightCategoryIntermediateKinLepton :                             *
+*         | isRightCategoryIntermediateKinLepton/D                           *
+*Entries :     1373 : Total  Size=      12409 bytes  File Size  =       1901 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   6.20     *
+*............................................................................*
+*Br   29 :qpKaon    : qpKaon/D                                               *
+*Entries :     1373 : Total  Size=      12049 bytes  File Size  =       7511 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.54     *
+*............................................................................*
+*Br   30 :hasTrueTargetKaon : hasTrueTargetKaon/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1765 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   6.59     *
+*............................................................................*
+*Br   31 :isRightCategoryKaon : isRightCategoryKaon/D                        *
+*Entries :     1373 : Total  Size=      12205 bytes  File Size  =        926 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.59     *
+*............................................................................*
+*Br   32 :qpSlowPion : qpSlowPion/D                                          *
+*Entries :     1373 : Total  Size=      12097 bytes  File Size  =       7889 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.47     *
+*............................................................................*
+*Br   33 :hasTrueTargetSlowPion : hasTrueTargetSlowPion/D                    *
+*Entries :     1373 : Total  Size=      12229 bytes  File Size  =       1777 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   6.57     *
+*............................................................................*
+*Br   34 :isRightCategorySlowPion : isRightCategorySlowPion/D                *
+*Entries :     1373 : Total  Size=      12253 bytes  File Size  =       1794 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   6.52     *
+*............................................................................*
+*Br   35 :qpFastHadron : qpFastHadron/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =       7864 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.48     *
+*............................................................................*
+*Br   36 :hasTrueTargetFastHadron : hasTrueTargetFastHadron/D                *
+*Entries :     1373 : Total  Size=      12253 bytes  File Size  =       1818 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   6.43     *
+*............................................................................*
+*Br   37 :isRightCategoryFastHadron : isRightCategoryFastHadron/D            *
+*Entries :     1373 : Total  Size=      12277 bytes  File Size  =        974 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.02     *
+*............................................................................*
+*Br   38 :qpLambda  : qpLambda/D                                             *
+*Entries :     1373 : Total  Size=      12073 bytes  File Size  =       7102 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.63     *
+*............................................................................*
+*Br   39 :hasTrueTargetLambda : hasTrueTargetLambda/D                        *
+*Entries :     1373 : Total  Size=      12205 bytes  File Size  =       1384 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   8.42     *
+*............................................................................*
+*Br   40 :isRightCategoryLambda : isRightCategoryLambda/D                    *
+*Entries :     1373 : Total  Size=      12229 bytes  File Size  =        955 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.22     *
+*............................................................................*
+*Br   41 :qpFSC     : qpFSC/D                                                *
+*Entries :     1373 : Total  Size=      12037 bytes  File Size  =       7555 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.53     *
+*............................................................................*
+*Br   42 :hasTrueTargetFSC : hasTrueTargetFSC/D                              *
+*Entries :     1373 : Total  Size=      12169 bytes  File Size  =       1737 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   6.70     *
+*............................................................................*
+*Br   43 :isRightCategoryFSC : isRightCategoryFSC/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        918 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.69     *
+*............................................................................*
+*Br   44 :qpMaximumPstar : qpMaximumPstar/D                                  *
+*Entries :     1373 : Total  Size=      12145 bytes  File Size  =       7452 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.56     *
+*............................................................................*
+*Br   45 :hasTrueTargetMaximumPstar : hasTrueTargetMaximumPstar/D            *
+*Entries :     1373 : Total  Size=      12277 bytes  File Size  =       1041 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.24     *
+*............................................................................*
+*Br   46 :isRightCategoryMaximumPstar : isRightCategoryMaximumPstar/D        *
+*Entries :     1373 : Total  Size=      12301 bytes  File Size  =       1056 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.10     *
+*............................................................................*
+*Br   47 :qpKaonPion : qpKaonPion/D                                          *
+*Entries :     1373 : Total  Size=      12097 bytes  File Size  =       7765 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.49     *
+*............................................................................*
+*Br   48 :hasTrueTargetKaonPion : hasTrueTargetKaonPion/D                    *
+*Entries :     1373 : Total  Size=      12229 bytes  File Size  =       1797 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   6.50     *
+*............................................................................*
+*Br   49 :isRightCategoryKaonPion : isRightCategoryKaonPion/D                *
+*Entries :     1373 : Total  Size=      12253 bytes  File Size  =        958 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.20     *
+*............................................................................*
+*Br   50 :Kp_kaonID : Kp_kaonID/D                                            *
+*Entries :     1373 : Total  Size=      12085 bytes  File Size  =       8315 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.39     *
+*............................................................................*
+*Br   51 :Kp_pionID : Kp_pionID/D                                            *
+*Entries :     1373 : Total  Size=      12085 bytes  File Size  =      11027 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.05     *
+*............................................................................*
+*Br   52 :Kp_protonID : Kp_protonID/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =      11180 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.04     *
+*............................................................................*
+*Br   53 :Kp_muonID : Kp_muonID/D                                            *
+*Entries :     1373 : Total  Size=      12085 bytes  File Size  =      11073 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.05     *
+*............................................................................*
+*Br   54 :Kp_electronID : Kp_electronID/D                                    *
+*Entries :     1373 : Total  Size=      12133 bytes  File Size  =      11090 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.05     *
+*............................................................................*
+*Br   55 :Kp_electronID_noTOP : Kp_electronID_noTOP/D                        *
+*Entries :     1373 : Total  Size=      12205 bytes  File Size  =      11067 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.05     *
+*............................................................................*
+*Br   56 :Kp_deuteronID : Kp_deuteronID/D                                    *
+*Entries :     1373 : Total  Size=      12133 bytes  File Size  =      11215 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.04     *
+*............................................................................*
+*Br   57 :Kp_binaryPID_211_13 : Kp_binaryPID_211_13/D                        *
+*Entries :     1373 : Total  Size=      12205 bytes  File Size  =       8353 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.40     *
+*............................................................................*
+*Br   58 :Kp_binaryPID_211_321 : Kp_binaryPID_211_321/D                      *
+*Entries :     1373 : Total  Size=      12217 bytes  File Size  =      11135 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.05     *
+*............................................................................*
+*Br   59 :Kp_binaryPID_211_2212 : Kp_binaryPID_211_2212/D                    *
+*Entries :     1373 : Total  Size=      12229 bytes  File Size  =       8149 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.43     *
+*............................................................................*
+*Br   60 :Kp_binaryPID_321_2212 : Kp_binaryPID_321_2212/D                    *
+*Entries :     1373 : Total  Size=      12229 bytes  File Size  =       5615 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   2.08     *
+*............................................................................*
+*Br   61 :Kp_px     : Kp_px/D                                                *
+*Entries :     1373 : Total  Size=      12037 bytes  File Size  =       7518 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.54     *
+*............................................................................*
+*Br   62 :Kp_py     : Kp_py/D                                                *
+*Entries :     1373 : Total  Size=      12037 bytes  File Size  =       7514 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.54     *
+*............................................................................*
+*Br   63 :Kp_pz     : Kp_pz/D                                                *
+*Entries :     1373 : Total  Size=      12037 bytes  File Size  =       7506 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.54     *
+*............................................................................*
+*Br   64 :Kp_pt     : Kp_pt/D                                                *
+*Entries :     1373 : Total  Size=      12037 bytes  File Size  =      10778 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.07     *
+*............................................................................*
+*Br   65 :Kp_p      : Kp_p/D                                                 *
+*Entries :     1373 : Total  Size=      12025 bytes  File Size  =      10823 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.07     *
+*............................................................................*
+*Br   66 :Kp_E      : Kp_E/D                                                 *
+*Entries :     1373 : Total  Size=      12025 bytes  File Size  =      10821 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.07     *
+*............................................................................*
+*Br   67 :Kp_mcE    : Kp_mcE/D                                               *
+*Entries :     1373 : Total  Size=      12049 bytes  File Size  =      10770 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.07     *
+*............................................................................*
+*Br   68 :Kp_mcP    : Kp_mcP/D                                               *
+*Entries :     1373 : Total  Size=      12049 bytes  File Size  =      10774 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.07     *
+*............................................................................*
+*Br   69 :Kp_mcPT   : Kp_mcPT/D                                              *
+*Entries :     1373 : Total  Size=      12061 bytes  File Size  =      10787 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.07     *
+*............................................................................*
+*Br   70 :Kp_mcPX   : Kp_mcPX/D                                              *
+*Entries :     1373 : Total  Size=      12061 bytes  File Size  =       7530 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.54     *
+*............................................................................*
+*Br   71 :Kp_mcPY   : Kp_mcPY/D                                              *
+*Entries :     1373 : Total  Size=      12061 bytes  File Size  =       7539 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.53     *
+*............................................................................*
+*Br   72 :Kp_mcPZ   : Kp_mcPZ/D                                              *
+*Entries :     1373 : Total  Size=      12061 bytes  File Size  =       7573 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.53     *
+*............................................................................*
+*Br   73 :Kp_mcPhi  : Kp_mcPhi/D                                             *
+*Entries :     1373 : Total  Size=      12073 bytes  File Size  =      10954 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.06     *
+*............................................................................*
+*Br   74 :Kp_isSignal : Kp_isSignal/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       1525 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   7.60     *
+*............................................................................*
+*Br   75 :Kp_mcErrors : Kp_mcErrors/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       1506 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   7.70     *
+*............................................................................*
+*Br   76 :Kp_mcPDG  : Kp_mcPDG/D                                             *
+*Entries :     1373 : Total  Size=      12073 bytes  File Size  =       1612 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   7.18     *
+*............................................................................*
+*Br   77 :Km_kaonID : Km_kaonID/D                                            *
+*Entries :     1373 : Total  Size=      12085 bytes  File Size  =       8245 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.40     *
+*............................................................................*
+*Br   78 :Km_pionID : Km_pionID/D                                            *
+*Entries :     1373 : Total  Size=      12085 bytes  File Size  =      10900 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.06     *
+*............................................................................*
+*Br   79 :Km_protonID : Km_protonID/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =      11058 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.05     *
+*............................................................................*
+*Br   80 :Km_muonID : Km_muonID/D                                            *
+*Entries :     1373 : Total  Size=      12085 bytes  File Size  =      10984 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.05     *
+*............................................................................*
+*Br   81 :Km_electronID : Km_electronID/D                                    *
+*Entries :     1373 : Total  Size=      12133 bytes  File Size  =      10973 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.06     *
+*............................................................................*
+*Br   82 :Km_electronID_noTOP : Km_electronID_noTOP/D                        *
+*Entries :     1373 : Total  Size=      12205 bytes  File Size  =      10920 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.07     *
+*............................................................................*
+*Br   83 :Km_deuteronID : Km_deuteronID/D                                    *
+*Entries :     1373 : Total  Size=      12133 bytes  File Size  =      11089 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.05     *
+*............................................................................*
+*Br   84 :Km_binaryPID_211_13 : Km_binaryPID_211_13/D                        *
+*Entries :     1373 : Total  Size=      12205 bytes  File Size  =       7527 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.55     *
+*............................................................................*
+*Br   85 :Km_binaryPID_211_321 : Km_binaryPID_211_321/D                      *
+*Entries :     1373 : Total  Size=      12217 bytes  File Size  =      11018 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.06     *
+*............................................................................*
+*Br   86 :Km_binaryPID_211_2212 : Km_binaryPID_211_2212/D                    *
+*Entries :     1373 : Total  Size=      12229 bytes  File Size  =       7842 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.49     *
+*............................................................................*
+*Br   87 :Km_binaryPID_321_2212 : Km_binaryPID_321_2212/D                    *
+*Entries :     1373 : Total  Size=      12229 bytes  File Size  =       5354 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   2.18     *
+*............................................................................*
+*Br   88 :Km_px     : Km_px/D                                                *
+*Entries :     1373 : Total  Size=      12037 bytes  File Size  =       7495 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.54     *
+*............................................................................*
+*Br   89 :Km_py     : Km_py/D                                                *
+*Entries :     1373 : Total  Size=      12037 bytes  File Size  =       7486 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.54     *
+*............................................................................*
+*Br   90 :Km_pz     : Km_pz/D                                                *
+*Entries :     1373 : Total  Size=      12037 bytes  File Size  =       7452 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.55     *
+*............................................................................*
+*Br   91 :Km_pt     : Km_pt/D                                                *
+*Entries :     1373 : Total  Size=      12037 bytes  File Size  =      10703 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.08     *
+*............................................................................*
+*Br   92 :Km_p      : Km_p/D                                                 *
+*Entries :     1373 : Total  Size=      12025 bytes  File Size  =      10687 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.08     *
+*............................................................................*
+*Br   93 :Km_E      : Km_E/D                                                 *
+*Entries :     1373 : Total  Size=      12025 bytes  File Size  =      10711 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.08     *
+*............................................................................*
+*Br   94 :Km_mcE    : Km_mcE/D                                               *
+*Entries :     1373 : Total  Size=      12049 bytes  File Size  =      10704 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.08     *
+*............................................................................*
+*Br   95 :Km_mcP    : Km_mcP/D                                               *
+*Entries :     1373 : Total  Size=      12049 bytes  File Size  =      10723 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.08     *
+*............................................................................*
+*Br   96 :Km_mcPT   : Km_mcPT/D                                              *
+*Entries :     1373 : Total  Size=      12061 bytes  File Size  =      10717 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.08     *
+*............................................................................*
+*Br   97 :Km_mcPX   : Km_mcPX/D                                              *
+*Entries :     1373 : Total  Size=      12061 bytes  File Size  =       7524 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.54     *
+*............................................................................*
+*Br   98 :Km_mcPY   : Km_mcPY/D                                              *
+*Entries :     1373 : Total  Size=      12061 bytes  File Size  =       7511 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.54     *
+*............................................................................*
+*Br   99 :Km_mcPZ   : Km_mcPZ/D                                              *
+*Entries :     1373 : Total  Size=      12061 bytes  File Size  =       7458 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.55     *
+*............................................................................*
+*Br  100 :Km_mcPhi  : Km_mcPhi/D                                             *
+*Entries :     1373 : Total  Size=      12073 bytes  File Size  =      10848 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.07     *
+*............................................................................*
+*Br  101 :Km_isSignal : Km_isSignal/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       1316 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   8.81     *
+*............................................................................*
+*Br  102 :Km_mcErrors : Km_mcErrors/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       1264 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   9.17     *
+*............................................................................*
+*Br  103 :Km_mcPDG  : Km_mcPDG/D                                             *
+*Entries :     1373 : Total  Size=      12073 bytes  File Size  =       1305 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   8.86     *
+*............................................................................*
+*Br  104 :pi0_InvM  : pi0_InvM/D                                             *
+*Entries :     1373 : Total  Size=      12073 bytes  File Size  =      11078 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.04     *
+*............................................................................*
+*Br  105 :pi0_daughterDiffOfPhi_0_1 : pi0_daughterDiffOfPhi_0_1/D            *
+*Entries :     1373 : Total  Size=      12277 bytes  File Size  =      11599 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.01     *
+*............................................................................*
+*Br  106 :pi0_daughterAngle_0_1 : pi0_daughterAngle_0_1/D                    *
+*Entries :     1373 : Total  Size=      12229 bytes  File Size  =      11394 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.02     *
+*............................................................................*
+*Br  107 :pi0_px    : pi0_px/D                                               *
+*Entries :     1373 : Total  Size=      12049 bytes  File Size  =       7848 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.47     *
+*............................................................................*
+*Br  108 :pi0_py    : pi0_py/D                                               *
+*Entries :     1373 : Total  Size=      12049 bytes  File Size  =       7864 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.47     *
+*............................................................................*
+*Br  109 :pi0_pz    : pi0_pz/D                                               *
+*Entries :     1373 : Total  Size=      12049 bytes  File Size  =       7839 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.47     *
+*............................................................................*
+*Br  110 :pi0_pt    : pi0_pt/D                                               *
+*Entries :     1373 : Total  Size=      12049 bytes  File Size  =      11452 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.01     *
+*............................................................................*
+*Br  111 :pi0_p     : pi0_p/D                                                *
+*Entries :     1373 : Total  Size=      12037 bytes  File Size  =      11422 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.01     *
+*............................................................................*
+*Br  112 :pi0_E     : pi0_E/D                                                *
+*Entries :     1373 : Total  Size=      12037 bytes  File Size  =      11424 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.01     *
+*............................................................................*
+*Br  113 :pi0_mcE   : pi0_mcE/D                                              *
+*Entries :     1373 : Total  Size=      12061 bytes  File Size  =      10788 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.07     *
+*............................................................................*
+*Br  114 :pi0_mcP   : pi0_mcP/D                                              *
+*Entries :     1373 : Total  Size=      12061 bytes  File Size  =      10820 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.07     *
+*............................................................................*
+*Br  115 :pi0_mcPT  : pi0_mcPT/D                                             *
+*Entries :     1373 : Total  Size=      12073 bytes  File Size  =      10703 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.08     *
+*............................................................................*
+*Br  116 :pi0_mcPX  : pi0_mcPX/D                                             *
+*Entries :     1373 : Total  Size=      12073 bytes  File Size  =       7591 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.52     *
+*............................................................................*
+*Br  117 :pi0_mcPY  : pi0_mcPY/D                                             *
+*Entries :     1373 : Total  Size=      12073 bytes  File Size  =       7477 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.55     *
+*............................................................................*
+*Br  118 :pi0_mcPZ  : pi0_mcPZ/D                                             *
+*Entries :     1373 : Total  Size=      12073 bytes  File Size  =       7659 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.51     *
+*............................................................................*
+*Br  119 :pi0_mcPhi : pi0_mcPhi/D                                            *
+*Entries :     1373 : Total  Size=      12085 bytes  File Size  =      10537 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.10     *
+*............................................................................*
+*Br  120 :pi0_isSignal : pi0_isSignal/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =       1639 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   7.08     *
+*............................................................................*
+*Br  121 :pi0_mcErrors : pi0_mcErrors/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =       1819 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   6.38     *
+*............................................................................*
+*Br  122 :pi0_mcPDG : pi0_mcPDG/D                                            *
+*Entries :     1373 : Total  Size=      12085 bytes  File Size  =       1966 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   5.89     *
+*............................................................................*
+*Br  123 :gamma1_clusterTheta : gamma1_clusterTheta/D                        *
+*Entries :     1373 : Total  Size=      12205 bytes  File Size  =      11444 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.02     *
+*............................................................................*
+*Br  124 :gamma1_clusterPhi : gamma1_clusterPhi/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =      11565 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.01     *
+*............................................................................*
+*Br  125 :gamma1_clusterE : gamma1_clusterE/D                                *
+*Entries :     1373 : Total  Size=      12157 bytes  File Size  =      11329 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.03     *
+*............................................................................*
+*Br  126 :gamma1_clusterE1E9 : gamma1_clusterE1E9/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =       4302 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   2.71     *
+*............................................................................*
+*Br  127 :gamma1_clusterReg : gamma1_clusterReg/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1372 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   8.48     *
+*............................................................................*
+*Br  128 :gamma1_clusterTiming : gamma1_clusterTiming/D                      *
+*Entries :     1373 : Total  Size=      12217 bytes  File Size  =       3615 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   3.23     *
+*............................................................................*
+*Br  129 :gamma1_clusterErrorTiming : gamma1_clusterErrorTiming/D            *
+*Entries :     1373 : Total  Size=      12277 bytes  File Size  =       4799 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   2.44     *
+*............................................................................*
+*Br  130 :gamma2_clusterTheta : gamma2_clusterTheta/D                        *
+*Entries :     1373 : Total  Size=      12205 bytes  File Size  =      11287 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.03     *
+*............................................................................*
+*Br  131 :gamma2_clusterPhi : gamma2_clusterPhi/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =      11485 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.01     *
+*............................................................................*
+*Br  132 :gamma2_clusterE : gamma2_clusterE/D                                *
+*Entries :     1373 : Total  Size=      12157 bytes  File Size  =      11264 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.03     *
+*............................................................................*
+*Br  133 :gamma2_clusterE1E9 : gamma2_clusterE1E9/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =       4287 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   2.72     *
+*............................................................................*
+*Br  134 :gamma2_clusterReg : gamma2_clusterReg/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1393 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   8.36     *
+*............................................................................*
+*Br  135 :gamma2_clusterTiming : gamma2_clusterTiming/D                      *
+*Entries :     1373 : Total  Size=      12217 bytes  File Size  =       3708 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   3.15     *
+*............................................................................*
+*Br  136 :gamma2_clusterErrorTiming : gamma2_clusterErrorTiming/D            *
+*Entries :     1373 : Total  Size=      12277 bytes  File Size  =       4684 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   2.50     *
+*............................................................................*
+*Br  137 :Mbc       : Mbc/D                                                  *
+*Entries :     1373 : Total  Size=      12013 bytes  File Size  =      10677 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.08     *
+*............................................................................*
+*Br  138 :deltaE    : deltaE/D                                               *
+*Entries :     1373 : Total  Size=      12049 bytes  File Size  =      11270 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.03     *
+*............................................................................*
+*Br  139 :px        : px/D                                                   *
+*Entries :     1373 : Total  Size=      12001 bytes  File Size  =       7737 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.49     *
+*............................................................................*
+*Br  140 :py        : py/D                                                   *
+*Entries :     1373 : Total  Size=      12001 bytes  File Size  =       7810 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.48     *
+*............................................................................*
+*Br  141 :pz        : pz/D                                                   *
+*Entries :     1373 : Total  Size=      12001 bytes  File Size  =       7302 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.58     *
+*............................................................................*
+*Br  142 :pt        : pt/D                                                   *
+*Entries :     1373 : Total  Size=      12001 bytes  File Size  =      11339 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.02     *
+*............................................................................*
+*Br  143 :p         : p/D                                                    *
+*Entries :     1373 : Total  Size=      11989 bytes  File Size  =      11322 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.02     *
+*............................................................................*
+*Br  144 :E         : E/D                                                    *
+*Entries :     1373 : Total  Size=      11989 bytes  File Size  =      10999 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.05     *
+*............................................................................*
+*Br  145 :mcE       : mcE/D                                                  *
+*Entries :     1373 : Total  Size=      12013 bytes  File Size  =       9889 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.17     *
+*............................................................................*
+*Br  146 :mcP       : mcP/D                                                  *
+*Entries :     1373 : Total  Size=      12013 bytes  File Size  =      10178 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.13     *
+*............................................................................*
+*Br  147 :mcPT      : mcPT/D                                                 *
+*Entries :     1373 : Total  Size=      12025 bytes  File Size  =       8311 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.39     *
+*............................................................................*
+*Br  148 :mcPX      : mcPX/D                                                 *
+*Entries :     1373 : Total  Size=      12025 bytes  File Size  =       6549 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.76     *
+*............................................................................*
+*Br  149 :mcPY      : mcPY/D                                                 *
+*Entries :     1373 : Total  Size=      12025 bytes  File Size  =       4998 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   2.31     *
+*............................................................................*
+*Br  150 :mcPZ      : mcPZ/D                                                 *
+*Entries :     1373 : Total  Size=      12025 bytes  File Size  =       6803 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.70     *
+*............................................................................*
+*Br  151 :mcPhi     : mcPhi/D                                                *
+*Entries :     1373 : Total  Size=      12037 bytes  File Size  =       5797 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.99     *
+*............................................................................*
+*Br  152 :isSignal  : isSignal/D                                             *
+*Entries :     1373 : Total  Size=      12073 bytes  File Size  =       1651 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   7.01     *
+*............................................................................*
+*Br  153 :mcErrors  : mcErrors/D                                             *
+*Entries :     1373 : Total  Size=      12073 bytes  File Size  =       3109 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   3.72     *
+*............................................................................*
+*Br  154 :mcPDG     : mcPDG/D                                                *
+*Entries :     1373 : Total  Size=      12037 bytes  File Size  =       2023 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   5.71     *
+*............................................................................*
+*Br  155 :dr        : dr/D                                                   *
+*Entries :     1373 : Total  Size=      12001 bytes  File Size  =      11365 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.01     *
+*............................................................................*
+*Br  156 :dz        : dz/D                                                   *
+*Entries :     1373 : Total  Size=      12001 bytes  File Size  =       8898 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   1.29     *
+*............................................................................*
+*Br  157 :nMCGen    : nMCGen/D                                               *
+*Entries :     1373 : Total  Size=      12049 bytes  File Size  =       3361 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   3.44     *
+*............................................................................*
+*Br  158 :MCGenPDG_0 : MCGenPDG_0/D                                          *
+*Entries :     1373 : Total  Size=      12097 bytes  File Size  =        909 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.74     *
+*............................................................................*
+*Br  159 :MCGenMothIndex_0 : MCGenMothIndex_0/D                              *
+*Entries :     1373 : Total  Size=      12169 bytes  File Size  =        969 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.00     *
+*............................................................................*
+*Br  160 :MCGenPDG_1 : MCGenPDG_1/D                                          *
+*Entries :     1373 : Total  Size=      12097 bytes  File Size  =       1724 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   6.72     *
+*............................................................................*
+*Br  161 :MCGenMothIndex_1 : MCGenMothIndex_1/D                              *
+*Entries :     1373 : Total  Size=      12169 bytes  File Size  =        902 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.90     *
+*............................................................................*
+*Br  162 :MCGenPDG_2 : MCGenPDG_2/D                                          *
+*Entries :     1373 : Total  Size=      12097 bytes  File Size  =       1719 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   6.74     *
+*............................................................................*
+*Br  163 :MCGenMothIndex_2 : MCGenMothIndex_2/D                              *
+*Entries :     1373 : Total  Size=      12169 bytes  File Size  =        902 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.90     *
+*............................................................................*
+*Br  164 :MCGenPDG_3 : MCGenPDG_3/D                                          *
+*Entries :     1373 : Total  Size=      12097 bytes  File Size  =       3621 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   3.20     *
+*............................................................................*
+*Br  165 :MCGenMothIndex_3 : MCGenMothIndex_3/D                              *
+*Entries :     1373 : Total  Size=      12169 bytes  File Size  =        969 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.00     *
+*............................................................................*
+*Br  166 :MCGenPDG_4 : MCGenPDG_4/D                                          *
+*Entries :     1373 : Total  Size=      12097 bytes  File Size  =       3395 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   3.41     *
+*............................................................................*
+*Br  167 :MCGenMothIndex_4 : MCGenMothIndex_4/D                              *
+*Entries :     1373 : Total  Size=      12169 bytes  File Size  =        969 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.00     *
+*............................................................................*
+*Br  168 :MCGenPDG_5 : MCGenPDG_5/D                                          *
+*Entries :     1373 : Total  Size=      12097 bytes  File Size  =       3550 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   3.26     *
+*............................................................................*
+*Br  169 :MCGenMothIndex_5 : MCGenMothIndex_5/D                              *
+*Entries :     1373 : Total  Size=      12169 bytes  File Size  =       1750 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   6.65     *
+*............................................................................*
+*Br  170 :MCGenPDG_6 : MCGenPDG_6/D                                          *
+*Entries :     1373 : Total  Size=      12097 bytes  File Size  =       3700 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   3.13     *
+*............................................................................*
+*Br  171 :MCGenMothIndex_6 : MCGenMothIndex_6/D                              *
+*Entries :     1373 : Total  Size=      12169 bytes  File Size  =       1607 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   7.24     *
+*............................................................................*
+*Br  172 :MCGenPDG_7 : MCGenPDG_7/D                                          *
+*Entries :     1373 : Total  Size=      12097 bytes  File Size  =       3614 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   3.21     *
+*............................................................................*
+*Br  173 :MCGenMothIndex_7 : MCGenMothIndex_7/D                              *
+*Entries :     1373 : Total  Size=      12169 bytes  File Size  =       1720 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   6.76     *
+*............................................................................*
+*Br  174 :MCGenPDG_8 : MCGenPDG_8/D                                          *
+*Entries :     1373 : Total  Size=      12097 bytes  File Size  =       3459 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   3.35     *
+*............................................................................*
+*Br  175 :MCGenMothIndex_8 : MCGenMothIndex_8/D                              *
+*Entries :     1373 : Total  Size=      12169 bytes  File Size  =       1969 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   5.91     *
+*............................................................................*
+*Br  176 :MCGenPDG_9 : MCGenPDG_9/D                                          *
+*Entries :     1373 : Total  Size=      12097 bytes  File Size  =       3313 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   3.50     *
+*............................................................................*
+*Br  177 :MCGenMothIndex_9 : MCGenMothIndex_9/D                              *
+*Entries :     1373 : Total  Size=      12169 bytes  File Size  =       2150 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   5.41     *
+*............................................................................*
+*Br  178 :MCGenPDG_10 : MCGenPDG_10/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       3209 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   3.61     *
+*............................................................................*
+*Br  179 :MCGenMothIndex_10 : MCGenMothIndex_10/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       2292 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   5.08     *
+*............................................................................*
+*Br  180 :MCGenPDG_11 : MCGenPDG_11/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       3042 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   3.81     *
+*............................................................................*
+*Br  181 :MCGenMothIndex_11 : MCGenMothIndex_11/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       2394 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   4.86     *
+*............................................................................*
+*Br  182 :MCGenPDG_12 : MCGenPDG_12/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       3018 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   3.84     *
+*............................................................................*
+*Br  183 :MCGenMothIndex_12 : MCGenMothIndex_12/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       2460 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   4.73     *
+*............................................................................*
+*Br  184 :MCGenPDG_13 : MCGenPDG_13/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       2967 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   3.91     *
+*............................................................................*
+*Br  185 :MCGenMothIndex_13 : MCGenMothIndex_13/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       2446 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   4.76     *
+*............................................................................*
+*Br  186 :MCGenPDG_14 : MCGenPDG_14/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       2974 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   3.90     *
+*............................................................................*
+*Br  187 :MCGenMothIndex_14 : MCGenMothIndex_14/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       2470 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   4.71     *
+*............................................................................*
+*Br  188 :MCGenPDG_15 : MCGenPDG_15/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       2920 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   3.97     *
+*............................................................................*
+*Br  189 :MCGenMothIndex_15 : MCGenMothIndex_15/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       2445 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   4.76     *
+*............................................................................*
+*Br  190 :MCGenPDG_16 : MCGenPDG_16/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       2867 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   4.04     *
+*............................................................................*
+*Br  191 :MCGenMothIndex_16 : MCGenMothIndex_16/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       2450 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   4.75     *
+*............................................................................*
+*Br  192 :MCGenPDG_17 : MCGenPDG_17/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       2768 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   4.19     *
+*............................................................................*
+*Br  193 :MCGenMothIndex_17 : MCGenMothIndex_17/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       2452 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   4.75     *
+*............................................................................*
+*Br  194 :MCGenPDG_18 : MCGenPDG_18/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       2799 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   4.14     *
+*............................................................................*
+*Br  195 :MCGenMothIndex_18 : MCGenMothIndex_18/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       2449 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   4.75     *
+*............................................................................*
+*Br  196 :MCGenPDG_19 : MCGenPDG_19/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       2749 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   4.22     *
+*............................................................................*
+*Br  197 :MCGenMothIndex_19 : MCGenMothIndex_19/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       2531 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   4.60     *
+*............................................................................*
+*Br  198 :MCGenPDG_20 : MCGenPDG_20/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       2757 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   4.20     *
+*............................................................................*
+*Br  199 :MCGenMothIndex_20 : MCGenMothIndex_20/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       2543 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   4.58     *
+*............................................................................*
+*Br  200 :MCGenPDG_21 : MCGenPDG_21/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       2750 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   4.22     *
+*............................................................................*
+*Br  201 :MCGenMothIndex_21 : MCGenMothIndex_21/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       2506 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   4.64     *
+*............................................................................*
+*Br  202 :MCGenPDG_22 : MCGenPDG_22/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       2713 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   4.27     *
+*............................................................................*
+*Br  203 :MCGenMothIndex_22 : MCGenMothIndex_22/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       2541 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   4.58     *
+*............................................................................*
+*Br  204 :MCGenPDG_23 : MCGenPDG_23/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       2693 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   4.30     *
+*............................................................................*
+*Br  205 :MCGenMothIndex_23 : MCGenMothIndex_23/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       2530 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   4.60     *
+*............................................................................*
+*Br  206 :MCGenPDG_24 : MCGenPDG_24/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       2692 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   4.31     *
+*............................................................................*
+*Br  207 :MCGenMothIndex_24 : MCGenMothIndex_24/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       2554 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   4.56     *
+*............................................................................*
+*Br  208 :MCGenPDG_25 : MCGenPDG_25/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       2640 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   4.39     *
+*............................................................................*
+*Br  209 :MCGenMothIndex_25 : MCGenMothIndex_25/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       2523 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   4.61     *
+*............................................................................*
+*Br  210 :MCGenPDG_26 : MCGenPDG_26/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       2634 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   4.40     *
+*............................................................................*
+*Br  211 :MCGenMothIndex_26 : MCGenMothIndex_26/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       2554 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   4.56     *
+*............................................................................*
+*Br  212 :MCGenPDG_27 : MCGenPDG_27/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       2577 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   4.50     *
+*............................................................................*
+*Br  213 :MCGenMothIndex_27 : MCGenMothIndex_27/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       2527 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   4.61     *
+*............................................................................*
+*Br  214 :MCGenPDG_28 : MCGenPDG_28/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       2532 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   4.58     *
+*............................................................................*
+*Br  215 :MCGenMothIndex_28 : MCGenMothIndex_28/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       2467 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   4.72     *
+*............................................................................*
+*Br  216 :MCGenPDG_29 : MCGenPDG_29/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       2507 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   4.62     *
+*............................................................................*
+*Br  217 :MCGenMothIndex_29 : MCGenMothIndex_29/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       2534 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   4.59     *
+*............................................................................*
+*Br  218 :MCGenPDG_30 : MCGenPDG_30/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       2530 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   4.58     *
+*............................................................................*
+*Br  219 :MCGenMothIndex_30 : MCGenMothIndex_30/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       2482 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   4.69     *
+*............................................................................*
+*Br  220 :MCGenPDG_31 : MCGenPDG_31/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       2438 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   4.75     *
+*............................................................................*
+*Br  221 :MCGenMothIndex_31 : MCGenMothIndex_31/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       2460 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   4.73     *
+*............................................................................*
+*Br  222 :MCGenPDG_32 : MCGenPDG_32/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       2435 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   4.76     *
+*............................................................................*
+*Br  223 :MCGenMothIndex_32 : MCGenMothIndex_32/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       2433 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   4.78     *
+*............................................................................*
+*Br  224 :MCGenPDG_33 : MCGenPDG_33/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       2336 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   4.96     *
+*............................................................................*
+*Br  225 :MCGenMothIndex_33 : MCGenMothIndex_33/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       2361 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   4.93     *
+*............................................................................*
+*Br  226 :MCGenPDG_34 : MCGenPDG_34/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       2204 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   5.26     *
+*............................................................................*
+*Br  227 :MCGenMothIndex_34 : MCGenMothIndex_34/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       2330 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   5.00     *
+*............................................................................*
+*Br  228 :MCGenPDG_35 : MCGenPDG_35/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       2212 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   5.24     *
+*............................................................................*
+*Br  229 :MCGenMothIndex_35 : MCGenMothIndex_35/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       2299 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   5.06     *
+*............................................................................*
+*Br  230 :MCGenPDG_36 : MCGenPDG_36/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       2215 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   5.23     *
+*............................................................................*
+*Br  231 :MCGenMothIndex_36 : MCGenMothIndex_36/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       2231 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   5.22     *
+*............................................................................*
+*Br  232 :MCGenPDG_37 : MCGenPDG_37/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       2193 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   5.29     *
+*............................................................................*
+*Br  233 :MCGenMothIndex_37 : MCGenMothIndex_37/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       2317 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   5.02     *
+*............................................................................*
+*Br  234 :MCGenPDG_38 : MCGenPDG_38/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       2131 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   5.44     *
+*............................................................................*
+*Br  235 :MCGenMothIndex_38 : MCGenMothIndex_38/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       2314 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   5.03     *
+*............................................................................*
+*Br  236 :MCGenPDG_39 : MCGenPDG_39/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       2016 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   5.75     *
+*............................................................................*
+*Br  237 :MCGenMothIndex_39 : MCGenMothIndex_39/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       2175 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   5.35     *
+*............................................................................*
+*Br  238 :MCGenPDG_40 : MCGenPDG_40/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       2019 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   5.74     *
+*............................................................................*
+*Br  239 :MCGenMothIndex_40 : MCGenMothIndex_40/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       2148 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   5.42     *
+*............................................................................*
+*Br  240 :MCGenPDG_41 : MCGenPDG_41/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       1948 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   5.95     *
+*............................................................................*
+*Br  241 :MCGenMothIndex_41 : MCGenMothIndex_41/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       2121 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   5.49     *
+*............................................................................*
+*Br  242 :MCGenPDG_42 : MCGenPDG_42/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       1866 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   6.21     *
+*............................................................................*
+*Br  243 :MCGenMothIndex_42 : MCGenMothIndex_42/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       2067 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   5.63     *
+*............................................................................*
+*Br  244 :MCGenPDG_43 : MCGenPDG_43/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       1955 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   5.93     *
+*............................................................................*
+*Br  245 :MCGenMothIndex_43 : MCGenMothIndex_43/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       2170 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   5.36     *
+*............................................................................*
+*Br  246 :MCGenPDG_44 : MCGenPDG_44/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       1892 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   6.13     *
+*............................................................................*
+*Br  247 :MCGenMothIndex_44 : MCGenMothIndex_44/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       2091 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   5.57     *
+*............................................................................*
+*Br  248 :MCGenPDG_45 : MCGenPDG_45/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       1902 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   6.09     *
+*............................................................................*
+*Br  249 :MCGenMothIndex_45 : MCGenMothIndex_45/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       2051 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   5.68     *
+*............................................................................*
+*Br  250 :MCGenPDG_46 : MCGenPDG_46/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       1887 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   6.14     *
+*............................................................................*
+*Br  251 :MCGenMothIndex_46 : MCGenMothIndex_46/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       2031 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   5.73     *
+*............................................................................*
+*Br  252 :MCGenPDG_47 : MCGenPDG_47/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       1782 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   6.51     *
+*............................................................................*
+*Br  253 :MCGenMothIndex_47 : MCGenMothIndex_47/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1945 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   5.98     *
+*............................................................................*
+*Br  254 :MCGenPDG_48 : MCGenPDG_48/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       1800 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   6.44     *
+*............................................................................*
+*Br  255 :MCGenMothIndex_48 : MCGenMothIndex_48/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1960 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   5.94     *
+*............................................................................*
+*Br  256 :MCGenPDG_49 : MCGenPDG_49/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       1698 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   6.83     *
+*............................................................................*
+*Br  257 :MCGenMothIndex_49 : MCGenMothIndex_49/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1840 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   6.33     *
+*............................................................................*
+*Br  258 :MCGenPDG_50 : MCGenPDG_50/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       1710 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   6.78     *
+*............................................................................*
+*Br  259 :MCGenMothIndex_50 : MCGenMothIndex_50/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1829 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   6.36     *
+*............................................................................*
+*Br  260 :MCGenPDG_51 : MCGenPDG_51/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       1707 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   6.79     *
+*............................................................................*
+*Br  261 :MCGenMothIndex_51 : MCGenMothIndex_51/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1874 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   6.21     *
+*............................................................................*
+*Br  262 :MCGenPDG_52 : MCGenPDG_52/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       1661 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   6.98     *
+*............................................................................*
+*Br  263 :MCGenMothIndex_52 : MCGenMothIndex_52/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1862 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   6.25     *
+*............................................................................*
+*Br  264 :MCGenPDG_53 : MCGenPDG_53/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       1654 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   7.01     *
+*............................................................................*
+*Br  265 :MCGenMothIndex_53 : MCGenMothIndex_53/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1794 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   6.49     *
+*............................................................................*
+*Br  266 :MCGenPDG_54 : MCGenPDG_54/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       1547 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   7.49     *
+*............................................................................*
+*Br  267 :MCGenMothIndex_54 : MCGenMothIndex_54/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1742 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   6.68     *
+*............................................................................*
+*Br  268 :MCGenPDG_55 : MCGenPDG_55/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       1500 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   7.73     *
+*............................................................................*
+*Br  269 :MCGenMothIndex_55 : MCGenMothIndex_55/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1663 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   7.00     *
+*............................................................................*
+*Br  270 :MCGenPDG_56 : MCGenPDG_56/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       1499 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   7.73     *
+*............................................................................*
+*Br  271 :MCGenMothIndex_56 : MCGenMothIndex_56/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1661 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   7.01     *
+*............................................................................*
+*Br  272 :MCGenPDG_57 : MCGenPDG_57/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       1545 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   7.50     *
+*............................................................................*
+*Br  273 :MCGenMothIndex_57 : MCGenMothIndex_57/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1718 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   6.78     *
+*............................................................................*
+*Br  274 :MCGenPDG_58 : MCGenPDG_58/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       1485 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   7.81     *
+*............................................................................*
+*Br  275 :MCGenMothIndex_58 : MCGenMothIndex_58/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1582 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   7.36     *
+*............................................................................*
+*Br  276 :MCGenPDG_59 : MCGenPDG_59/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       1386 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   8.36     *
+*............................................................................*
+*Br  277 :MCGenMothIndex_59 : MCGenMothIndex_59/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1532 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   7.60     *
+*............................................................................*
+*Br  278 :MCGenPDG_60 : MCGenPDG_60/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       1393 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   8.32     *
+*............................................................................*
+*Br  279 :MCGenMothIndex_60 : MCGenMothIndex_60/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1561 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   7.46     *
+*............................................................................*
+*Br  280 :MCGenPDG_61 : MCGenPDG_61/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       1341 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   8.64     *
+*............................................................................*
+*Br  281 :MCGenMothIndex_61 : MCGenMothIndex_61/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1510 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   7.71     *
+*............................................................................*
+*Br  282 :MCGenPDG_62 : MCGenPDG_62/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       1292 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   8.97     *
+*............................................................................*
+*Br  283 :MCGenMothIndex_62 : MCGenMothIndex_62/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1499 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   7.77     *
+*............................................................................*
+*Br  284 :MCGenPDG_63 : MCGenPDG_63/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       1293 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   8.97     *
+*............................................................................*
+*Br  285 :MCGenMothIndex_63 : MCGenMothIndex_63/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1460 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   7.97     *
+*............................................................................*
+*Br  286 :MCGenPDG_64 : MCGenPDG_64/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       1194 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   9.71     *
+*............................................................................*
+*Br  287 :MCGenMothIndex_64 : MCGenMothIndex_64/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1385 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   8.40     *
+*............................................................................*
+*Br  288 :MCGenPDG_65 : MCGenPDG_65/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       1193 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   9.72     *
+*............................................................................*
+*Br  289 :MCGenMothIndex_65 : MCGenMothIndex_65/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1359 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   8.57     *
+*............................................................................*
+*Br  290 :MCGenPDG_66 : MCGenPDG_66/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       1172 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   9.89     *
+*............................................................................*
+*Br  291 :MCGenMothIndex_66 : MCGenMothIndex_66/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1314 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   8.86     *
+*............................................................................*
+*Br  292 :MCGenPDG_67 : MCGenPDG_67/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       1165 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   9.95     *
+*............................................................................*
+*Br  293 :MCGenMothIndex_67 : MCGenMothIndex_67/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1280 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   9.09     *
+*............................................................................*
+*Br  294 :MCGenPDG_68 : MCGenPDG_68/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       1224 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   9.47     *
+*............................................................................*
+*Br  295 :MCGenMothIndex_68 : MCGenMothIndex_68/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1370 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   8.50     *
+*............................................................................*
+*Br  296 :MCGenPDG_69 : MCGenPDG_69/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       1172 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   9.89     *
+*............................................................................*
+*Br  297 :MCGenMothIndex_69 : MCGenMothIndex_69/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1304 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   8.93     *
+*............................................................................*
+*Br  298 :MCGenPDG_70 : MCGenPDG_70/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       1134 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  10.22     *
+*............................................................................*
+*Br  299 :MCGenMothIndex_70 : MCGenMothIndex_70/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1287 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   9.04     *
+*............................................................................*
+*Br  300 :MCGenPDG_71 : MCGenPDG_71/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       1088 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  10.65     *
+*............................................................................*
+*Br  301 :MCGenMothIndex_71 : MCGenMothIndex_71/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1234 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   9.43     *
+*............................................................................*
+*Br  302 :MCGenPDG_72 : MCGenPDG_72/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       1034 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.21     *
+*............................................................................*
+*Br  303 :MCGenMothIndex_72 : MCGenMothIndex_72/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1113 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  10.46     *
+*............................................................................*
+*Br  304 :MCGenPDG_73 : MCGenPDG_73/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       1072 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  10.81     *
+*............................................................................*
+*Br  305 :MCGenMothIndex_73 : MCGenMothIndex_73/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1163 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  10.01     *
+*............................................................................*
+*Br  306 :MCGenPDG_74 : MCGenPDG_74/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       1101 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  10.53     *
+*............................................................................*
+*Br  307 :MCGenMothIndex_74 : MCGenMothIndex_74/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1176 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=   9.90     *
+*............................................................................*
+*Br  308 :MCGenPDG_75 : MCGenPDG_75/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       1069 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  10.84     *
+*............................................................................*
+*Br  309 :MCGenMothIndex_75 : MCGenMothIndex_75/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1153 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  10.10     *
+*............................................................................*
+*Br  310 :MCGenPDG_76 : MCGenPDG_76/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       1027 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.29     *
+*............................................................................*
+*Br  311 :MCGenMothIndex_76 : MCGenMothIndex_76/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1096 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  10.62     *
+*............................................................................*
+*Br  312 :MCGenPDG_77 : MCGenPDG_77/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       1045 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.09     *
+*............................................................................*
+*Br  313 :MCGenMothIndex_77 : MCGenMothIndex_77/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1117 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  10.42     *
+*............................................................................*
+*Br  314 :MCGenPDG_78 : MCGenPDG_78/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       1049 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.05     *
+*............................................................................*
+*Br  315 :MCGenMothIndex_78 : MCGenMothIndex_78/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1121 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  10.38     *
+*............................................................................*
+*Br  316 :MCGenPDG_79 : MCGenPDG_79/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       1036 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.19     *
+*............................................................................*
+*Br  317 :MCGenMothIndex_79 : MCGenMothIndex_79/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1131 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  10.29     *
+*............................................................................*
+*Br  318 :MCGenPDG_80 : MCGenPDG_80/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       1043 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.11     *
+*............................................................................*
+*Br  319 :MCGenMothIndex_80 : MCGenMothIndex_80/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1110 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  10.49     *
+*............................................................................*
+*Br  320 :MCGenPDG_81 : MCGenPDG_81/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =       1013 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.44     *
+*............................................................................*
+*Br  321 :MCGenMothIndex_81 : MCGenMothIndex_81/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1081 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  10.77     *
+*............................................................................*
+*Br  322 :MCGenPDG_82 : MCGenPDG_82/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =        998 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.62     *
+*............................................................................*
+*Br  323 :MCGenMothIndex_82 : MCGenMothIndex_82/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1071 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  10.87     *
+*............................................................................*
+*Br  324 :MCGenPDG_83 : MCGenPDG_83/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =        968 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.98     *
+*............................................................................*
+*Br  325 :MCGenMothIndex_83 : MCGenMothIndex_83/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1034 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.26     *
+*............................................................................*
+*Br  326 :MCGenPDG_84 : MCGenPDG_84/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =        970 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.95     *
+*............................................................................*
+*Br  327 :MCGenMothIndex_84 : MCGenMothIndex_84/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1023 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.38     *
+*............................................................................*
+*Br  328 :MCGenPDG_85 : MCGenPDG_85/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =        961 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.06     *
+*............................................................................*
+*Br  329 :MCGenMothIndex_85 : MCGenMothIndex_85/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1016 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.46     *
+*............................................................................*
+*Br  330 :MCGenPDG_86 : MCGenPDG_86/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =        972 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.93     *
+*............................................................................*
+*Br  331 :MCGenMothIndex_86 : MCGenMothIndex_86/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1038 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.21     *
+*............................................................................*
+*Br  332 :MCGenPDG_87 : MCGenPDG_87/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =        987 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.74     *
+*............................................................................*
+*Br  333 :MCGenMothIndex_87 : MCGenMothIndex_87/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1074 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  10.84     *
+*............................................................................*
+*Br  334 :MCGenPDG_88 : MCGenPDG_88/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =        975 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.89     *
+*............................................................................*
+*Br  335 :MCGenMothIndex_88 : MCGenMothIndex_88/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1043 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.16     *
+*............................................................................*
+*Br  336 :MCGenPDG_89 : MCGenPDG_89/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =        970 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.95     *
+*............................................................................*
+*Br  337 :MCGenMothIndex_89 : MCGenMothIndex_89/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1027 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.33     *
+*............................................................................*
+*Br  338 :MCGenPDG_90 : MCGenPDG_90/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =        968 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.98     *
+*............................................................................*
+*Br  339 :MCGenMothIndex_90 : MCGenMothIndex_90/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1028 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.32     *
+*............................................................................*
+*Br  340 :MCGenPDG_91 : MCGenPDG_91/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =        952 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.18     *
+*............................................................................*
+*Br  341 :MCGenMothIndex_91 : MCGenMothIndex_91/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1002 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.62     *
+*............................................................................*
+*Br  342 :MCGenPDG_92 : MCGenPDG_92/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =        952 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.18     *
+*............................................................................*
+*Br  343 :MCGenMothIndex_92 : MCGenMothIndex_92/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =       1010 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.52     *
+*............................................................................*
+*Br  344 :MCGenPDG_93 : MCGenPDG_93/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =        939 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.35     *
+*............................................................................*
+*Br  345 :MCGenMothIndex_93 : MCGenMothIndex_93/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =        990 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.76     *
+*............................................................................*
+*Br  346 :MCGenPDG_94 : MCGenPDG_94/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =        929 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.48     *
+*............................................................................*
+*Br  347 :MCGenMothIndex_94 : MCGenMothIndex_94/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =        977 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.91     *
+*............................................................................*
+*Br  348 :MCGenPDG_95 : MCGenPDG_95/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =        939 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.35     *
+*............................................................................*
+*Br  349 :MCGenMothIndex_95 : MCGenMothIndex_95/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =        993 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.72     *
+*............................................................................*
+*Br  350 :MCGenPDG_96 : MCGenPDG_96/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =        939 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.35     *
+*............................................................................*
+*Br  351 :MCGenMothIndex_96 : MCGenMothIndex_96/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =        993 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.72     *
+*............................................................................*
+*Br  352 :MCGenPDG_97 : MCGenPDG_97/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =        939 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.35     *
+*............................................................................*
+*Br  353 :MCGenMothIndex_97 : MCGenMothIndex_97/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =        994 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.71     *
+*............................................................................*
+*Br  354 :MCGenPDG_98 : MCGenPDG_98/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =        939 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.35     *
+*............................................................................*
+*Br  355 :MCGenMothIndex_98 : MCGenMothIndex_98/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =        994 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.71     *
+*............................................................................*
+*Br  356 :MCGenPDG_99 : MCGenPDG_99/D                                        *
+*Entries :     1373 : Total  Size=      12109 bytes  File Size  =        939 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.35     *
+*............................................................................*
+*Br  357 :MCGenMothIndex_99 : MCGenMothIndex_99/D                            *
+*Entries :     1373 : Total  Size=      12181 bytes  File Size  =        987 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.79     *
+*............................................................................*
+*Br  358 :MCGenPDG_100 : MCGenPDG_100/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        947 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.25     *
+*............................................................................*
+*Br  359 :MCGenMothIndex_100 : MCGenMothIndex_100/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        995 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.71     *
+*............................................................................*
+*Br  360 :MCGenPDG_101 : MCGenPDG_101/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  361 :MCGenMothIndex_101 : MCGenMothIndex_101/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  362 :MCGenPDG_102 : MCGenPDG_102/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  363 :MCGenMothIndex_102 : MCGenMothIndex_102/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  364 :MCGenPDG_103 : MCGenPDG_103/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  365 :MCGenMothIndex_103 : MCGenMothIndex_103/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  366 :MCGenPDG_104 : MCGenPDG_104/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  367 :MCGenMothIndex_104 : MCGenMothIndex_104/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  368 :MCGenPDG_105 : MCGenPDG_105/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  369 :MCGenMothIndex_105 : MCGenMothIndex_105/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  370 :MCGenPDG_106 : MCGenPDG_106/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  371 :MCGenMothIndex_106 : MCGenMothIndex_106/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  372 :MCGenPDG_107 : MCGenPDG_107/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  373 :MCGenMothIndex_107 : MCGenMothIndex_107/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  374 :MCGenPDG_108 : MCGenPDG_108/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  375 :MCGenMothIndex_108 : MCGenMothIndex_108/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  376 :MCGenPDG_109 : MCGenPDG_109/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  377 :MCGenMothIndex_109 : MCGenMothIndex_109/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  378 :MCGenPDG_110 : MCGenPDG_110/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  379 :MCGenMothIndex_110 : MCGenMothIndex_110/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  380 :MCGenPDG_111 : MCGenPDG_111/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  381 :MCGenMothIndex_111 : MCGenMothIndex_111/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  382 :MCGenPDG_112 : MCGenPDG_112/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  383 :MCGenMothIndex_112 : MCGenMothIndex_112/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  384 :MCGenPDG_113 : MCGenPDG_113/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  385 :MCGenMothIndex_113 : MCGenMothIndex_113/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  386 :MCGenPDG_114 : MCGenPDG_114/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  387 :MCGenMothIndex_114 : MCGenMothIndex_114/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  388 :MCGenPDG_115 : MCGenPDG_115/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  389 :MCGenMothIndex_115 : MCGenMothIndex_115/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  390 :MCGenPDG_116 : MCGenPDG_116/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  391 :MCGenMothIndex_116 : MCGenMothIndex_116/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  392 :MCGenPDG_117 : MCGenPDG_117/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  393 :MCGenMothIndex_117 : MCGenMothIndex_117/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  394 :MCGenPDG_118 : MCGenPDG_118/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  395 :MCGenMothIndex_118 : MCGenMothIndex_118/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  396 :MCGenPDG_119 : MCGenPDG_119/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  397 :MCGenMothIndex_119 : MCGenMothIndex_119/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  398 :MCGenPDG_120 : MCGenPDG_120/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  399 :MCGenMothIndex_120 : MCGenMothIndex_120/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  400 :MCGenPDG_121 : MCGenPDG_121/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  401 :MCGenMothIndex_121 : MCGenMothIndex_121/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  402 :MCGenPDG_122 : MCGenPDG_122/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  403 :MCGenMothIndex_122 : MCGenMothIndex_122/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  404 :MCGenPDG_123 : MCGenPDG_123/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  405 :MCGenMothIndex_123 : MCGenMothIndex_123/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  406 :MCGenPDG_124 : MCGenPDG_124/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  407 :MCGenMothIndex_124 : MCGenMothIndex_124/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  408 :MCGenPDG_125 : MCGenPDG_125/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  409 :MCGenMothIndex_125 : MCGenMothIndex_125/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  410 :MCGenPDG_126 : MCGenPDG_126/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  411 :MCGenMothIndex_126 : MCGenMothIndex_126/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  412 :MCGenPDG_127 : MCGenPDG_127/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  413 :MCGenMothIndex_127 : MCGenMothIndex_127/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  414 :MCGenPDG_128 : MCGenPDG_128/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  415 :MCGenMothIndex_128 : MCGenMothIndex_128/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  416 :MCGenPDG_129 : MCGenPDG_129/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  417 :MCGenMothIndex_129 : MCGenMothIndex_129/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  418 :MCGenPDG_130 : MCGenPDG_130/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  419 :MCGenMothIndex_130 : MCGenMothIndex_130/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  420 :MCGenPDG_131 : MCGenPDG_131/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  421 :MCGenMothIndex_131 : MCGenMothIndex_131/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  422 :MCGenPDG_132 : MCGenPDG_132/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  423 :MCGenMothIndex_132 : MCGenMothIndex_132/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  424 :MCGenPDG_133 : MCGenPDG_133/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  425 :MCGenMothIndex_133 : MCGenMothIndex_133/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  426 :MCGenPDG_134 : MCGenPDG_134/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  427 :MCGenMothIndex_134 : MCGenMothIndex_134/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  428 :MCGenPDG_135 : MCGenPDG_135/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  429 :MCGenMothIndex_135 : MCGenMothIndex_135/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  430 :MCGenPDG_136 : MCGenPDG_136/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  431 :MCGenMothIndex_136 : MCGenMothIndex_136/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  432 :MCGenPDG_137 : MCGenPDG_137/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  433 :MCGenMothIndex_137 : MCGenMothIndex_137/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  434 :MCGenPDG_138 : MCGenPDG_138/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  435 :MCGenMothIndex_138 : MCGenMothIndex_138/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  436 :MCGenPDG_139 : MCGenPDG_139/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  437 :MCGenMothIndex_139 : MCGenMothIndex_139/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  438 :MCGenPDG_140 : MCGenPDG_140/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  439 :MCGenMothIndex_140 : MCGenMothIndex_140/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  440 :MCGenPDG_141 : MCGenPDG_141/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  441 :MCGenMothIndex_141 : MCGenMothIndex_141/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  442 :MCGenPDG_142 : MCGenPDG_142/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  443 :MCGenMothIndex_142 : MCGenMothIndex_142/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  444 :MCGenPDG_143 : MCGenPDG_143/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  445 :MCGenMothIndex_143 : MCGenMothIndex_143/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  446 :MCGenPDG_144 : MCGenPDG_144/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  447 :MCGenMothIndex_144 : MCGenMothIndex_144/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  448 :MCGenPDG_145 : MCGenPDG_145/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  449 :MCGenMothIndex_145 : MCGenMothIndex_145/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  450 :MCGenPDG_146 : MCGenPDG_146/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  451 :MCGenMothIndex_146 : MCGenMothIndex_146/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  452 :MCGenPDG_147 : MCGenPDG_147/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  453 :MCGenMothIndex_147 : MCGenMothIndex_147/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  454 :MCGenPDG_148 : MCGenPDG_148/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  455 :MCGenMothIndex_148 : MCGenMothIndex_148/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  456 :MCGenPDG_149 : MCGenPDG_149/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  457 :MCGenMothIndex_149 : MCGenMothIndex_149/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  458 :MCGenPDG_150 : MCGenPDG_150/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  459 :MCGenMothIndex_150 : MCGenMothIndex_150/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  460 :MCGenPDG_151 : MCGenPDG_151/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  461 :MCGenMothIndex_151 : MCGenMothIndex_151/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  462 :MCGenPDG_152 : MCGenPDG_152/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  463 :MCGenMothIndex_152 : MCGenMothIndex_152/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  464 :MCGenPDG_153 : MCGenPDG_153/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  465 :MCGenMothIndex_153 : MCGenMothIndex_153/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  466 :MCGenPDG_154 : MCGenPDG_154/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  467 :MCGenMothIndex_154 : MCGenMothIndex_154/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  468 :MCGenPDG_155 : MCGenPDG_155/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  469 :MCGenMothIndex_155 : MCGenMothIndex_155/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  470 :MCGenPDG_156 : MCGenPDG_156/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  471 :MCGenMothIndex_156 : MCGenMothIndex_156/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  472 :MCGenPDG_157 : MCGenPDG_157/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  473 :MCGenMothIndex_157 : MCGenMothIndex_157/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  474 :MCGenPDG_158 : MCGenPDG_158/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  475 :MCGenMothIndex_158 : MCGenMothIndex_158/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  476 :MCGenPDG_159 : MCGenPDG_159/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  477 :MCGenMothIndex_159 : MCGenMothIndex_159/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  478 :MCGenPDG_160 : MCGenPDG_160/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  479 :MCGenMothIndex_160 : MCGenMothIndex_160/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  480 :MCGenPDG_161 : MCGenPDG_161/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  481 :MCGenMothIndex_161 : MCGenMothIndex_161/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  482 :MCGenPDG_162 : MCGenPDG_162/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  483 :MCGenMothIndex_162 : MCGenMothIndex_162/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  484 :MCGenPDG_163 : MCGenPDG_163/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  485 :MCGenMothIndex_163 : MCGenMothIndex_163/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  486 :MCGenPDG_164 : MCGenPDG_164/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  487 :MCGenMothIndex_164 : MCGenMothIndex_164/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  488 :MCGenPDG_165 : MCGenPDG_165/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  489 :MCGenMothIndex_165 : MCGenMothIndex_165/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  490 :MCGenPDG_166 : MCGenPDG_166/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  491 :MCGenMothIndex_166 : MCGenMothIndex_166/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  492 :MCGenPDG_167 : MCGenPDG_167/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  493 :MCGenMothIndex_167 : MCGenMothIndex_167/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  494 :MCGenPDG_168 : MCGenPDG_168/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  495 :MCGenMothIndex_168 : MCGenMothIndex_168/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  496 :MCGenPDG_169 : MCGenPDG_169/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  497 :MCGenMothIndex_169 : MCGenMothIndex_169/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  498 :MCGenPDG_170 : MCGenPDG_170/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  499 :MCGenMothIndex_170 : MCGenMothIndex_170/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  500 :MCGenPDG_171 : MCGenPDG_171/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  501 :MCGenMothIndex_171 : MCGenMothIndex_171/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  502 :MCGenPDG_172 : MCGenPDG_172/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  503 :MCGenMothIndex_172 : MCGenMothIndex_172/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  504 :MCGenPDG_173 : MCGenPDG_173/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  505 :MCGenMothIndex_173 : MCGenMothIndex_173/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  506 :MCGenPDG_174 : MCGenPDG_174/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  507 :MCGenMothIndex_174 : MCGenMothIndex_174/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  508 :MCGenPDG_175 : MCGenPDG_175/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  509 :MCGenMothIndex_175 : MCGenMothIndex_175/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  510 :MCGenPDG_176 : MCGenPDG_176/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  511 :MCGenMothIndex_176 : MCGenMothIndex_176/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  512 :MCGenPDG_177 : MCGenPDG_177/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  513 :MCGenMothIndex_177 : MCGenMothIndex_177/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  514 :MCGenPDG_178 : MCGenPDG_178/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  515 :MCGenMothIndex_178 : MCGenMothIndex_178/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  516 :MCGenPDG_179 : MCGenPDG_179/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  517 :MCGenMothIndex_179 : MCGenMothIndex_179/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  518 :MCGenPDG_180 : MCGenPDG_180/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  519 :MCGenMothIndex_180 : MCGenMothIndex_180/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  520 :MCGenPDG_181 : MCGenPDG_181/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  521 :MCGenMothIndex_181 : MCGenMothIndex_181/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  522 :MCGenPDG_182 : MCGenPDG_182/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  523 :MCGenMothIndex_182 : MCGenMothIndex_182/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  524 :MCGenPDG_183 : MCGenPDG_183/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  525 :MCGenMothIndex_183 : MCGenMothIndex_183/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  526 :MCGenPDG_184 : MCGenPDG_184/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  527 :MCGenMothIndex_184 : MCGenMothIndex_184/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  528 :MCGenPDG_185 : MCGenPDG_185/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  529 :MCGenMothIndex_185 : MCGenMothIndex_185/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  530 :MCGenPDG_186 : MCGenPDG_186/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  531 :MCGenMothIndex_186 : MCGenMothIndex_186/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  532 :MCGenPDG_187 : MCGenPDG_187/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  533 :MCGenMothIndex_187 : MCGenMothIndex_187/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  534 :MCGenPDG_188 : MCGenPDG_188/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  535 :MCGenMothIndex_188 : MCGenMothIndex_188/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  536 :MCGenPDG_189 : MCGenPDG_189/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  537 :MCGenMothIndex_189 : MCGenMothIndex_189/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  538 :MCGenPDG_190 : MCGenPDG_190/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  539 :MCGenMothIndex_190 : MCGenMothIndex_190/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  540 :MCGenPDG_191 : MCGenPDG_191/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  541 :MCGenMothIndex_191 : MCGenMothIndex_191/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  542 :MCGenPDG_192 : MCGenPDG_192/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  543 :MCGenMothIndex_192 : MCGenMothIndex_192/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  544 :MCGenPDG_193 : MCGenPDG_193/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  545 :MCGenMothIndex_193 : MCGenMothIndex_193/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  546 :MCGenPDG_194 : MCGenPDG_194/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  547 :MCGenMothIndex_194 : MCGenMothIndex_194/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  548 :MCGenPDG_195 : MCGenPDG_195/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  549 :MCGenMothIndex_195 : MCGenMothIndex_195/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  550 :MCGenPDG_196 : MCGenPDG_196/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  551 :MCGenMothIndex_196 : MCGenMothIndex_196/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  552 :MCGenPDG_197 : MCGenPDG_197/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  553 :MCGenMothIndex_197 : MCGenMothIndex_197/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  554 :MCGenPDG_198 : MCGenPDG_198/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  555 :MCGenMothIndex_198 : MCGenMothIndex_198/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  556 :MCGenPDG_199 : MCGenPDG_199/D                                      *
+*Entries :     1373 : Total  Size=      12121 bytes  File Size  =        937 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  12.38     *
+*............................................................................*
+*Br  557 :MCGenMothIndex_199 : MCGenMothIndex_199/D                          *
+*Entries :     1373 : Total  Size=      12193 bytes  File Size  =        985 *
+*Baskets :        8 : Basket Size=       1600 bytes  Compression=  11.83     *
+*............................................................................*
+*Br  558 :InvM_KK   : InvM_KK/D                                              *
+*Entries :     1373 : Total  Size=      11557 bytes  File Size  =       4840 *
+*Baskets :        1 : Basket Size=      32000 bytes  Compression=   2.28     *
+*............................................................................*
+*Br  559 :iDcyTr    : iDcyTr/I                                               *
+*Entries :     1373 : Total  Size=       6052 bytes  File Size  =       1952 *
+*Baskets :        1 : Basket Size=      32000 bytes  Compression=   2.85     *
+*............................................................................*
+*Br  560 :nPDcyBr_B0 : nPDcyBr_B0/I                                          *
+*Entries :     1373 : Total  Size=       6072 bytes  File Size  =        564 *
+*Baskets :        1 : Basket Size=      32000 bytes  Compression=   9.87     *
+*............................................................................*
+*Br  561 :iDcyBrP_B0_0 : iDcyBrP_B0_0/I                                      *
+*Entries :     1373 : Total  Size=       6082 bytes  File Size  =       1978 *
+*Baskets :        1 : Basket Size=      32000 bytes  Compression=   2.82     *
+*............................................................................*
+*Br  562 :iDcyBrP_B0_1 : iDcyBrP_B0_1/I                                      *
+*Entries :     1373 : Total  Size=       6082 bytes  File Size  =        768 *
+*Baskets :        1 : Basket Size=      32000 bytes  Compression=   7.25     *
+*............................................................................*
+*Br  563 :nPCascDcyBr_B0 : nPCascDcyBr_B0/I                                  *
+*Entries :     1373 : Total  Size=       6092 bytes  File Size  =        568 *
+*Baskets :        1 : Basket Size=      32000 bytes  Compression=   9.81     *
+*............................................................................*
+*Br  564 :iCascDcyBrP_B0_0 : iCascDcyBrP_B0_0/I                              *
+*Entries :     1373 : Total  Size=       6102 bytes  File Size  =       1860 *
+*Baskets :        1 : Basket Size=      32000 bytes  Compression=   3.00     *
+*............................................................................*
+*Br  565 :iCascDcyBrP_B0_1 : iCascDcyBrP_B0_1/I                              *
+*Entries :     1373 : Total  Size=       6102 bytes  File Size  =        785 *
+*Baskets :        1 : Basket Size=      32000 bytes  Compression=   7.10     *
+*............................................................................*

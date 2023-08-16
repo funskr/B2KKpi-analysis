@@ -1,0 +1,8 @@
+#20230723 21 jobs
+#/home/belle2/yuanmk/data/B2KKpi/B2KKpi_charged_20230723_21/sub00/*.root
+#/home/belle2/yuanmk/data/B2KKpi/B2KKpi_charged_20230723_21/sub01/*.root
+#/home/belle2/yuanmk/data/B2KKpi/B2KKpi_charged_20230723_21/sub02/*.root
+#/home/belle2/yuanmk/data/B2KKpi/B2KKpi_charged_20230723_21/sub03/*.root
+#/home/belle2/yuanmk/data/B2KKpi/B2KKpi_charged_20230723_21/sub04/*.root
+#/home/belle2/yuanmk/data/B2KKpi/B2KKpi_charged_20230723_21/sub05/*.root
+/home/belle2/yuanmk/analysis/B2KKpi/topoana/charged_MC.root

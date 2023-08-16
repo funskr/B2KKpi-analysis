@@ -1,0 +1,631 @@
+Belle II software tools set up at: /cvmfs/belle.cern.ch/tools
+Environment setup for release: release-06-01-12
+Central release directory    : /cvmfs/belle.cern.ch/el7/releases/release-06-01-12
+
+Processing mpi0.C...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+[#0] WARNING:InputArguments -- The parameter 'sigma' with range [0, 10] of the RooGaussian 'sig' exceeds the safe range of (0, inf). Advise to limit its range.
+[#1] INFO:DataHandling -- RooTreeDataStore::loadValues(data) Skipping event #17 because pi0_InvM cannot accommodate the value 0.0942313
+[#1] INFO:DataHandling -- RooTreeDataStore::loadValues(data) Skipping event #22 because pi0_InvM cannot accommodate the value 0.0819893
+[#1] INFO:DataHandling -- RooTreeDataStore::loadValues(data) Skipping event #25 because pi0_InvM cannot accommodate the value 0.0774443
+[#1] INFO:DataHandling -- RooTreeDataStore::loadValues(data) Skipping event #26 because pi0_InvM cannot accommodate the value 0.0774443
+[#1] INFO:DataHandling -- RooTreeDataStore::loadValues(data) Skipping ...
+[#0] WARNING:DataHandling -- RooTreeDataStore::loadValues(data) Ignored 9790 out-of-range events
+[#1] INFO:Minization -- RooMinimizer::optimizeConst: activating const optimization
+[#1] INFO:Minization --  The following expressions will be evaluated in cache-and-track mode: (sig,bkg)
+RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (-263920) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	c0=-0.37197	c1=-0.908535	fsig=0.994467	mean=0.127067	sigma=0.00027843
+RooChebychev::bkg[ x=pi0_InvM coefList=(c0,c1) ]
+     p.d.f value is less than zero (-0.053441), trying to recover @ x=pi0_InvM=0.143981, coefList=(c0 = -0.37197,c1 = -0.908535)
+     p.d.f value is less than zero (-0.043224), trying to recover @ x=pi0_InvM=0.143934, coefList=(c0 = -0.37197,c1 = -0.908535)
+     p.d.f value is less than zero (-0.043224), trying to recover @ x=pi0_InvM=0.143934, coefList=(c0 = -0.37197,c1 = -0.908535)
+     p.d.f value is less than zero (-0.186940), trying to recover @ x=pi0_InvM=0.144587, coefList=(c0 = -0.37197,c1 = -0.908535)
+     p.d.f value is less than zero (-0.131578), trying to recover @ x=pi0_InvM=0.144338, coefList=(c0 = -0.37197,c1 = -0.908535)
+     p.d.f value is less than zero (-0.131578), trying to recover @ x=pi0_InvM=0.144338, coefList=(c0 = -0.37197,c1 = -0.908535)
+     p.d.f value is less than zero (-0.195043), trying to recover @ x=pi0_InvM=0.144623, coefList=(c0 = -0.37197,c1 = -0.908535)
+     p.d.f value is less than zero (-0.195043), trying to recover @ x=pi0_InvM=0.144623, coefList=(c0 = -0.37197,c1 = -0.908535)
+     p.d.f value is less than zero (-0.008824), trying to recover @ x=pi0_InvM=0.143774, coefList=(c0 = -0.37197,c1 = -0.908535)
+     p.d.f value is less than zero (-0.070174), trying to recover @ x=pi0_InvM=0.144058, coefList=(c0 = -0.37197,c1 = -0.908535)
+     p.d.f value is less than zero (-0.170409), trying to recover @ x=pi0_InvM=0.144513, coefList=(c0 = -0.37197,c1 = -0.908535)
+     p.d.f value is less than zero (-0.170409), trying to recover @ x=pi0_InvM=0.144513, coefList=(c0 = -0.37197,c1 = -0.908535)
+    ... (remaining 288 messages suppressed)
+RooNLLVar::nll_model_data[ paramSet=(c0,c1,fsig,mean,sigma) ]
+     function value is NAN @ paramSet=(c0 = -0.37197,c1 = -0.908535,fsig = 0.994467,mean = 0.127067,sigma = 0.00027843)
+RooAddPdf::model[ fsig * sig + [%] * bkg ]
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0/0.00069792,bkg = -0.0534412/0.0455996), !coefficients=(fsig = 0.994467)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0/0.00069792,bkg = -0.0534412/0.0455996), !coefficients=(fsig = 0.994467)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0/0.00069792,bkg = -0.0432243/0.0455996), !coefficients=(fsig = 0.994467)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0/0.00069792,bkg = -0.0432243/0.0455996), !coefficients=(fsig = 0.994467)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0/0.00069792,bkg = -0.0432243/0.0455996), !coefficients=(fsig = 0.994467)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0/0.00069792,bkg = -0.0432243/0.0455996), !coefficients=(fsig = 0.994467)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0/0.00069792,bkg = -0.18694/0.0455996), !coefficients=(fsig = 0.994467)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0/0.00069792,bkg = -0.18694/0.0455996), !coefficients=(fsig = 0.994467)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0/0.00069792,bkg = -0.131578/0.0455996), !coefficients=(fsig = 0.994467)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0/0.00069792,bkg = -0.131578/0.0455996), !coefficients=(fsig = 0.994467)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0/0.00069792,bkg = -0.131578/0.0455996), !coefficients=(fsig = 0.994467)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0/0.00069792,bkg = -0.131578/0.0455996), !coefficients=(fsig = 0.994467)
+    ... (remaining 586 messages suppressed)
+
+RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (-263920) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	c0=-0.957489	c1=-0.503583	fsig=0.95766	mean=0.128648	sigma=0.00377348
+RooChebychev::bkg[ x=pi0_InvM coefList=(c0,c1) ]
+     p.d.f value is less than zero (-0.038673), trying to recover @ x=pi0_InvM=0.14238, coefList=(c0 = -0.957489,c1 = -0.503583)
+     p.d.f value is less than zero (-0.044244), trying to recover @ x=pi0_InvM=0.142416, coefList=(c0 = -0.957489,c1 = -0.503583)
+     p.d.f value is less than zero (-0.044244), trying to recover @ x=pi0_InvM=0.142416, coefList=(c0 = -0.957489,c1 = -0.503583)
+     p.d.f value is less than zero (-0.214625), trying to recover @ x=pi0_InvM=0.143506, coefList=(c0 = -0.957489,c1 = -0.503583)
+     p.d.f value is less than zero (-0.214625), trying to recover @ x=pi0_InvM=0.143506, coefList=(c0 = -0.957489,c1 = -0.503583)
+     p.d.f value is less than zero (-0.214625), trying to recover @ x=pi0_InvM=0.143506, coefList=(c0 = -0.957489,c1 = -0.503583)
+     p.d.f value is less than zero (-0.214625), trying to recover @ x=pi0_InvM=0.143506, coefList=(c0 = -0.957489,c1 = -0.503583)
+     p.d.f value is less than zero (-0.040975), trying to recover @ x=pi0_InvM=0.142395, coefList=(c0 = -0.957489,c1 = -0.503583)
+     p.d.f value is less than zero (-0.040975), trying to recover @ x=pi0_InvM=0.142395, coefList=(c0 = -0.957489,c1 = -0.503583)
+     p.d.f value is less than zero (-0.106866), trying to recover @ x=pi0_InvM=0.142822, coefList=(c0 = -0.957489,c1 = -0.503583)
+     p.d.f value is less than zero (-0.291476), trying to recover @ x=pi0_InvM=0.143981, coefList=(c0 = -0.957489,c1 = -0.503583)
+     p.d.f value is less than zero (-0.216787), trying to recover @ x=pi0_InvM=0.143519, coefList=(c0 = -0.957489,c1 = -0.503583)
+    ... (remaining 845 messages suppressed)
+RooNLLVar::nll_model_data[ paramSet=(c0,c1,fsig,mean,sigma) ]
+     function value is NAN @ paramSet=(c0 = -0.957489,c1 = -0.503583,fsig = 0.95766,mean = 0.128648,sigma = 0.00377348)
+RooAddPdf::model[ fsig * sig + [%] * bkg ]
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.00133243/0.00945864,bkg = -0.0386726/0.0408751), !coefficients=(fsig = 0.95766)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.00133243/0.00945864,bkg = -0.0386726/0.0408751), !coefficients=(fsig = 0.95766)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.00128631/0.00945864,bkg = -0.044244/0.0408751), !coefficients=(fsig = 0.95766)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.00128631/0.00945864,bkg = -0.044244/0.0408751), !coefficients=(fsig = 0.95766)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.00128631/0.00945864,bkg = -0.044244/0.0408751), !coefficients=(fsig = 0.95766)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.00128631/0.00945864,bkg = -0.044244/0.0408751), !coefficients=(fsig = 0.95766)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.000430338/0.00945864,bkg = -0.214625/0.0408751), !coefficients=(fsig = 0.95766)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.000430338/0.00945864,bkg = -0.214625/0.0408751), !coefficients=(fsig = 0.95766)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.000430338/0.00945864,bkg = -0.214625/0.0408751), !coefficients=(fsig = 0.95766)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.000430338/0.00945864,bkg = -0.214625/0.0408751), !coefficients=(fsig = 0.95766)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.000430338/0.00945864,bkg = -0.214625/0.0408751), !coefficients=(fsig = 0.95766)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.000430338/0.00945864,bkg = -0.214625/0.0408751), !coefficients=(fsig = 0.95766)
+    ... (remaining 1700 messages suppressed)
+
+RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (-263920) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	c0=0.672096	c1=-0.525732	fsig=0.852678	mean=0.124355	sigma=0.00212475
+RooChebychev::bkg[ x=pi0_InvM coefList=(c0,c1) ]
+     p.d.f value is less than zero (-0.151792), trying to recover @ x=pi0_InvM=0.110292, coefList=(c0 = 0.672096,c1 = -0.525732)
+     p.d.f value is less than zero (-0.009638), trying to recover @ x=pi0_InvM=0.111219, coefList=(c0 = 0.672096,c1 = -0.525732)
+     p.d.f value is less than zero (-0.191912), trying to recover @ x=pi0_InvM=0.110037, coefList=(c0 = 0.672096,c1 = -0.525732)
+     p.d.f value is less than zero (-0.143453), trying to recover @ x=pi0_InvM=0.110345, coefList=(c0 = 0.672096,c1 = -0.525732)
+     p.d.f value is less than zero (-0.143453), trying to recover @ x=pi0_InvM=0.110345, coefList=(c0 = 0.672096,c1 = -0.525732)
+     p.d.f value is less than zero (-0.132213), trying to recover @ x=pi0_InvM=0.110418, coefList=(c0 = 0.672096,c1 = -0.525732)
+     p.d.f value is less than zero (-0.140276), trying to recover @ x=pi0_InvM=0.110366, coefList=(c0 = 0.672096,c1 = -0.525732)
+     p.d.f value is less than zero (-0.037537), trying to recover @ x=pi0_InvM=0.111034, coefList=(c0 = 0.672096,c1 = -0.525732)
+     p.d.f value is less than zero (-0.032022), trying to recover @ x=pi0_InvM=0.11107, coefList=(c0 = 0.672096,c1 = -0.525732)
+     p.d.f value is less than zero (-0.163907), trying to recover @ x=pi0_InvM=0.110215, coefList=(c0 = 0.672096,c1 = -0.525732)
+     p.d.f value is less than zero (-0.163907), trying to recover @ x=pi0_InvM=0.110215, coefList=(c0 = 0.672096,c1 = -0.525732)
+     p.d.f value is less than zero (-0.045904), trying to recover @ x=pi0_InvM=0.110979, coefList=(c0 = 0.672096,c1 = -0.525732)
+    ... (remaining 654 messages suppressed)
+RooNLLVar::nll_model_data[ paramSet=(c0,c1,fsig,mean,sigma) ]
+     function value is NAN @ paramSet=(c0 = 0.672096,c1 = -0.525732,fsig = 0.852678,mean = 0.124355,sigma = 0.00212475)
+RooAddPdf::model[ fsig * sig + [%] * bkg ]
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 3.07457e-10/0.00532597,bkg = -0.151792/0.0411335), !coefficients=(fsig = 0.852678)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 3.07457e-10/0.00532597,bkg = -0.151792/0.0411335), !coefficients=(fsig = 0.852678)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 5.01462e-09/0.00532597,bkg = -0.0096383/0.0411335), !coefficients=(fsig = 0.852678)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 5.01462e-09/0.00532597,bkg = -0.0096383/0.0411335), !coefficients=(fsig = 0.852678)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 1.38017e-10/0.00532597,bkg = -0.191912/0.0411335), !coefficients=(fsig = 0.852678)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 1.38017e-10/0.00532597,bkg = -0.191912/0.0411335), !coefficients=(fsig = 0.852678)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 3.629e-10/0.00532597,bkg = -0.143453/0.0411335), !coefficients=(fsig = 0.852678)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 3.629e-10/0.00532597,bkg = -0.143453/0.0411335), !coefficients=(fsig = 0.852678)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 3.629e-10/0.00532597,bkg = -0.143453/0.0411335), !coefficients=(fsig = 0.852678)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 3.629e-10/0.00532597,bkg = -0.143453/0.0411335), !coefficients=(fsig = 0.852678)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 4.53594e-10/0.00532597,bkg = -0.132213/0.0411335), !coefficients=(fsig = 0.852678)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 4.53594e-10/0.00532597,bkg = -0.132213/0.0411335), !coefficients=(fsig = 0.852678)
+    ... (remaining 1318 messages suppressed)
+
+RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (-263920) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	c0=-0.993161	c1=-0.322985	fsig=0.902284	mean=0.127685	sigma=0.00507557
+RooChebychev::bkg[ x=pi0_InvM coefList=(c0,c1) ]
+     p.d.f value is less than zero (-0.125711), trying to recover @ x=pi0_InvM=0.143506, coefList=(c0 = -0.993161,c1 = -0.322985)
+     p.d.f value is less than zero (-0.125711), trying to recover @ x=pi0_InvM=0.143506, coefList=(c0 = -0.993161,c1 = -0.322985)
+     p.d.f value is less than zero (-0.125711), trying to recover @ x=pi0_InvM=0.143506, coefList=(c0 = -0.993161,c1 = -0.322985)
+     p.d.f value is less than zero (-0.125711), trying to recover @ x=pi0_InvM=0.143506, coefList=(c0 = -0.993161,c1 = -0.322985)
+     p.d.f value is less than zero (-0.041800), trying to recover @ x=pi0_InvM=0.142822, coefList=(c0 = -0.993161,c1 = -0.322985)
+     p.d.f value is less than zero (-0.185305), trying to recover @ x=pi0_InvM=0.143981, coefList=(c0 = -0.993161,c1 = -0.322985)
+     p.d.f value is less than zero (-0.127390), trying to recover @ x=pi0_InvM=0.143519, coefList=(c0 = -0.993161,c1 = -0.322985)
+     p.d.f value is less than zero (-0.127390), trying to recover @ x=pi0_InvM=0.143519, coefList=(c0 = -0.993161,c1 = -0.322985)
+     p.d.f value is less than zero (-0.179352), trying to recover @ x=pi0_InvM=0.143934, coefList=(c0 = -0.993161,c1 = -0.322985)
+     p.d.f value is less than zero (-0.179352), trying to recover @ x=pi0_InvM=0.143934, coefList=(c0 = -0.993161,c1 = -0.322985)
+     p.d.f value is less than zero (-0.086804), trying to recover @ x=pi0_InvM=0.143191, coefList=(c0 = -0.993161,c1 = -0.322985)
+     p.d.f value is less than zero (-0.018544), trying to recover @ x=pi0_InvM=0.14263, coefList=(c0 = -0.993161,c1 = -0.322985)
+    ... (remaining 672 messages suppressed)
+RooNLLVar::nll_model_data[ paramSet=(c0,c1,fsig,mean,sigma) ]
+     function value is NAN @ paramSet=(c0 = -0.993161,c1 = -0.322985,fsig = 0.902284,mean = 0.127685,sigma = 0.00507557)
+RooAddPdf::model[ fsig * sig + [%] * bkg ]
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.00776569/0.0127153,bkg = -0.125711/0.0387682), !coefficients=(fsig = 0.902284)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.00776569/0.0127153,bkg = -0.125711/0.0387682), !coefficients=(fsig = 0.902284)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.00776569/0.0127153,bkg = -0.125711/0.0387682), !coefficients=(fsig = 0.902284)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.00776569/0.0127153,bkg = -0.125711/0.0387682), !coefficients=(fsig = 0.902284)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.00776569/0.0127153,bkg = -0.125711/0.0387682), !coefficients=(fsig = 0.902284)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.00776569/0.0127153,bkg = -0.125711/0.0387682), !coefficients=(fsig = 0.902284)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.00776569/0.0127153,bkg = -0.125711/0.0387682), !coefficients=(fsig = 0.902284)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.00776569/0.0127153,bkg = -0.125711/0.0387682), !coefficients=(fsig = 0.902284)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0117071/0.0127153,bkg = -0.0418003/0.0387682), !coefficients=(fsig = 0.902284)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0117071/0.0127153,bkg = -0.0418003/0.0387682), !coefficients=(fsig = 0.902284)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.00577294/0.0127153,bkg = -0.185305/0.0387682), !coefficients=(fsig = 0.902284)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.00577294/0.0127153,bkg = -0.185305/0.0387682), !coefficients=(fsig = 0.902284)
+    ... (remaining 1354 messages suppressed)
+
+RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (-263920) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	c0=-0.997173	c1=-0.56731	fsig=0.828074	mean=0.127448	sigma=0.00611719
+RooChebychev::bkg[ x=pi0_InvM coefList=(c0,c1) ]
+     p.d.f value is less than zero (-0.100831), trying to recover @ x=pi0_InvM=0.14238, coefList=(c0 = -0.997173,c1 = -0.56731)
+     p.d.f value is less than zero (-0.106938), trying to recover @ x=pi0_InvM=0.142416, coefList=(c0 = -0.997173,c1 = -0.56731)
+     p.d.f value is less than zero (-0.106938), trying to recover @ x=pi0_InvM=0.142416, coefList=(c0 = -0.997173,c1 = -0.56731)
+     p.d.f value is less than zero (-0.293808), trying to recover @ x=pi0_InvM=0.143506, coefList=(c0 = -0.997173,c1 = -0.56731)
+     p.d.f value is less than zero (-0.293808), trying to recover @ x=pi0_InvM=0.143506, coefList=(c0 = -0.997173,c1 = -0.56731)
+     p.d.f value is less than zero (-0.293808), trying to recover @ x=pi0_InvM=0.143506, coefList=(c0 = -0.997173,c1 = -0.56731)
+     p.d.f value is less than zero (-0.293808), trying to recover @ x=pi0_InvM=0.143506, coefList=(c0 = -0.997173,c1 = -0.56731)
+     p.d.f value is less than zero (-0.103355), trying to recover @ x=pi0_InvM=0.142395, coefList=(c0 = -0.997173,c1 = -0.56731)
+     p.d.f value is less than zero (-0.103355), trying to recover @ x=pi0_InvM=0.142395, coefList=(c0 = -0.997173,c1 = -0.56731)
+     p.d.f value is less than zero (-0.175593), trying to recover @ x=pi0_InvM=0.142822, coefList=(c0 = -0.997173,c1 = -0.56731)
+     p.d.f value is less than zero (-0.378170), trying to recover @ x=pi0_InvM=0.143981, coefList=(c0 = -0.997173,c1 = -0.56731)
+     p.d.f value is less than zero (-0.296181), trying to recover @ x=pi0_InvM=0.143519, coefList=(c0 = -0.997173,c1 = -0.56731)
+    ... (remaining 1013 messages suppressed)
+RooNLLVar::nll_model_data[ paramSet=(c0,c1,fsig,mean,sigma) ]
+     function value is NAN @ paramSet=(c0 = -0.997173,c1 = -0.56731,fsig = 0.828074,mean = 0.127448,sigma = 0.00611719)
+RooAddPdf::model[ fsig * sig + [%] * bkg ]
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0508377/0.0152687,bkg = -0.100831/0.0416186), !coefficients=(fsig = 0.828074)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0508377/0.0152687,bkg = -0.100831/0.0416186), !coefficients=(fsig = 0.828074)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0501021/0.0152687,bkg = -0.106938/0.0416186), !coefficients=(fsig = 0.828074)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0501021/0.0152687,bkg = -0.106938/0.0416186), !coefficients=(fsig = 0.828074)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0501021/0.0152687,bkg = -0.106938/0.0416186), !coefficients=(fsig = 0.828074)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0501021/0.0152687,bkg = -0.106938/0.0416186), !coefficients=(fsig = 0.828074)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0318953/0.0152687,bkg = -0.293808/0.0416186), !coefficients=(fsig = 0.828074)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0318953/0.0152687,bkg = -0.293808/0.0416186), !coefficients=(fsig = 0.828074)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0318953/0.0152687,bkg = -0.293808/0.0416186), !coefficients=(fsig = 0.828074)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0318953/0.0152687,bkg = -0.293808/0.0416186), !coefficients=(fsig = 0.828074)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0318953/0.0152687,bkg = -0.293808/0.0416186), !coefficients=(fsig = 0.828074)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0318953/0.0152687,bkg = -0.293808/0.0416186), !coefficients=(fsig = 0.828074)
+    ... (remaining 2036 messages suppressed)
+
+RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (-263920) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	c0=-0.78073	c1=-0.285568	fsig=0.908579	mean=0.128835	sigma=0.00661129
+RooChebychev::bkg[ x=pi0_InvM coefList=(c0,c1) ]
+     p.d.f value is less than zero (-0.021218), trying to recover @ x=pi0_InvM=0.144587, coefList=(c0 = -0.78073,c1 = -0.285568)
+     p.d.f value is less than zero (-0.025135), trying to recover @ x=pi0_InvM=0.144623, coefList=(c0 = -0.78073,c1 = -0.285568)
+     p.d.f value is less than zero (-0.025135), trying to recover @ x=pi0_InvM=0.144623, coefList=(c0 = -0.78073,c1 = -0.285568)
+     p.d.f value is less than zero (-0.013217), trying to recover @ x=pi0_InvM=0.144513, coefList=(c0 = -0.78073,c1 = -0.285568)
+     p.d.f value is less than zero (-0.013217), trying to recover @ x=pi0_InvM=0.144513, coefList=(c0 = -0.78073,c1 = -0.285568)
+     p.d.f value is less than zero (-0.044746), trying to recover @ x=pi0_InvM=0.144803, coefList=(c0 = -0.78073,c1 = -0.285568)
+     p.d.f value is less than zero (-0.044746), trying to recover @ x=pi0_InvM=0.144803, coefList=(c0 = -0.78073,c1 = -0.285568)
+     p.d.f value is less than zero (-0.044746), trying to recover @ x=pi0_InvM=0.144803, coefList=(c0 = -0.78073,c1 = -0.285568)
+     p.d.f value is less than zero (-0.044746), trying to recover @ x=pi0_InvM=0.144803, coefList=(c0 = -0.78073,c1 = -0.285568)
+     p.d.f value is less than zero (-0.035962), trying to recover @ x=pi0_InvM=0.144723, coefList=(c0 = -0.78073,c1 = -0.285568)
+     p.d.f value is less than zero (-0.036504), trying to recover @ x=pi0_InvM=0.144728, coefList=(c0 = -0.78073,c1 = -0.285568)
+     p.d.f value is less than zero (-0.009713), trying to recover @ x=pi0_InvM=0.14448, coefList=(c0 = -0.78073,c1 = -0.285568)
+    ... (remaining 137 messages suppressed)
+RooNLLVar::nll_model_data[ paramSet=(c0,c1,fsig,mean,sigma) ]
+     function value is NAN @ paramSet=(c0 = -0.78073,c1 = -0.285568,fsig = 0.908579,mean = 0.128835,sigma = 0.00661129)
+RooAddPdf::model[ fsig * sig + [%] * bkg ]
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0585197/0.0164157,bkg = -0.0212175/0.0383316), !coefficients=(fsig = 0.908579)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0585197/0.0164157,bkg = -0.0212175/0.0383316), !coefficients=(fsig = 0.908579)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0577616/0.0164157,bkg = -0.0251353/0.0383316), !coefficients=(fsig = 0.908579)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0577616/0.0164157,bkg = -0.0251353/0.0383316), !coefficients=(fsig = 0.908579)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0577616/0.0164157,bkg = -0.0251353/0.0383316), !coefficients=(fsig = 0.908579)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0577616/0.0164157,bkg = -0.0251353/0.0383316), !coefficients=(fsig = 0.908579)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0600962/0.0164157,bkg = -0.0132167/0.0383316), !coefficients=(fsig = 0.908579)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0600962/0.0164157,bkg = -0.0132167/0.0383316), !coefficients=(fsig = 0.908579)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0600962/0.0164157,bkg = -0.0132167/0.0383316), !coefficients=(fsig = 0.908579)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0600962/0.0164157,bkg = -0.0132167/0.0383316), !coefficients=(fsig = 0.908579)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0541011/0.0164157,bkg = -0.0447462/0.0383316), !coefficients=(fsig = 0.908579)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0541011/0.0164157,bkg = -0.0447462/0.0383316), !coefficients=(fsig = 0.908579)
+    ... (remaining 284 messages suppressed)
+
+RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (-263920) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	c0=-0.850322	c1=-0.334194	fsig=0.756996	mean=0.127902	sigma=0.00527179
+RooChebychev::bkg[ x=pi0_InvM coefList=(c0,c1) ]
+     p.d.f value is less than zero (-0.002614), trying to recover @ x=pi0_InvM=0.143506, coefList=(c0 = -0.850322,c1 = -0.334194)
+     p.d.f value is less than zero (-0.002614), trying to recover @ x=pi0_InvM=0.143506, coefList=(c0 = -0.850322,c1 = -0.334194)
+     p.d.f value is less than zero (-0.002614), trying to recover @ x=pi0_InvM=0.143506, coefList=(c0 = -0.850322,c1 = -0.334194)
+     p.d.f value is less than zero (-0.002614), trying to recover @ x=pi0_InvM=0.143506, coefList=(c0 = -0.850322,c1 = -0.334194)
+     p.d.f value is less than zero (-0.059456), trying to recover @ x=pi0_InvM=0.143981, coefList=(c0 = -0.850322,c1 = -0.334194)
+     p.d.f value is less than zero (-0.004214), trying to recover @ x=pi0_InvM=0.143519, coefList=(c0 = -0.850322,c1 = -0.334194)
+     p.d.f value is less than zero (-0.004214), trying to recover @ x=pi0_InvM=0.143519, coefList=(c0 = -0.850322,c1 = -0.334194)
+     p.d.f value is less than zero (-0.053774), trying to recover @ x=pi0_InvM=0.143934, coefList=(c0 = -0.850322,c1 = -0.334194)
+     p.d.f value is less than zero (-0.053774), trying to recover @ x=pi0_InvM=0.143934, coefList=(c0 = -0.850322,c1 = -0.334194)
+     p.d.f value is less than zero (-0.002106), trying to recover @ x=pi0_InvM=0.143501, coefList=(c0 = -0.850322,c1 = -0.334194)
+     p.d.f value is less than zero (-0.002106), trying to recover @ x=pi0_InvM=0.143501, coefList=(c0 = -0.850322,c1 = -0.334194)
+     p.d.f value is less than zero (-0.133255), trying to recover @ x=pi0_InvM=0.144587, coefList=(c0 = -0.850322,c1 = -0.334194)
+    ... (remaining 375 messages suppressed)
+RooNLLVar::nll_model_data[ paramSet=(c0,c1,fsig,mean,sigma) ]
+     function value is NAN @ paramSet=(c0 = -0.850322,c1 = -0.334194,fsig = 0.756996,mean = 0.127902,sigma = 0.00527179)
+RooAddPdf::model[ fsig * sig + [%] * bkg ]
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0125227/0.0132021,bkg = -0.00261361/0.0388989), !coefficients=(fsig = 0.756996)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0125227/0.0132021,bkg = -0.00261361/0.0388989), !coefficients=(fsig = 0.756996)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0125227/0.0132021,bkg = -0.00261361/0.0388989), !coefficients=(fsig = 0.756996)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0125227/0.0132021,bkg = -0.00261361/0.0388989), !coefficients=(fsig = 0.756996)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0125227/0.0132021,bkg = -0.00261361/0.0388989), !coefficients=(fsig = 0.756996)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0125227/0.0132021,bkg = -0.00261361/0.0388989), !coefficients=(fsig = 0.756996)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0125227/0.0132021,bkg = -0.00261361/0.0388989), !coefficients=(fsig = 0.756996)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0125227/0.0132021,bkg = -0.00261361/0.0388989), !coefficients=(fsig = 0.756996)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0095486/0.0132021,bkg = -0.0594561/0.0388989), !coefficients=(fsig = 0.756996)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0095486/0.0132021,bkg = -0.0594561/0.0388989), !coefficients=(fsig = 0.756996)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0124281/0.0132021,bkg = -0.00421411/0.0388989), !coefficients=(fsig = 0.756996)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0124281/0.0132021,bkg = -0.00421411/0.0388989), !coefficients=(fsig = 0.756996)
+    ... (remaining 760 messages suppressed)
+
+RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (-263920) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	c0=-0.961936	c1=-0.326887	fsig=0.77577	mean=0.128301	sigma=0.0060212
+RooChebychev::bkg[ x=pi0_InvM coefList=(c0,c1) ]
+     p.d.f value is less than zero (-0.099779), trying to recover @ x=pi0_InvM=0.143506, coefList=(c0 = -0.961936,c1 = -0.326887)
+     p.d.f value is less than zero (-0.099779), trying to recover @ x=pi0_InvM=0.143506, coefList=(c0 = -0.961936,c1 = -0.326887)
+     p.d.f value is less than zero (-0.099779), trying to recover @ x=pi0_InvM=0.143506, coefList=(c0 = -0.961936,c1 = -0.326887)
+     p.d.f value is less than zero (-0.099779), trying to recover @ x=pi0_InvM=0.143506, coefList=(c0 = -0.961936,c1 = -0.326887)
+     p.d.f value is less than zero (-0.016541), trying to recover @ x=pi0_InvM=0.142822, coefList=(c0 = -0.961936,c1 = -0.326887)
+     p.d.f value is less than zero (-0.158918), trying to recover @ x=pi0_InvM=0.143981, coefList=(c0 = -0.961936,c1 = -0.326887)
+     p.d.f value is less than zero (-0.101445), trying to recover @ x=pi0_InvM=0.143519, coefList=(c0 = -0.961936,c1 = -0.326887)
+     p.d.f value is less than zero (-0.101445), trying to recover @ x=pi0_InvM=0.143519, coefList=(c0 = -0.961936,c1 = -0.326887)
+     p.d.f value is less than zero (-0.153009), trying to recover @ x=pi0_InvM=0.143934, coefList=(c0 = -0.961936,c1 = -0.326887)
+     p.d.f value is less than zero (-0.153009), trying to recover @ x=pi0_InvM=0.143934, coefList=(c0 = -0.961936,c1 = -0.326887)
+     p.d.f value is less than zero (-0.061178), trying to recover @ x=pi0_InvM=0.143191, coefList=(c0 = -0.961936,c1 = -0.326887)
+     p.d.f value is less than zero (-0.099251), trying to recover @ x=pi0_InvM=0.143501, coefList=(c0 = -0.961936,c1 = -0.326887)
+    ... (remaining 600 messages suppressed)
+RooNLLVar::nll_model_data[ paramSet=(c0,c1,fsig,mean,sigma) ]
+     function value is NAN @ paramSet=(c0 = -0.961936,c1 = -0.326887,fsig = 0.77577,mean = 0.128301,sigma = 0.0060212)
+RooAddPdf::model[ fsig * sig + [%] * bkg ]
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0412476/0.0150332,bkg = -0.0997786/0.0388137), !coefficients=(fsig = 0.77577)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0412476/0.0150332,bkg = -0.0997786/0.0388137), !coefficients=(fsig = 0.77577)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0412476/0.0150332,bkg = -0.0997786/0.0388137), !coefficients=(fsig = 0.77577)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0412476/0.0150332,bkg = -0.0997786/0.0388137), !coefficients=(fsig = 0.77577)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0412476/0.0150332,bkg = -0.0997786/0.0388137), !coefficients=(fsig = 0.77577)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0412476/0.0150332,bkg = -0.0997786/0.0388137), !coefficients=(fsig = 0.77577)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0412476/0.0150332,bkg = -0.0997786/0.0388137), !coefficients=(fsig = 0.77577)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0412476/0.0150332,bkg = -0.0997786/0.0388137), !coefficients=(fsig = 0.77577)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0545789/0.0150332,bkg = -0.0165412/0.0388137), !coefficients=(fsig = 0.77577)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0545789/0.0150332,bkg = -0.0165412/0.0388137), !coefficients=(fsig = 0.77577)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0336824/0.0150332,bkg = -0.158918/0.0388137), !coefficients=(fsig = 0.77577)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0336824/0.0150332,bkg = -0.158918/0.0388137), !coefficients=(fsig = 0.77577)
+    ... (remaining 1210 messages suppressed)
+
+RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (-263920) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	c0=-0.793414	c1=-0.258247	fsig=0.888767	mean=0.128827	sigma=0.00641849
+RooChebychev::bkg[ x=pi0_InvM coefList=(c0,c1) ]
+     p.d.f value is less than zero (-0.008831), trying to recover @ x=pi0_InvM=0.144587, coefList=(c0 = -0.793414,c1 = -0.258247)
+     p.d.f value is less than zero (-0.012555), trying to recover @ x=pi0_InvM=0.144623, coefList=(c0 = -0.793414,c1 = -0.258247)
+     p.d.f value is less than zero (-0.012555), trying to recover @ x=pi0_InvM=0.144623, coefList=(c0 = -0.793414,c1 = -0.258247)
+     p.d.f value is less than zero (-0.001227), trying to recover @ x=pi0_InvM=0.144513, coefList=(c0 = -0.793414,c1 = -0.258247)
+     p.d.f value is less than zero (-0.001227), trying to recover @ x=pi0_InvM=0.144513, coefList=(c0 = -0.793414,c1 = -0.258247)
+     p.d.f value is less than zero (-0.031189), trying to recover @ x=pi0_InvM=0.144803, coefList=(c0 = -0.793414,c1 = -0.258247)
+     p.d.f value is less than zero (-0.031189), trying to recover @ x=pi0_InvM=0.144803, coefList=(c0 = -0.793414,c1 = -0.258247)
+     p.d.f value is less than zero (-0.031189), trying to recover @ x=pi0_InvM=0.144803, coefList=(c0 = -0.793414,c1 = -0.258247)
+     p.d.f value is less than zero (-0.031189), trying to recover @ x=pi0_InvM=0.144803, coefList=(c0 = -0.793414,c1 = -0.258247)
+     p.d.f value is less than zero (-0.022843), trying to recover @ x=pi0_InvM=0.144723, coefList=(c0 = -0.793414,c1 = -0.258247)
+     p.d.f value is less than zero (-0.023358), trying to recover @ x=pi0_InvM=0.144728, coefList=(c0 = -0.793414,c1 = -0.258247)
+     p.d.f value is less than zero (-0.030889), trying to recover @ x=pi0_InvM=0.1448, coefList=(c0 = -0.793414,c1 = -0.258247)
+    ... (remaining 111 messages suppressed)
+RooNLLVar::nll_model_data[ paramSet=(c0,c1,fsig,mean,sigma) ]
+     function value is NAN @ paramSet=(c0 = -0.793414,c1 = -0.258247,fsig = 0.888767,mean = 0.128827,sigma = 0.00641849)
+RooAddPdf::model[ fsig * sig + [%] * bkg ]
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0490699/0.0159673,bkg = -0.00883129/0.0380129), !coefficients=(fsig = 0.888767)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0490699/0.0159673,bkg = -0.00883129/0.0380129), !coefficients=(fsig = 0.888767)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0483954/0.0159673,bkg = -0.0125547/0.0380129), !coefficients=(fsig = 0.888767)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0483954/0.0159673,bkg = -0.0125547/0.0380129), !coefficients=(fsig = 0.888767)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0483954/0.0159673,bkg = -0.0125547/0.0380129), !coefficients=(fsig = 0.888767)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0483954/0.0159673,bkg = -0.0125547/0.0380129), !coefficients=(fsig = 0.888767)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0504744/0.0159673,bkg = -0.00122672/0.0380129), !coefficients=(fsig = 0.888767)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0504744/0.0159673,bkg = -0.00122672/0.0380129), !coefficients=(fsig = 0.888767)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0504744/0.0159673,bkg = -0.00122672/0.0380129), !coefficients=(fsig = 0.888767)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0504744/0.0159673,bkg = -0.00122672/0.0380129), !coefficients=(fsig = 0.888767)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0451464/0.0159673,bkg = -0.0311892/0.0380129), !coefficients=(fsig = 0.888767)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0451464/0.0159673,bkg = -0.0311892/0.0380129), !coefficients=(fsig = 0.888767)
+    ... (remaining 232 messages suppressed)
+
+RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (-263920) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	c0=-0.78747	c1=-0.264383	fsig=0.782867	mean=0.128208	sigma=0.00589234
+RooChebychev::bkg[ x=pi0_InvM coefList=(c0,c1) ]
+     p.d.f value is less than zero (-0.008590), trying to recover @ x=pi0_InvM=0.144587, coefList=(c0 = -0.78747,c1 = -0.264383)
+     p.d.f value is less than zero (-0.012351), trying to recover @ x=pi0_InvM=0.144623, coefList=(c0 = -0.78747,c1 = -0.264383)
+     p.d.f value is less than zero (-0.012351), trying to recover @ x=pi0_InvM=0.144623, coefList=(c0 = -0.78747,c1 = -0.264383)
+     p.d.f value is less than zero (-0.000909), trying to recover @ x=pi0_InvM=0.144513, coefList=(c0 = -0.78747,c1 = -0.264383)
+     p.d.f value is less than zero (-0.000909), trying to recover @ x=pi0_InvM=0.144513, coefList=(c0 = -0.78747,c1 = -0.264383)
+     p.d.f value is less than zero (-0.031172), trying to recover @ x=pi0_InvM=0.144803, coefList=(c0 = -0.78747,c1 = -0.264383)
+     p.d.f value is less than zero (-0.031172), trying to recover @ x=pi0_InvM=0.144803, coefList=(c0 = -0.78747,c1 = -0.264383)
+     p.d.f value is less than zero (-0.031172), trying to recover @ x=pi0_InvM=0.144803, coefList=(c0 = -0.78747,c1 = -0.264383)
+     p.d.f value is less than zero (-0.031172), trying to recover @ x=pi0_InvM=0.144803, coefList=(c0 = -0.78747,c1 = -0.264383)
+     p.d.f value is less than zero (-0.022742), trying to recover @ x=pi0_InvM=0.144723, coefList=(c0 = -0.78747,c1 = -0.264383)
+     p.d.f value is less than zero (-0.023262), trying to recover @ x=pi0_InvM=0.144728, coefList=(c0 = -0.78747,c1 = -0.264383)
+     p.d.f value is less than zero (-0.030869), trying to recover @ x=pi0_InvM=0.1448, coefList=(c0 = -0.78747,c1 = -0.264383)
+    ... (remaining 111 messages suppressed)
+RooNLLVar::nll_model_data[ paramSet=(c0,c1,fsig,mean,sigma) ]
+     function value is NAN @ paramSet=(c0 = -0.78747,c1 = -0.264383,fsig = 0.782867,mean = 0.128208,sigma = 0.00589234)
+RooAddPdf::model[ fsig * sig + [%] * bkg ]
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0209962/0.0147228,bkg = -0.00858988/0.0380845), !coefficients=(fsig = 0.782867)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0209962/0.0147228,bkg = -0.00858988/0.0380845), !coefficients=(fsig = 0.782867)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0206409/0.0147228,bkg = -0.0123505/0.0380845), !coefficients=(fsig = 0.782867)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0206409/0.0147228,bkg = -0.0123505/0.0380845), !coefficients=(fsig = 0.782867)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0206409/0.0147228,bkg = -0.0123505/0.0380845), !coefficients=(fsig = 0.782867)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0206409/0.0147228,bkg = -0.0123505/0.0380845), !coefficients=(fsig = 0.782867)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0217398/0.0147228,bkg = -0.000909406/0.0380845), !coefficients=(fsig = 0.782867)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0217398/0.0147228,bkg = -0.000909406/0.0380845), !coefficients=(fsig = 0.782867)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0217398/0.0147228,bkg = -0.000909406/0.0380845), !coefficients=(fsig = 0.782867)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0217398/0.0147228,bkg = -0.000909406/0.0380845), !coefficients=(fsig = 0.782867)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0189462/0.0147228,bkg = -0.0311724/0.0380845), !coefficients=(fsig = 0.782867)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0189462/0.0147228,bkg = -0.0311724/0.0380845), !coefficients=(fsig = 0.782867)
+    ... (remaining 232 messages suppressed)
+
+RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (-263920) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	c0=-0.866144	c1=-0.184646	fsig=0.810959	mean=0.128284	sigma=0.00606501
+RooChebychev::bkg[ x=pi0_InvM coefList=(c0,c1) ]
+     p.d.f value is less than zero (-0.013111), trying to recover @ x=pi0_InvM=0.144587, coefList=(c0 = -0.866144,c1 = -0.184646)
+     p.d.f value is less than zero (-0.016390), trying to recover @ x=pi0_InvM=0.144623, coefList=(c0 = -0.866144,c1 = -0.184646)
+     p.d.f value is less than zero (-0.016390), trying to recover @ x=pi0_InvM=0.144623, coefList=(c0 = -0.866144,c1 = -0.184646)
+     p.d.f value is less than zero (-0.006411), trying to recover @ x=pi0_InvM=0.144513, coefList=(c0 = -0.866144,c1 = -0.184646)
+     p.d.f value is less than zero (-0.006411), trying to recover @ x=pi0_InvM=0.144513, coefList=(c0 = -0.866144,c1 = -0.184646)
+     p.d.f value is less than zero (-0.032792), trying to recover @ x=pi0_InvM=0.144803, coefList=(c0 = -0.866144,c1 = -0.184646)
+     p.d.f value is less than zero (-0.032792), trying to recover @ x=pi0_InvM=0.144803, coefList=(c0 = -0.866144,c1 = -0.184646)
+     p.d.f value is less than zero (-0.032792), trying to recover @ x=pi0_InvM=0.144803, coefList=(c0 = -0.866144,c1 = -0.184646)
+     p.d.f value is less than zero (-0.032792), trying to recover @ x=pi0_InvM=0.144803, coefList=(c0 = -0.866144,c1 = -0.184646)
+     p.d.f value is less than zero (-0.025448), trying to recover @ x=pi0_InvM=0.144723, coefList=(c0 = -0.866144,c1 = -0.184646)
+     p.d.f value is less than zero (-0.025901), trying to recover @ x=pi0_InvM=0.144728, coefList=(c0 = -0.866144,c1 = -0.184646)
+     p.d.f value is less than zero (-0.003476), trying to recover @ x=pi0_InvM=0.14448, coefList=(c0 = -0.866144,c1 = -0.184646)
+    ... (remaining 127 messages suppressed)
+RooNLLVar::nll_model_data[ paramSet=(c0,c1,fsig,mean,sigma) ]
+     function value is NAN @ paramSet=(c0 = -0.866144,c1 = -0.184646,fsig = 0.810959,mean = 0.128284,sigma = 0.00606501)
+RooAddPdf::model[ fsig * sig + [%] * bkg ]
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0269826/0.0151387,bkg = -0.013111/0.0371542), !coefficients=(fsig = 0.810959)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0269826/0.0151387,bkg = -0.013111/0.0371542), !coefficients=(fsig = 0.810959)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0265534/0.0151387,bkg = -0.0163903/0.0371542), !coefficients=(fsig = 0.810959)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0265534/0.0151387,bkg = -0.0163903/0.0371542), !coefficients=(fsig = 0.810959)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0265534/0.0151387,bkg = -0.0163903/0.0371542), !coefficients=(fsig = 0.810959)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0265534/0.0151387,bkg = -0.0163903/0.0371542), !coefficients=(fsig = 0.810959)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0278793/0.0151387,bkg = -0.00641102/0.0371542), !coefficients=(fsig = 0.810959)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0278793/0.0151387,bkg = -0.00641102/0.0371542), !coefficients=(fsig = 0.810959)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0278793/0.0151387,bkg = -0.00641102/0.0371542), !coefficients=(fsig = 0.810959)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0278793/0.0151387,bkg = -0.00641102/0.0371542), !coefficients=(fsig = 0.810959)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0244998/0.0151387,bkg = -0.0327916/0.0371542), !coefficients=(fsig = 0.810959)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0244998/0.0151387,bkg = -0.0327916/0.0371542), !coefficients=(fsig = 0.810959)
+    ... (remaining 264 messages suppressed)
+
+RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (-263920) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	c0=-0.743098	c1=-0.260065	fsig=0.885046	mean=0.128784	sigma=0.00638471
+RooChebychev::bkg[ x=pi0_InvM coefList=(c0,c1) ]
+     p.d.f value is less than zero (-0.001784), trying to recover @ x=pi0_InvM=0.144986, coefList=(c0 = -0.743098,c1 = -0.260065)
+     p.d.f value is less than zero (-0.000776), trying to recover @ x=pi0_InvM=0.144977, coefList=(c0 = -0.743098,c1 = -0.260065)
+     p.d.f value is less than zero (-0.000776), trying to recover @ x=pi0_InvM=0.144977, coefList=(c0 = -0.743098,c1 = -0.260065)
+     p.d.f value is less than zero (-0.003102), trying to recover @ x=pi0_InvM=0.144999, coefList=(c0 = -0.743098,c1 = -0.260065)
+     p.d.f value is less than zero (-0.000527), trying to recover @ x=pi0_InvM=0.144974, coefList=(c0 = -0.743098,c1 = -0.260065)
+RooNLLVar::nll_model_data[ paramSet=(c0,c1,fsig,mean,sigma) ]
+     function value is NAN @ paramSet=(c0 = -0.743098,c1 = -0.260065,fsig = 0.885046,mean = 0.128784,sigma = 0.00638471)
+RooAddPdf::model[ fsig * sig + [%] * bkg ]
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0399646/0.0158892,bkg = -0.00178389/0.0380341), !coefficients=(fsig = 0.885046)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0399646/0.0158892,bkg = -0.00178389/0.0380341), !coefficients=(fsig = 0.885046)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.040122/0.0158892,bkg = -0.000776399/0.0380341), !coefficients=(fsig = 0.885046)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.040122/0.0158892,bkg = -0.000776399/0.0380341), !coefficients=(fsig = 0.885046)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.040122/0.0158892,bkg = -0.000776399/0.0380341), !coefficients=(fsig = 0.885046)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.040122/0.0158892,bkg = -0.000776399/0.0380341), !coefficients=(fsig = 0.885046)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0397595/0.0158892,bkg = -0.00310204/0.0380341), !coefficients=(fsig = 0.885046)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0397595/0.0158892,bkg = -0.00310204/0.0380341), !coefficients=(fsig = 0.885046)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0401611/0.0158892,bkg = -0.000526993/0.0380341), !coefficients=(fsig = 0.885046)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0401611/0.0158892,bkg = -0.000526993/0.0380341), !coefficients=(fsig = 0.885046)
+
+RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (-263920) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	c0=-0.743098	c1=-0.259353	fsig=0.885046	mean=0.128784	sigma=0.00638471
+RooChebychev::bkg[ x=pi0_InvM coefList=(c0,c1) ]
+     p.d.f value is less than zero (-0.001074), trying to recover @ x=pi0_InvM=0.144986, coefList=(c0 = -0.743098,c1 = -0.259353)
+     p.d.f value is less than zero (-0.000069), trying to recover @ x=pi0_InvM=0.144977, coefList=(c0 = -0.743098,c1 = -0.259353)
+     p.d.f value is less than zero (-0.000069), trying to recover @ x=pi0_InvM=0.144977, coefList=(c0 = -0.743098,c1 = -0.259353)
+     p.d.f value is less than zero (-0.002391), trying to recover @ x=pi0_InvM=0.144999, coefList=(c0 = -0.743098,c1 = -0.259353)
+RooNLLVar::nll_model_data[ paramSet=(c0,c1,fsig,mean,sigma) ]
+     function value is NAN @ paramSet=(c0 = -0.743098,c1 = -0.259353,fsig = 0.885046,mean = 0.128784,sigma = 0.00638471)
+RooAddPdf::model[ fsig * sig + [%] * bkg ]
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0399646/0.0158892,bkg = -0.00107449/0.0380258), !coefficients=(fsig = 0.885046)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0399646/0.0158892,bkg = -0.00107449/0.0380258), !coefficients=(fsig = 0.885046)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.040122/0.0158892,bkg = -6.86055e-05/0.0380258), !coefficients=(fsig = 0.885046)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.040122/0.0158892,bkg = -6.86055e-05/0.0380258), !coefficients=(fsig = 0.885046)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.040122/0.0158892,bkg = -6.86055e-05/0.0380258), !coefficients=(fsig = 0.885046)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.040122/0.0158892,bkg = -6.86055e-05/0.0380258), !coefficients=(fsig = 0.885046)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0397595/0.0158892,bkg = -0.00239053/0.0380258), !coefficients=(fsig = 0.885046)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0397595/0.0158892,bkg = -0.00239053/0.0380258), !coefficients=(fsig = 0.885046)
+
+RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (-204988) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	c0=0.997436	c1=-0.999848	fsig=0.526978	mean=0.10069	sigma=2.68705
+RooChebychev::bkg[ x=pi0_InvM coefList=(c0,c1) ]
+     p.d.f value is less than zero (-0.047010), trying to recover @ x=pi0_InvM=0.113629, coefList=(c0 = 0.997436,c1 = -0.999848)
+     p.d.f value is less than zero (-0.123013), trying to recover @ x=pi0_InvM=0.113313, coefList=(c0 = 0.997436,c1 = -0.999848)
+     p.d.f value is less than zero (-0.475338), trying to recover @ x=pi0_InvM=0.111912, coefList=(c0 = 0.997436,c1 = -0.999848)
+     p.d.f value is less than zero (-0.475338), trying to recover @ x=pi0_InvM=0.111912, coefList=(c0 = 0.997436,c1 = -0.999848)
+     p.d.f value is less than zero (-0.119923), trying to recover @ x=pi0_InvM=0.113326, coefList=(c0 = 0.997436,c1 = -0.999848)
+     p.d.f value is less than zero (-0.866490), trying to recover @ x=pi0_InvM=0.110463, coefList=(c0 = 0.997436,c1 = -0.999848)
+     p.d.f value is less than zero (-0.421704), trying to recover @ x=pi0_InvM=0.112118, coefList=(c0 = 0.997436,c1 = -0.999848)
+     p.d.f value is less than zero (-0.473952), trying to recover @ x=pi0_InvM=0.111917, coefList=(c0 = 0.997436,c1 = -0.999848)
+     p.d.f value is less than zero (-0.473952), trying to recover @ x=pi0_InvM=0.111917, coefList=(c0 = 0.997436,c1 = -0.999848)
+     p.d.f value is less than zero (-0.368018), trying to recover @ x=pi0_InvM=0.112328, coefList=(c0 = 0.997436,c1 = -0.999848)
+     p.d.f value is less than zero (-0.062053), trying to recover @ x=pi0_InvM=0.113566, coefList=(c0 = 0.997436,c1 = -0.999848)
+     p.d.f value is less than zero (-0.869748), trying to recover @ x=pi0_InvM=0.110451, coefList=(c0 = 0.997436,c1 = -0.999848)
+    ... (remaining 2038 messages suppressed)
+RooNLLVar::nll_model_data[ paramSet=(c0,c1,fsig,mean,sigma) ]
+     function value is NAN @ paramSet=(c0 = 0.997436,c1 = -0.999848,fsig = 0.526978,mean = 0.10069,sigma = 2.68705)
+RooAddPdf::model[ fsig * sig + [%] * bkg ]
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.999988/0.034998,bkg = -0.0510886/0.0466649), !coefficients=(fsig = 0.526978)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.999988/0.034998,bkg = -0.0510886/0.0466649), !coefficients=(fsig = 0.526978)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.999988/0.034998,bkg = -0.0234013/0.0466649), !coefficients=(fsig = 0.526978)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.999988/0.034998,bkg = -0.0234013/0.0466649), !coefficients=(fsig = 0.526978)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.999992/0.034998,bkg = -0.520148/0.0466649), !coefficients=(fsig = 0.526978)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.999992/0.034998,bkg = -0.520148/0.0466649), !coefficients=(fsig = 0.526978)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.999992/0.034998,bkg = -0.520148/0.0466649), !coefficients=(fsig = 0.526978)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.999992/0.034998,bkg = -0.520148/0.0466649), !coefficients=(fsig = 0.526978)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.999989/0.034998,bkg = -0.158813/0.0466649), !coefficients=(fsig = 0.526978)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.999989/0.034998,bkg = -0.158813/0.0466649), !coefficients=(fsig = 0.526978)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.99999/0.034998,bkg = -0.340685/0.0466649), !coefficients=(fsig = 0.526978)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.99999/0.034998,bkg = -0.340685/0.0466649), !coefficients=(fsig = 0.526978)
+    ... (remaining 2038 messages suppressed)
+
+RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (-204988) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	c0=-0.984641	c1=-0.17366	fsig=0.659327	mean=0.149913	sigma=9.61924
+RooChebychev::bkg[ x=pi0_InvM coefList=(c0,c1) ]
+     p.d.f value is less than zero (-0.017424), trying to recover @ x=pi0_InvM=0.143506, coefList=(c0 = -0.984641,c1 = -0.17366)
+     p.d.f value is less than zero (-0.017424), trying to recover @ x=pi0_InvM=0.143506, coefList=(c0 = -0.984641,c1 = -0.17366)
+     p.d.f value is less than zero (-0.017424), trying to recover @ x=pi0_InvM=0.143506, coefList=(c0 = -0.984641,c1 = -0.17366)
+     p.d.f value is less than zero (-0.017424), trying to recover @ x=pi0_InvM=0.143506, coefList=(c0 = -0.984641,c1 = -0.17366)
+     p.d.f value is less than zero (-0.061716), trying to recover @ x=pi0_InvM=0.143981, coefList=(c0 = -0.984641,c1 = -0.17366)
+     p.d.f value is less than zero (-0.018675), trying to recover @ x=pi0_InvM=0.143519, coefList=(c0 = -0.984641,c1 = -0.17366)
+     p.d.f value is less than zero (-0.018675), trying to recover @ x=pi0_InvM=0.143519, coefList=(c0 = -0.984641,c1 = -0.17366)
+     p.d.f value is less than zero (-0.057300), trying to recover @ x=pi0_InvM=0.143934, coefList=(c0 = -0.984641,c1 = -0.17366)
+     p.d.f value is less than zero (-0.057300), trying to recover @ x=pi0_InvM=0.143934, coefList=(c0 = -0.984641,c1 = -0.17366)
+     p.d.f value is less than zero (-0.017028), trying to recover @ x=pi0_InvM=0.143501, coefList=(c0 = -0.984641,c1 = -0.17366)
+     p.d.f value is less than zero (-0.017028), trying to recover @ x=pi0_InvM=0.143501, coefList=(c0 = -0.984641,c1 = -0.17366)
+     p.d.f value is less than zero (-0.118850), trying to recover @ x=pi0_InvM=0.144587, coefList=(c0 = -0.984641,c1 = -0.17366)
+    ... (remaining 426 messages suppressed)
+RooNLLVar::nll_model_data[ paramSet=(c0,c1,fsig,mean,sigma) ]
+     function value is NAN @ paramSet=(c0 = -0.984641,c1 = -0.17366,fsig = 0.659327,mean = 0.149913,sigma = 9.61924)
+RooAddPdf::model[ fsig * sig + [%] * bkg ]
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 1/0.0349999,bkg = -0.0174242/0.037026), !coefficients=(fsig = 0.659327)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 1/0.0349999,bkg = -0.0174242/0.037026), !coefficients=(fsig = 0.659327)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 1/0.0349999,bkg = -0.0174242/0.037026), !coefficients=(fsig = 0.659327)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 1/0.0349999,bkg = -0.0174242/0.037026), !coefficients=(fsig = 0.659327)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 1/0.0349999,bkg = -0.0174242/0.037026), !coefficients=(fsig = 0.659327)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 1/0.0349999,bkg = -0.0174242/0.037026), !coefficients=(fsig = 0.659327)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 1/0.0349999,bkg = -0.0174242/0.037026), !coefficients=(fsig = 0.659327)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 1/0.0349999,bkg = -0.0174242/0.037026), !coefficients=(fsig = 0.659327)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 1/0.0349999,bkg = -0.0617161/0.037026), !coefficients=(fsig = 0.659327)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 1/0.0349999,bkg = -0.0617161/0.037026), !coefficients=(fsig = 0.659327)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 1/0.0349999,bkg = -0.0186749/0.037026), !coefficients=(fsig = 0.659327)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 1/0.0349999,bkg = -0.0186749/0.037026), !coefficients=(fsig = 0.659327)
+    ... (remaining 862 messages suppressed)
+
+RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (-204988) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	c0=-0.961339	c1=-0.312709	fsig=0.0192131	mean=0.106559	sigma=3.99743
+RooChebychev::bkg[ x=pi0_InvM coefList=(c0,c1) ]
+     p.d.f value is less than zero (-0.089691), trying to recover @ x=pi0_InvM=0.143506, coefList=(c0 = -0.961339,c1 = -0.312709)
+     p.d.f value is less than zero (-0.089691), trying to recover @ x=pi0_InvM=0.143506, coefList=(c0 = -0.961339,c1 = -0.312709)
+     p.d.f value is less than zero (-0.089691), trying to recover @ x=pi0_InvM=0.143506, coefList=(c0 = -0.961339,c1 = -0.312709)
+     p.d.f value is less than zero (-0.089691), trying to recover @ x=pi0_InvM=0.143506, coefList=(c0 = -0.961339,c1 = -0.312709)
+     p.d.f value is less than zero (-0.008458), trying to recover @ x=pi0_InvM=0.142822, coefList=(c0 = -0.961339,c1 = -0.312709)
+     p.d.f value is less than zero (-0.147383), trying to recover @ x=pi0_InvM=0.143981, coefList=(c0 = -0.961339,c1 = -0.312709)
+     p.d.f value is less than zero (-0.091316), trying to recover @ x=pi0_InvM=0.143519, coefList=(c0 = -0.961339,c1 = -0.312709)
+     p.d.f value is less than zero (-0.091316), trying to recover @ x=pi0_InvM=0.143519, coefList=(c0 = -0.961339,c1 = -0.312709)
+     p.d.f value is less than zero (-0.141619), trying to recover @ x=pi0_InvM=0.143934, coefList=(c0 = -0.961339,c1 = -0.312709)
+     p.d.f value is less than zero (-0.141619), trying to recover @ x=pi0_InvM=0.143934, coefList=(c0 = -0.961339,c1 = -0.312709)
+     p.d.f value is less than zero (-0.052025), trying to recover @ x=pi0_InvM=0.143191, coefList=(c0 = -0.961339,c1 = -0.312709)
+     p.d.f value is less than zero (-0.089176), trying to recover @ x=pi0_InvM=0.143501, coefList=(c0 = -0.961339,c1 = -0.312709)
+    ... (remaining 583 messages suppressed)
+RooNLLVar::nll_model_data[ paramSet=(c0,c1,fsig,mean,sigma) ]
+     function value is NAN @ paramSet=(c0 = -0.961339,c1 = -0.312709,fsig = 0.0192131,mean = 0.106559,sigma = 3.99743)
+RooAddPdf::model[ fsig * sig + [%] * bkg ]
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.999957/0.0349994,bkg = -0.0896907/0.0386483), !coefficients=(fsig = 0.0192131)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.999957/0.0349994,bkg = -0.0896907/0.0386483), !coefficients=(fsig = 0.0192131)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.999957/0.0349994,bkg = -0.0896907/0.0386483), !coefficients=(fsig = 0.0192131)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.999957/0.0349994,bkg = -0.0896907/0.0386483), !coefficients=(fsig = 0.0192131)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.999957/0.0349994,bkg = -0.0896907/0.0386483), !coefficients=(fsig = 0.0192131)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.999957/0.0349994,bkg = -0.0896907/0.0386483), !coefficients=(fsig = 0.0192131)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.999957/0.0349994,bkg = -0.0896907/0.0386483), !coefficients=(fsig = 0.0192131)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.999957/0.0349994,bkg = -0.0896907/0.0386483), !coefficients=(fsig = 0.0192131)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.999959/0.0349994,bkg = -0.00845833/0.0386483), !coefficients=(fsig = 0.0192131)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.999959/0.0349994,bkg = -0.00845833/0.0386483), !coefficients=(fsig = 0.0192131)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.999956/0.0349994,bkg = -0.147383/0.0386483), !coefficients=(fsig = 0.0192131)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.999956/0.0349994,bkg = -0.147383/0.0386483), !coefficients=(fsig = 0.0192131)
+    ... (remaining 1176 messages suppressed)
+
+RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (-204988) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	c0=-0.743098	c1=-0.259353	fsig=0.885046	mean=0.128784	sigma=0.00638471
+RooChebychev::bkg[ x=pi0_InvM coefList=(c0,c1) ]
+     p.d.f value is less than zero (-0.001074), trying to recover @ x=pi0_InvM=0.144986, coefList=(c0 = -0.743098,c1 = -0.259353)
+     p.d.f value is less than zero (-0.000069), trying to recover @ x=pi0_InvM=0.144977, coefList=(c0 = -0.743098,c1 = -0.259353)
+     p.d.f value is less than zero (-0.000069), trying to recover @ x=pi0_InvM=0.144977, coefList=(c0 = -0.743098,c1 = -0.259353)
+     p.d.f value is less than zero (-0.002391), trying to recover @ x=pi0_InvM=0.144999, coefList=(c0 = -0.743098,c1 = -0.259353)
+RooNLLVar::nll_model_data[ paramSet=(c0,c1,fsig,mean,sigma) ]
+     function value is NAN @ paramSet=(c0 = -0.743098,c1 = -0.259353,fsig = 0.885046,mean = 0.128784,sigma = 0.00638471)
+RooAddPdf::model[ fsig * sig + [%] * bkg ]
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0399646/0.0158892,bkg = -0.00107449/0.0380258), !coefficients=(fsig = 0.885046)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0399646/0.0158892,bkg = -0.00107449/0.0380258), !coefficients=(fsig = 0.885046)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.040122/0.0158892,bkg = -6.86055e-05/0.0380258), !coefficients=(fsig = 0.885046)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.040122/0.0158892,bkg = -6.86055e-05/0.0380258), !coefficients=(fsig = 0.885046)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.040122/0.0158892,bkg = -6.86055e-05/0.0380258), !coefficients=(fsig = 0.885046)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.040122/0.0158892,bkg = -6.86055e-05/0.0380258), !coefficients=(fsig = 0.885046)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0397595/0.0158892,bkg = -0.00239053/0.0380258), !coefficients=(fsig = 0.885046)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0397595/0.0158892,bkg = -0.00239053/0.0380258), !coefficients=(fsig = 0.885046)
+
+RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (-204988) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	c0=-0.743098	c1=-0.369779	fsig=0.885046	mean=0.128784	sigma=0.00638471
+RooChebychev::bkg[ x=pi0_InvM coefList=(c0,c1) ]
+     p.d.f value is less than zero (-0.060827), trying to recover @ x=pi0_InvM=0.144587, coefList=(c0 = -0.743098,c1 = -0.369779)
+     p.d.f value is less than zero (-0.029883), trying to recover @ x=pi0_InvM=0.144338, coefList=(c0 = -0.743098,c1 = -0.369779)
+     p.d.f value is less than zero (-0.029883), trying to recover @ x=pi0_InvM=0.144338, coefList=(c0 = -0.743098,c1 = -0.369779)
+     p.d.f value is less than zero (-0.065347), trying to recover @ x=pi0_InvM=0.144623, coefList=(c0 = -0.743098,c1 = -0.369779)
+     p.d.f value is less than zero (-0.065347), trying to recover @ x=pi0_InvM=0.144623, coefList=(c0 = -0.743098,c1 = -0.369779)
+     p.d.f value is less than zero (-0.051599), trying to recover @ x=pi0_InvM=0.144513, coefList=(c0 = -0.743098,c1 = -0.369779)
+     p.d.f value is less than zero (-0.051599), trying to recover @ x=pi0_InvM=0.144513, coefList=(c0 = -0.743098,c1 = -0.369779)
+     p.d.f value is less than zero (-0.087982), trying to recover @ x=pi0_InvM=0.144803, coefList=(c0 = -0.743098,c1 = -0.369779)
+     p.d.f value is less than zero (-0.087982), trying to recover @ x=pi0_InvM=0.144803, coefList=(c0 = -0.743098,c1 = -0.369779)
+     p.d.f value is less than zero (-0.087982), trying to recover @ x=pi0_InvM=0.144803, coefList=(c0 = -0.743098,c1 = -0.369779)
+     p.d.f value is less than zero (-0.087982), trying to recover @ x=pi0_InvM=0.144803, coefList=(c0 = -0.743098,c1 = -0.369779)
+     p.d.f value is less than zero (-0.014368), trying to recover @ x=pi0_InvM=0.144212, coefList=(c0 = -0.743098,c1 = -0.369779)
+    ... (remaining 192 messages suppressed)
+RooNLLVar::nll_model_data[ paramSet=(c0,c1,fsig,mean,sigma) ]
+     function value is NAN @ paramSet=(c0 = -0.743098,c1 = -0.369779,fsig = 0.885046,mean = 0.128784,sigma = 0.00638471)
+RooAddPdf::model[ fsig * sig + [%] * bkg ]
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0467522/0.0158892,bkg = -0.0608271/0.0393141), !coefficients=(fsig = 0.885046)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0467522/0.0158892,bkg = -0.0608271/0.0393141), !coefficients=(fsig = 0.885046)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0514463/0.0158892,bkg = -0.0298832/0.0393141), !coefficients=(fsig = 0.885046)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0514463/0.0158892,bkg = -0.0298832/0.0393141), !coefficients=(fsig = 0.885046)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0514463/0.0158892,bkg = -0.0298832/0.0393141), !coefficients=(fsig = 0.885046)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0514463/0.0158892,bkg = -0.0298832/0.0393141), !coefficients=(fsig = 0.885046)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0461011/0.0158892,bkg = -0.0653471/0.0393141), !coefficients=(fsig = 0.885046)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0461011/0.0158892,bkg = -0.0653471/0.0393141), !coefficients=(fsig = 0.885046)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0461011/0.0158892,bkg = -0.0653471/0.0393141), !coefficients=(fsig = 0.885046)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0461011/0.0158892,bkg = -0.0653471/0.0393141), !coefficients=(fsig = 0.885046)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0481084/0.0158892,bkg = -0.0515987/0.0393141), !coefficients=(fsig = 0.885046)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0481084/0.0158892,bkg = -0.0515987/0.0393141), !coefficients=(fsig = 0.885046)
+    ... (remaining 394 messages suppressed)
+
+RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (-204988) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	c0=-0.743098	c1=-0.259598	fsig=0.885046	mean=0.128784	sigma=0.00638471
+RooChebychev::bkg[ x=pi0_InvM coefList=(c0,c1) ]
+     p.d.f value is less than zero (-0.001318), trying to recover @ x=pi0_InvM=0.144986, coefList=(c0 = -0.743098,c1 = -0.259598)
+     p.d.f value is less than zero (-0.000312), trying to recover @ x=pi0_InvM=0.144977, coefList=(c0 = -0.743098,c1 = -0.259598)
+     p.d.f value is less than zero (-0.000312), trying to recover @ x=pi0_InvM=0.144977, coefList=(c0 = -0.743098,c1 = -0.259598)
+     p.d.f value is less than zero (-0.002635), trying to recover @ x=pi0_InvM=0.144999, coefList=(c0 = -0.743098,c1 = -0.259598)
+     p.d.f value is less than zero (-0.000063), trying to recover @ x=pi0_InvM=0.144974, coefList=(c0 = -0.743098,c1 = -0.259598)
+RooNLLVar::nll_model_data[ paramSet=(c0,c1,fsig,mean,sigma) ]
+     function value is NAN @ paramSet=(c0 = -0.743098,c1 = -0.259598,fsig = 0.885046,mean = 0.128784,sigma = 0.00638471)
+RooAddPdf::model[ fsig * sig + [%] * bkg ]
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0399646/0.0158892,bkg = -0.00131815/0.0380286), !coefficients=(fsig = 0.885046)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0399646/0.0158892,bkg = -0.00131815/0.0380286), !coefficients=(fsig = 0.885046)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.040122/0.0158892,bkg = -0.000311714/0.0380286), !coefficients=(fsig = 0.885046)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.040122/0.0158892,bkg = -0.000311714/0.0380286), !coefficients=(fsig = 0.885046)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.040122/0.0158892,bkg = -0.000311714/0.0380286), !coefficients=(fsig = 0.885046)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.040122/0.0158892,bkg = -0.000311714/0.0380286), !coefficients=(fsig = 0.885046)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0397595/0.0158892,bkg = -0.00263491/0.0380286), !coefficients=(fsig = 0.885046)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0397595/0.0158892,bkg = -0.00263491/0.0380286), !coefficients=(fsig = 0.885046)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(sig = 0.0401611/0.0158892,bkg = -6.25686e-05/0.0380286), !coefficients=(fsig = 0.885046)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(), !pdfs=(sig = 0.0401611/0.0158892,bkg = -6.25686e-05/0.0380286), !coefficients=(fsig = 0.885046)
+
+[#1] INFO:Minization -- RooMinimizer::optimizeConst: deactivating const optimization
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) directly selected PDF components: (bkg)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) indirectly selected PDF components: ()
+RooRealVar::mean = 0.127851 +/- 3.74356e-05  L(0.1 - 0.15) 
+RooRealVar::sigma = 0.00622574 +/- 0.000128585  L(0 - 10) 
+0x7ffdc3ea5b08 RooAddPdf::model = 1.02783 [Auto,Dirty] 
+  0x7ffdc3ea7180/V- RooGaussian::sig = 0.99841 [Auto,Dirty] 
+    0x7ffdc3ea7d50/V- RooRealVar::pi0_InvM = 0.1275
+    0x7ffdc3ea79e0/V- RooRealVar::mean = 0.127851 +/- 3.74356e-05
+    0x7ffdc3ea7660/V- RooRealVar::sigma = 0.00622574 +/- 0.000128585
+  0x7ffdc3ea6190/V- RooRealVar::fsig = 0.840418 +/- 0.039782
+  0x7ffdc3ea65f0/V- RooChebychev::bkg = 1.18279 [Auto,Dirty] 
+    0x7ffdc3ea7d50/V- RooRealVar::pi0_InvM = 0.1275
+    0x7ffdc3ea6e10/V- RooRealVar::c0 = -0.540699 +/- 0.123813
+    0x7ffdc3ea6aa0/V- RooRealVar::c1 = -0.182793 +/- 0.15193
+Info in <TCanvas::Print>: pdf file test.pdf has been created

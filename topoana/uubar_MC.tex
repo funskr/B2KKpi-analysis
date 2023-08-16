@@ -1,0 +1,977 @@
+\documentclass[landscape]{article}
+\usepackage{/home/belle2/yuanmk/topoana/topoana/share/geometry}
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
+\usepackage{longtable}
+\usepackage{/home/belle2/yuanmk/topoana/topoana/share/makecell}
+\usepackage{color}
+\usepackage{amssymb} % The package is used for the \dashrightarrow
+\newcommand{\tablecaption}[1]{\caption{#1} \\}
+\usepackage{caption}
+\captionsetup{font=normalsize}
+\newcommand{\tableheader}[1]
+{
+  \hline
+  #1
+  \hline
+  \endfirsthead
+
+  \hline
+  #1
+  \hline
+  \endhead
+
+  \endfoot
+
+  \endlastfoot
+}
+% The following command \tableheaderP is developed as a substitute for \tableheader, in cases that hlines are needed at the bottom of the pages (except for the last one) of the tables when \EOL is defined and used as \\ with no \hline followed. In the command \tableheaderP, P is the initial of PRIME.
+\newcommand{\tableheaderP}[1]
+{
+  \hline
+  #1
+  \hline
+  \endfirsthead
+
+  \hline
+  #1
+  \hline
+  \endhead
+
+  \hline % This is the only difference between \tableheader and \tableheaderP.
+  \endfoot
+
+  \endlastfoot
+}
+\setcellgapes[t]{2pt}
+\makegapedcells
+\newcounter{rownumbers}
+\newcommand\rn{\stepcounter{rownumbers}\arabic{rownumbers}}
+% \newcommand{\EOL}{\\ \hline} % Use this definition to retain hlines in the body part.
+\newcommand{\EOL}{\\} % Use this definition to remove hlines in the body part.
+% The following command \EOLP is developed as a supplementary to \EOL, in cases that hlines are needed in some tables (nLineMean>2, the average number of lines occupied by one decay object is larger than two) when \EOL is only defined as \\ with no \hline followed for other tables. In the command \EOLP, P is the initial of PRIME.
+\newcommand{\EOLP}{\\ \hline} % Use this definition to retain hlines in the body part.
+% \newcommand{\EOLP}{\\} % Use this definition to remove hlines in the body part.
+\newcommand{\topoTags}[1]{#1} % Use this definition to retain topology tags.
+% \newcommand{\topoTags}[1]{} % Use this definition to remove topology tags.
+\begin{document}
+\title{Topology Analysis \footnote{\small{Xingyu Zhou, Liaoning Normal University, zhouxy@lnnu.edu.cn}} \footnote{\small{This package is implemented referring to a program called {\sc Topo}, which is first developed by Prof. Shuxian Du from Zhengzhou University and later extended and maintained by Prof. Gang Li from Institute of High Energy Physics, Chinese Academy of Sciences. The {\sc Topo} program has been widely used by colleagues in BESIII collaboration. Several years ago, when I was a Ph.D. student working on the BESIII experiment, I learned the idea of topology analysis and a lot of programming techniques from the {\sc Topo} program. So, I really appreciate the original works of Prof. Du and Prof. Li very much. To meet my own needs and to practice developing analysis tools with C++, ROOT, and LaTeX, I wrote the package from scratch. At that time, the package functioned well but was relatively simple. At the end of 2017, when I just started my post-doctoral research at Beihang University, my co-supervisor Prof. Chengping Shen reminded me that it could be a useful tool for the Belle II experiment as well. So, I revised and extended it, making it more well-rounded and suitable for the Belle II experiment. Now, it also applies to many other similar high energy physics experiments. Here, I would like to thank Prof. Du and Prof. Li for their original works, and Prof. Shen for his suggestion, guidance, support, and encouragement.}} \footnote{\small{Besides, I would like to thank all of the people who have helped me in the development of the program. I am particularly grateful to Prof. Xingtao Huang for his comments on the principles and styles of the program, to Remco de Boer for his suggestions on the tex output and the use of GitHub, and to Xi Chen for his discussions on the core algorithms. I am especially indebted to Prof. Xiqing Hao, Longke Li, Xiaoping Qin, Ilya Komarov, Yubo Li, Guanda Gong, Suxian Li, Junhao Yin, Prof. Xiaolong Wang, Yeqi Chen, Hannah Wakeling, Hongrong Qi, Hui Li, Ning Cao, Sanjeeda Bharati Das, Kazuki Kojima, Tingting Han, Fang Yan, Lin Wang, Meiru An, and Noreen Rauls for their advice in extending and perfecting the program. Also, I thank Xi'an Xiong, Runqiu Ma, Wencheng Yan, Sen Jia, Lu Cao, Dong Liu, Hongpeng Wang, Jiawei Zhang, Jiajun Liu, Maoqiang Jing, Yi Zhang, Wei Shan, and Yadi Wang for their efforts in helping me test the program.}} \footnote{\small{The paper on the tool has been published by {\it Computer Physics Communications}. You can find this paper and the preprint corresponding to it in the links \href{https://doi.org/10.1016/j.cpc.2020.107540}{Comput. Phys. Commun. 258 (2021) 107540} and \href{https://arxiv.org/abs/2001.04016}{arXiv:2001.04016}, respectively. If the tool really helps your researches, we would appreciate it very much if you could cite the paper in your publications.}} \\ \vspace{1cm} \Large{(v2.12.3)}}
+\maketitle
+
+\clearpage
+
+\newgeometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+
+\listoftables
+
+\newgeometry{left=0.0cm,right=0.0cm,top=2.5cm,bottom=2.5cm}
+
+\clearpage
+
+\small
+\centering
+\setcounter{rownumbers}{0}
+\begin{longtable}{clcccc}
+\tablecaption{Decay trees and their respective initial-final states.}
+\tableheaderP{rowNo & \thead{decay tree \\ (decay initial-final states)} & \topoTags{iDcyTr & }nEtr & nCEtr \\}
+
+% \rn = 1
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{+} \pi^{-} \rho^{+} \rho^{-} K^{+} K^{-} \gamma^{I} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{I} 
+$) } & \topoTags{78 & }7 & 7 \EOL
+
+% \rn = 2
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{+} \pi^{+} \pi^{-} \rho^{-} \omega K^{+} K^{-} \gamma^{I} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+\omega \rightarrow \pi^{0} \pi^{+} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{I} 
+$) } & \topoTags{246 & }6 & 13 \EOL
+
+% \rn = 3
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{0} \rho^{0} \pi^{+} \pi^{-} K^{+} K^{-} ,
+\rho^{0} \rightarrow \pi^{+} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{97 & }5 & 18 \EOL
+
+% \rn = 4
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \rho^{0} \pi^{+} \pi^{+} \pi^{-} \rho^{-} K^{+} K^{-} ,
+\rho^{0} \rightarrow \pi^{+} \pi^{-} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{203 & }5 & 23 \EOL
+
+% \rn = 5
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{I} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{I} 
+$) } & \topoTags{352 & }5 & 28 \EOL
+
+% \rn = 6
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{0} \rho^{0} \pi^{+} \pi^{-} K^{+} K^{-} \gamma^{I} ,
+\rho^{0} \rightarrow \pi^{+} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{I} 
+$) } & \topoTags{469 & }5 & 33 \EOL
+
+% \rn = 7
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{-} \rho^{+} \omega K^{+} K^{-} \gamma^{I} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\omega \rightarrow \pi^{0} \pi^{+} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{I} 
+$) } & \topoTags{484 & }5 & 38 \EOL
+
+% \rn = 8
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \rho^{-} K^{+} K^{-} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{1080 & }5 & 43 \EOL
+
+% \rn = 9
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{I} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{I} 
+$) } & \topoTags{1166 & }5 & 48 \EOL
+
+% \rn = 10
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \rho^{0} \pi^{+} \pi^{-} \rho^{+} \rho^{-} K^{+} K^{-} ,
+\rho^{0} \rightarrow \pi^{+} \pi^{-} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{1325 & }5 & 53 \EOL
+
+% \rn = 11
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{144 & }4 & 57 \EOL
+
+% \rn = 12
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{-} \rho^{+} \omega K^{+} K^{-} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\omega \rightarrow \pi^{0} \pi^{+} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{145 & }4 & 61 \EOL
+
+% \rn = 13
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{-} \omega K^{+} K^{-} \gamma^{I} ,
+\omega \rightarrow \pi^{0} \pi^{+} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{I} 
+$) } & \topoTags{155 & }4 & 65 \EOL
+
+% \rn = 14
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{-} \pi^{-} \rho^{+} \omega K^{+} K^{-} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\omega \rightarrow \pi^{0} \pi^{+} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{212 & }4 & 69 \EOL
+
+% \rn = 15
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{-} \rho^{+} K^{*} \bar{K}^{*} K^{-} K^{*+} \gamma^{I} \gamma^{I} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+K^{*} \rightarrow \pi^{-} K^{+} ,
+\bar{K}^{*} \rightarrow \pi^{+} K^{-} ,
+K^{*+} \rightarrow \pi^{+} K^{0} ,
+K^{0} \rightarrow K_{L}^{0} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} K_{L}^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} K^{-} \gamma^{I} \gamma^{I} 
+$) } & \topoTags{233 & }4 & 73 \EOL
+
+% \rn = 16
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \rho^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \omega \gamma^{I} ,
+\rho^{0} \rightarrow \pi^{+} \pi^{-} ,
+\omega \rightarrow \pi^{0} \pi^{+} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \pi^{-} \pi^{-} \gamma^{I} 
+$) } & \topoTags{417 & }4 & 77 \EOL
+
+% \rn = 17
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{518 & }4 & 81 \EOL
+
+% \rn = 18
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{+} \pi^{-} \rho^{+} \rho^{-} K^{+} K^{-} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{827 & }4 & 85 \EOL
+
+% \rn = 19
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{+} \pi^{+} \rho^{-} \rho^{-} K^{+} K^{-} \gamma^{I} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{I} 
+$) } & \topoTags{1007 & }4 & 89 \EOL
+
+% \rn = 20
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{-} K^{+} K^{-} p \bar{p} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{-} K^{+} K^{-} p \bar{p} 
+$) } & \topoTags{1278 & }4 & 93 \EOL
+
+% \rn = 21
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{-} \pi^{-} \rho^{+} \rho^{+} K^{+} K^{-} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{91 & }3 & 96 \EOL
+
+% \rn = 22
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \rho^{0} \pi^{+} \rho^{-} K^{+} K^{-} ,
+\rho^{0} \rightarrow \pi^{+} \pi^{-} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{45 & }3 & 99 \EOL
+
+% \rn = 23
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{-} \pi^{-} \rho^{+} K^{+} K^{*-} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+K^{*-} \rightarrow \pi^{0} K^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{112 & }3 & 102 \EOL
+
+% \rn = 24
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \rho^{0} \pi^{+} \pi^{-} K^{+} K^{-} \gamma^{I} ,
+\rho^{0} \rightarrow \pi^{+} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{I} 
+$) } & \topoTags{131 & }3 & 105 \EOL
+
+% \rn = 25
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{+} \pi^{-} \rho^{+} \rho^{-} K^{+} K^{-} \gamma^{I} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{I} 
+$) } & \topoTags{160 & }3 & 108 \EOL
+
+% \rn = 26
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \rho^{0} \pi^{-} \rho^{+} K^{+} K^{-} \gamma^{I} ,
+\rho^{0} \rightarrow \pi^{+} \pi^{-} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{I} 
+$) } & \topoTags{305 & }3 & 111 \EOL
+
+% \rn = 27
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{+} \pi^{-} K^{+} K^{+} K^{-} K^{*-} ,
+K^{*-} \rightarrow \pi^{0} K^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{-} K^{+} K^{+} K^{-} K^{-} 
+$) } & \topoTags{366 & }3 & 114 \EOL
+
+% \rn = 28
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{+} \pi^{-} \rho^{+} \rho^{-} \omega ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+\omega \rightarrow \pi^{0} \pi^{+} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \pi^{-} 
+$) } & \topoTags{372 & }3 & 117 \EOL
+
+% \rn = 29
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \rho^{0} \pi^{+} \pi^{+} \pi^{-} \rho^{-} K^{+} K^{-} ,
+\rho^{0} \rightarrow \pi^{+} \pi^{-} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{445 & }3 & 120 \EOL
+
+% \rn = 30
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{-} \rho^{+} K^{*} K^{-} \gamma^{I} \gamma^{I} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+K^{*} \rightarrow \pi^{-} K^{+} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{I} \gamma^{I} 
+$) } & \topoTags{447 & }3 & 123 \EOL
+
+% \rn = 31
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \rho^{0} \pi^{+} \rho^{-} K^{-} K^{*+} \gamma^{I} ,
+\rho^{0} \rightarrow \pi^{+} \pi^{-} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+K^{*+} \rightarrow \pi^{0} K^{+} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{I} 
+$) } & \topoTags{631 & }3 & 126 \EOL
+
+% \rn = 32
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{-} \rho^{+} K^{-} p \bar{\Lambda} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{\Lambda} \rightarrow \pi^{0} \bar{n} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{-} K^{-} \bar{n} p 
+$) } & \topoTags{672 & }3 & 129 \EOL
+
+% \rn = 33
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{+} \pi^{-} \pi^{-} \omega \bar{K}^{*} K^{+} \gamma^{I} ,
+\omega \rightarrow \pi^{0} \pi^{+} \pi^{-} ,
+\bar{K}^{*} \rightarrow \pi^{+} K^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{I} 
+$) } & \topoTags{766 & }3 & 132 \EOL
+
+% \rn = 34
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{0} \rho^{0} \pi^{+} \pi^{-} \omega ,
+\rho^{0} \rightarrow \pi^{+} \pi^{-} ,
+\omega \rightarrow \pi^{0} \pi^{+} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \pi^{-} 
+$) } & \topoTags{839 & }3 & 135 \EOL
+
+% \rn = 35
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{+} \pi^{-} \omega K^{+} K^{*-} ,
+\omega \rightarrow \pi^{0} \pi^{+} \pi^{-} ,
+K^{*-} \rightarrow \pi^{0} K^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{894 & }3 & 138 \EOL
+
+% \rn = 36
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{-} \pi^{-} \rho^{+} \rho^{+} \omega K^{+} K^{-} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\omega \rightarrow \pi^{0} \pi^{+} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{1086 & }3 & 141 \EOL
+
+% \rn = 37
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \omega K^{+} K^{-} \gamma^{I} ,
+\omega \rightarrow \pi^{0} \pi^{+} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{I} 
+$) } & \topoTags{1232 & }3 & 144 \EOL
+
+% \rn = 38
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{+} \pi^{-} \pi^{-} \rho^{+} K^{-} K^{*+} \gamma^{I} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+K^{*+} \rightarrow \pi^{0} K^{+} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{I} 
+$) } & \topoTags{1273 & }3 & 147 \EOL
+
+% \rn = 39
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \rho^{0} \pi^{+} \pi^{-} K^{+} K^{-} \gamma^{I} \gamma^{I} ,
+\rho^{0} \rightarrow \pi^{+} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{I} \gamma^{I} 
+$) } & \topoTags{1415 & }3 & 150 \EOL
+
+% \rn = 40
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{+} \pi^{+} \pi^{-} \rho^{-} \omega \gamma^{I} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+\omega \rightarrow \pi^{0} \pi^{+} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \pi^{-} \gamma^{I} 
+$) } & \topoTags{1491 & }3 & 153 \EOL
+
+% \rn = 41
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \rho^{0} \pi^{+} \pi^{-} \rho^{+} \rho^{-} K^{+} K^{-} \gamma^{I} ,
+\rho^{0} \rightarrow \pi^{+} \pi^{-} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{I} 
+$) } & \topoTags{1494 & }3 & 156 \EOL
+
+% \rn = 42
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{-} \rho^{+} K^{+} K^{-} \gamma^{I} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{-} K^{+} K^{-} \gamma^{I} 
+$) } & \topoTags{1508 & }3 & 159 \EOL
+
+% \rn = 43
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \rho^{0} \pi^{+} \pi^{-} \pi^{-} \rho^{+} K^{+} K^{-} \gamma^{I} ,
+\rho^{0} \rightarrow \pi^{+} \pi^{-} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{I} 
+$) } & \topoTags{1581 & }3 & 162 \EOL
+
+% \rn = 44
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{0} \rho^{0} \pi^{+} \rho^{-} ,
+\rho^{0} \rightarrow \pi^{+} \pi^{-} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} 
+$) } & \topoTags{1690 & }3 & 165 \EOL
+
+% \rn = 45
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \rho^{+} \rho^{-} K^{+} K^{-} K^{-} K^{*+} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+K^{*+} \rightarrow \pi^{+} K^{0} ,
+K^{0} \rightarrow K_{S}^{0} ,
+K_{S}^{0} \rightarrow \pi^{+} \pi^{-} \gamma^{F} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} K^{-} \gamma^{F} 
+$) } & \topoTags{1924 & }3 & 168 \EOL
+
+% \rn = 46
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{+} \rho^{-} \omega K^{+} K^{-} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+\omega \rightarrow \pi^{0} \pi^{+} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{2022 & }3 & 171 \EOL
+
+% \rn = 47
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{+} \pi^{-} \rho^{+} \rho^{-} K^{+} K^{-} \gamma^{I} \gamma^{I} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{I} \gamma^{I} 
+$) } & \topoTags{2081 & }3 & 174 \EOL
+
+% \rn = 48
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{-} \omega K^{+} K^{-} \gamma^{I} ,
+\omega \rightarrow \pi^{0} \pi^{+} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{I} 
+$) } & \topoTags{2340 & }3 & 177 \EOL
+
+% \rn = 49
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{+} \rho^{-} K^{+} K^{+} K^{-} K^{-} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{-} K^{+} K^{+} K^{-} K^{-} 
+$) } & \topoTags{2366 & }3 & 180 \EOL
+
+% \rn = 50
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \rho^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{I} \gamma^{I} ,
+\rho^{0} \rightarrow \pi^{+} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{I} \gamma^{I} 
+$) } & \topoTags{2541 & }3 & 183 \EOL
+
+% \rn = 51
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{0} \rho^{0} \pi^{+} \pi^{-} \omega K^{+} K^{-} ,
+\rho^{0} \rightarrow \pi^{+} \pi^{-} ,
+\omega \rightarrow \pi^{0} \pi^{+} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{2601 & }3 & 186 \EOL
+
+% \rn = 52
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{-} \rho^{+} K^{-} K^{*+} \gamma^{I} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+K^{*+} \rightarrow \pi^{0} K^{+} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{-} K^{+} K^{-} \gamma^{I} 
+$) } & \topoTags{2788 & }3 & 189 \EOL
+
+% \rn = 53
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{+} \pi^{-} \pi^{-} \bar{K}^{*} K^{+} K^{+} K^{-} ,
+\bar{K}^{*} \rightarrow \pi^{+} K^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{+} K^{-} K^{-} 
+$) } & \topoTags{2980 & }3 & 192 \EOL
+
+% \rn = 54
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \rho^{-} \eta \bar{K}^{*} K^{+} \phi ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+\eta \rightarrow \pi^{0} \pi^{+} \pi^{-} ,
+\bar{K}^{*} \rightarrow \pi^{+} K^{-} ,
+\phi \rightarrow K^{+} K^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{+} K^{-} K^{-} 
+$) } & \topoTags{3010 & }3 & 195 \EOL
+
+% \rn = 55
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{-} K^{+} K^{-} \gamma^{I} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{-} K^{+} K^{-} \gamma^{I} 
+$) } & \topoTags{3165 & }3 & 198 \EOL
+
+% \rn = 56
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{-} \rho^{+} \rho^{-} \omega \bar{K}^{*} K^{+} \gamma^{I} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+\omega \rightarrow \pi^{0} \pi^{+} \pi^{-} ,
+\bar{K}^{*} \rightarrow \pi^{+} K^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{I} 
+$) } & \topoTags{3322 & }3 & 201 \EOL
+
+% \rn = 57
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \rho^{0} \rho^{0} \rho^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} ,
+\rho^{0} \rightarrow \pi^{+} \pi^{-} ,
+\rho^{0} \rightarrow \pi^{+} \pi^{-} ,
+\rho^{0} \rightarrow \pi^{+} \pi^{-} \gamma^{F} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \pi^{-} \pi^{-} \pi^{-} \gamma^{F} 
+$) } & \topoTags{19 & }2 & 203 \EOL
+
+% \rn = 58
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{0} \rho^{0} \pi^{+} \rho^{-} \omega \gamma^{I} ,
+\rho^{0} \rightarrow \pi^{+} \pi^{-} \gamma^{F} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+\omega \rightarrow \pi^{0} \pi^{+} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \pi^{-} \gamma^{I} \gamma^{F} 
+$) } & \topoTags{25 & }2 & 205 \EOL
+
+% \rn = 59
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{0} \rho^{-} \bar{K}^{*} K^{+} K^{+} K^{-} \gamma^{I} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+\bar{K}^{*} \rightarrow \pi^{0} \bar{K}^{0} ,
+\bar{K}^{0} \rightarrow K_{L}^{0} ,
+K_{L}^{0} \rightarrow \pi^{0} \pi^{0} \pi^{0} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{-} K^{+} K^{+} K^{-} \gamma^{I} 
+$) } & \topoTags{28 & }2 & 207 \EOL
+
+% \rn = 60
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{-} \rho^{+} \rho^{+} K^{*} K^{-} \gamma^{I} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+K^{*} \rightarrow \pi^{-} K^{+} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{I} 
+$) } & \topoTags{35 & }2 & 209 \EOL
+
+% \rn = 61
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \rho^{0} \pi^{-} \rho^{+} K^{-} K^{*+} ,
+\rho^{0} \rightarrow \pi^{+} \pi^{-} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+K^{*+} \rightarrow \pi^{0} K^{+} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{38 & }2 & 211 \EOL
+
+% \rn = 62
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{-} \rho^{+} \omega K^{+} K^{-} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\omega \rightarrow \pi^{0} \pi^{+} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{0 & }2 & 213 \EOL
+
+% \rn = 63
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{+} \pi^{+} \pi^{+} \pi^{-} \rho^{-} \omega K^{*} K^{-} \gamma^{I} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+\omega \rightarrow \pi^{0} \pi^{+} \pi^{-} ,
+K^{*} \rightarrow \pi^{-} K^{+} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{I} 
+$) } & \topoTags{2 & }2 & 215 \EOL
+
+% \rn = 64
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \rho^{0} \pi^{+} \pi^{+} \pi^{-} \rho^{-} \gamma^{I} \gamma^{I} ,
+\rho^{0} \rightarrow \pi^{+} \pi^{-} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \pi^{-} \gamma^{I} \gamma^{I} 
+$) } & \topoTags{82 & }2 & 217 \EOL
+
+% \rn = 65
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{+} \pi^{-} \pi^{-} \rho^{+} K^{+} K^{-} \phi ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\phi \rightarrow K^{+} K^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{+} K^{-} K^{-} 
+$) } & \topoTags{83 & }2 & 219 \EOL
+
+% \rn = 66
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{+} \rho^{-} \rho^{-} K^{+} K^{-} \gamma^{I} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{I} 
+$) } & \topoTags{87 & }2 & 221 \EOL
+
+% \rn = 67
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \omega K^{*} K^{-} \gamma^{I} ,
+\omega \rightarrow \pi^{0} \pi^{+} \pi^{-} ,
+K^{*} \rightarrow \pi^{-} K^{+} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{I} 
+$) } & \topoTags{6 & }2 & 223 \EOL
+
+% \rn = 68
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \rho^{-} K^{+} K^{-} \gamma^{I} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} \gamma^{F} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{I} \gamma^{F} 
+$) } & \topoTags{95 & }2 & 225 \EOL
+
+% \rn = 69
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \rho^{-} K^{+} K^{-} \gamma^{I} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{I} 
+$) } & \topoTags{13 & }2 & 227 \EOL
+
+% \rn = 70
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \omega \omega \gamma^{I} \gamma^{I} ,
+\omega \rightarrow \pi^{0} \pi^{+} \pi^{-} ,
+\omega \rightarrow \pi^{0} \pi^{+} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \pi^{-} \pi^{-} \gamma^{I} \gamma^{I} 
+$) } & \topoTags{98 & }2 & 229 \EOL
+
+% \rn = 71
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \rho^{0} \pi^{+} \pi^{-} K^{*} \bar{K}^{*} ,
+\rho^{0} \rightarrow \pi^{+} \pi^{-} ,
+K^{*} \rightarrow \pi^{-} K^{+} ,
+\bar{K}^{*} \rightarrow \pi^{+} K^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{111 & }2 & 231 \EOL
+
+% \rn = 72
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \rho^{0} \pi^{+} \pi^{-} K^{-} K^{*+} ,
+\rho^{0} \rightarrow \pi^{+} \pi^{-} ,
+K^{*+} \rightarrow \pi^{0} K^{+} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{116 & }2 & 233 \EOL
+
+% \rn = 73
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \omega K^{+} K^{-} ,
+\omega \rightarrow \pi^{0} \pi^{+} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{130 & }2 & 235 \EOL
+
+% \rn = 74
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{+} \pi^{+} \pi^{-} \rho^{-} K^{+} K^{-} \gamma^{I} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{I} 
+$) } & \topoTags{133 & }2 & 237 \EOL
+
+% \rn = 75
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{+} \pi^{+} \rho^{-} \rho^{-} \omega K^{+} K^{-} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+\omega \rightarrow \pi^{0} \pi^{+} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{171 & }2 & 239 \EOL
+
+% \rn = 76
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{0} \rho^{0} \pi^{+} \pi^{-} K^{+} K^{-} ,
+\rho^{0} \rightarrow \pi^{+} \pi^{-} \gamma^{F} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{F} 
+$) } & \topoTags{180 & }2 & 241 \EOL
+
+% \rn = 77
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{-} \rho^{-} \bar{K}^{*} K^{+} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+\bar{K}^{*} \rightarrow \pi^{+} K^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{187 & }2 & 243 \EOL
+
+% \rn = 78
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{-} \rho^{+} \omega K^{+} K^{-} \gamma^{I} \gamma^{I} \gamma^{I} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\omega \rightarrow \pi^{0} \pi^{+} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{I} \gamma^{I} \gamma^{I} 
+$) } & \topoTags{216 & }2 & 245 \EOL
+
+% \rn = 79
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{-} K^{*+} \gamma^{I} ,
+K^{*+} \rightarrow \pi^{0} K^{+} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{I} 
+$) } & \topoTags{229 & }2 & 247 \EOL
+
+% \rn = 80
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{+} \rho^{-} K^{+} K^{-} \gamma^{I} \gamma^{I} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{-} K^{+} K^{-} \gamma^{I} \gamma^{I} 
+$) } & \topoTags{253 & }2 & 249 \EOL
+
+% \rn = 81
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{-} \pi^{-} \rho^{+} \omega \gamma^{I} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\omega \rightarrow \pi^{0} \pi^{+} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \pi^{-} \gamma^{I} 
+$) } & \topoTags{307 & }2 & 251 \EOL
+
+% \rn = 82
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{+} \pi^{-} \pi^{-} \rho^{+} K^{+} K^{*-} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+K^{*-} \rightarrow \pi^{0} K^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{309 & }2 & 253 \EOL
+
+% \rn = 83
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{-} K^{*} \bar{K}^{*} K^{-} K^{*+} ,
+K^{*} \rightarrow \pi^{-} K^{+} ,
+\bar{K}^{*} \rightarrow \pi^{+} K^{-} ,
+K^{*+} \rightarrow \pi^{0} K^{+} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{+} K^{-} K^{-} 
+$) } & \topoTags{320 & }2 & 255 \EOL
+
+% \rn = 84
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{-} \rho^{+} K^{*} K^{-} \gamma^{I} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+K^{*} \rightarrow \pi^{-} K^{+} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{I} 
+$) } & \topoTags{339 & }2 & 257 \EOL
+
+% \rn = 85
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{+} \rho^{-} K^{+} K^{+} K^{-} K^{-} \gamma^{I} \gamma^{I} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{-} K^{+} K^{+} K^{-} K^{-} \gamma^{I} \gamma^{I} 
+$) } & \topoTags{364 & }2 & 259 \EOL
+
+% \rn = 86
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{+} \rho^{+} \rho^{-} K^{0} K^{-} \gamma^{I} \gamma^{I} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+K^{0} \rightarrow K_{L}^{0} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{0} K_{L}^{0} \pi^{+} \pi^{+} \pi^{-} K^{-} \gamma^{I} \gamma^{I} 
+$) } & \topoTags{377 & }2 & 261 \EOL
+
+% \rn = 87
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{+} \pi^{-} \rho^{+} \rho^{-} K^{-} K^{*+} \gamma^{I} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+K^{*+} \rightarrow \pi^{0} K^{+} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{I} 
+$) } & \topoTags{379 & }2 & 263 \EOL
+
+% \rn = 88
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} \bar{n} p 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} \bar{n} p 
+$) } & \topoTags{383 & }2 & 265 \EOL
+
+% \rn = 89
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \rho^{0} \pi^{-} \rho^{+} K^{+} K^{*-} \gamma^{I} \gamma^{I} ,
+\rho^{0} \rightarrow \pi^{+} \pi^{-} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+K^{*-} \rightarrow \pi^{0} K^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{I} \gamma^{I} 
+$) } & \topoTags{394 & }2 & 267 \EOL
+
+% \rn = 90
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \rho^{0} \rho^{0} \omega K^{+} K^{-} \gamma^{I} ,
+\rho^{0} \rightarrow \pi^{+} \pi^{-} ,
+\rho^{0} \rightarrow \pi^{+} \pi^{-} ,
+\omega \rightarrow \pi^{0} \pi^{+} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{I} 
+$) } & \topoTags{399 & }2 & 269 \EOL
+
+% \rn = 91
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{+} \pi^{-} \bar{K}^{0} K^{*} K^{+} K^{-} \phi \gamma^{I} ,
+\bar{K}^{0} \rightarrow K_{L}^{0} ,
+K^{*} \rightarrow \pi^{-} K^{+} \gamma^{F} ,
+\phi \rightarrow K^{+} K^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} K_{L}^{0} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{+} K^{+} K^{-} K^{-} \gamma^{I} \gamma^{F} 
+$) } & \topoTags{401 & }2 & 271 \EOL
+
+% \rn = 92
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{+} \pi^{-} \rho^{-} K^{+} K^{-} \bar{n} p ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} \bar{n} p 
+$) } & \topoTags{409 & }2 & 273 \EOL
+
+% \rn = 93
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{-} \eta K^{+} K^{-} ,
+\eta \rightarrow \pi^{0} \pi^{+} \pi^{-} \gamma^{F} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{F} 
+$) } & \topoTags{413 & }2 & 275 \EOL
+
+% \rn = 94
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \rho^{-} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \pi^{-} 
+$) } & \topoTags{421 & }2 & 277 \EOL
+
+% \rn = 95
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{-} \rho^{+} \rho^{-} \omega ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+\omega \rightarrow \pi^{0} \pi^{+} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \pi^{-} 
+$) } & \topoTags{428 & }2 & 279 \EOL
+
+% \rn = 96
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{+} \rho^{-} \omega K^{-} K^{*+} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+\omega \rightarrow \pi^{0} \pi^{+} \pi^{-} ,
+K^{*+} \rightarrow \pi^{0} K^{+} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{433 & }2 & 281 \EOL
+
+% \rn = 97
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \rho^{0} \pi^{+} \pi^{-} \pi^{-} \rho^{+} \omega \gamma^{I} \gamma^{I} ,
+\rho^{0} \rightarrow \pi^{+} \pi^{-} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\omega \rightarrow \pi^{0} \pi^{+} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \pi^{-} \pi^{-} \gamma^{I} \gamma^{I} 
+$) } & \topoTags{437 & }2 & 283 \EOL
+
+% \rn = 98
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \rho^{-} K^{+} K^{-} \gamma^{I} \gamma^{I} \gamma^{I} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{I} \gamma^{I} \gamma^{I} 
+$) } & \topoTags{462 & }2 & 285 \EOL
+
+% \rn = 99
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} K^{*} K^{+} K^{-} K^{-} \phi \gamma^{I} \gamma^{I} ,
+K^{*} \rightarrow \pi^{-} K^{+} ,
+\phi \rightarrow K^{+} K^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{-} K^{+} K^{+} K^{+} K^{-} K^{-} K^{-} \gamma^{I} \gamma^{I} 
+$) } & \topoTags{463 & }2 & 287 \EOL
+
+% \rn = 100
+\rn & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \rho^{-} \gamma^{I} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} 
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \pi^{-} \gamma^{I} 
+$) } & \topoTags{474 & }2 & 289 \EOL
+
+rest & \makecell[l]{ $ 
+e^{+} e^{-} \rightarrow \rm{others \  (3956 \  in \  total)}
+$ \\ ($
+e^{+} e^{-} \dashrightarrow \rm{corresponding\ to\ others}
+$) } & \topoTags{--- & }4164 & 4453 \\ \hline
+
+\end{longtable}
+\end{document}

@@ -1,0 +1,11 @@
+# The signal decay file of B0 -> K+ K- pi0
+
+Decay Upsilon(4S)
+1.0 B0 anti-B0 VSS_BMIX dm;
+Enddecay
+
+Decay B0
+1.0 K+ K- pi0 PHOTOS PHSP;
+Enddecay
+
+End

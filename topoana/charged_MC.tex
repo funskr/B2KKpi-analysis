@@ -1,0 +1,1476 @@
+\documentclass[landscape]{article}
+\usepackage{/home/belle2/yuanmk/topoana/topoana/share/geometry}
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
+\usepackage{longtable}
+\usepackage{/home/belle2/yuanmk/topoana/topoana/share/makecell}
+\usepackage{color}
+\usepackage{amssymb} % The package is used for the \dashrightarrow
+\newcommand{\tablecaption}[1]{\caption{#1} \\}
+\usepackage{caption}
+\captionsetup{font=normalsize}
+\newcommand{\tableheader}[1]
+{
+  \hline
+  #1
+  \hline
+  \endfirsthead
+
+  \hline
+  #1
+  \hline
+  \endhead
+
+  \endfoot
+
+  \endlastfoot
+}
+% The following command \tableheaderP is developed as a substitute for \tableheader, in cases that hlines are needed at the bottom of the pages (except for the last one) of the tables when \EOL is defined and used as \\ with no \hline followed. In the command \tableheaderP, P is the initial of PRIME.
+\newcommand{\tableheaderP}[1]
+{
+  \hline
+  #1
+  \hline
+  \endfirsthead
+
+  \hline
+  #1
+  \hline
+  \endhead
+
+  \hline % This is the only difference between \tableheader and \tableheaderP.
+  \endfoot
+
+  \endlastfoot
+}
+\setcellgapes[t]{2pt}
+\makegapedcells
+\newcounter{rownumbers}
+\newcommand\rn{\stepcounter{rownumbers}\arabic{rownumbers}}
+% \newcommand{\EOL}{\\ \hline} % Use this definition to retain hlines in the body part.
+\newcommand{\EOL}{\\} % Use this definition to remove hlines in the body part.
+% The following command \EOLP is developed as a supplementary to \EOL, in cases that hlines are needed in some tables (nLineMean>2, the average number of lines occupied by one decay object is larger than two) when \EOL is only defined as \\ with no \hline followed for other tables. In the command \EOLP, P is the initial of PRIME.
+\newcommand{\EOLP}{\\ \hline} % Use this definition to retain hlines in the body part.
+% \newcommand{\EOLP}{\\} % Use this definition to remove hlines in the body part.
+\newcommand{\topoTags}[1]{#1} % Use this definition to retain topology tags.
+% \newcommand{\topoTags}[1]{} % Use this definition to remove topology tags.
+\begin{document}
+\title{Topology Analysis \footnote{\small{Xingyu Zhou, Liaoning Normal University, zhouxy@lnnu.edu.cn}} \footnote{\small{This package is implemented referring to a program called {\sc Topo}, which is first developed by Prof. Shuxian Du from Zhengzhou University and later extended and maintained by Prof. Gang Li from Institute of High Energy Physics, Chinese Academy of Sciences. The {\sc Topo} program has been widely used by colleagues in BESIII collaboration. Several years ago, when I was a Ph.D. student working on the BESIII experiment, I learned the idea of topology analysis and a lot of programming techniques from the {\sc Topo} program. So, I really appreciate the original works of Prof. Du and Prof. Li very much. To meet my own needs and to practice developing analysis tools with C++, ROOT, and LaTeX, I wrote the package from scratch. At that time, the package functioned well but was relatively simple. At the end of 2017, when I just started my post-doctoral research at Beihang University, my co-supervisor Prof. Chengping Shen reminded me that it could be a useful tool for the Belle II experiment as well. So, I revised and extended it, making it more well-rounded and suitable for the Belle II experiment. Now, it also applies to many other similar high energy physics experiments. Here, I would like to thank Prof. Du and Prof. Li for their original works, and Prof. Shen for his suggestion, guidance, support, and encouragement.}} \footnote{\small{Besides, I would like to thank all of the people who have helped me in the development of the program. I am particularly grateful to Prof. Xingtao Huang for his comments on the principles and styles of the program, to Remco de Boer for his suggestions on the tex output and the use of GitHub, and to Xi Chen for his discussions on the core algorithms. I am especially indebted to Prof. Xiqing Hao, Longke Li, Xiaoping Qin, Ilya Komarov, Yubo Li, Guanda Gong, Suxian Li, Junhao Yin, Prof. Xiaolong Wang, Yeqi Chen, Hannah Wakeling, Hongrong Qi, Hui Li, Ning Cao, Sanjeeda Bharati Das, Kazuki Kojima, Tingting Han, Fang Yan, Lin Wang, Meiru An, and Noreen Rauls for their advice in extending and perfecting the program. Also, I thank Xi'an Xiong, Runqiu Ma, Wencheng Yan, Sen Jia, Lu Cao, Dong Liu, Hongpeng Wang, Jiawei Zhang, Jiajun Liu, Maoqiang Jing, Yi Zhang, Wei Shan, and Yadi Wang for their efforts in helping me test the program.}} \footnote{\small{The paper on the tool has been published by {\it Computer Physics Communications}. You can find this paper and the preprint corresponding to it in the links \href{https://doi.org/10.1016/j.cpc.2020.107540}{Comput. Phys. Commun. 258 (2021) 107540} and \href{https://arxiv.org/abs/2001.04016}{arXiv:2001.04016}, respectively. If the tool really helps your researches, we would appreciate it very much if you could cite the paper in your publications.}} \\ \vspace{1cm} \Large{(v2.12.3)}}
+\maketitle
+
+\clearpage
+
+\newgeometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+
+\listoftables
+
+\newgeometry{left=0.0cm,right=0.0cm,top=2.5cm,bottom=2.5cm}
+
+\clearpage
+
+\small
+\centering
+\setcounter{rownumbers}{0}
+\begin{longtable}{clcccc}
+\tablecaption{Decay trees and their respective initial-final states.}
+\tableheader{rowNo & \thead{decay tree \\ (decay initial-final states)} & \topoTags{iDcyTr & }nEtr & nCEtr \\}
+
+% \rn = 1
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \mu^{+} \nu_{\mu} \bar{D}^{*0} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+\bar{D}^{*0} \rightarrow \pi^{0} \bar{D}^{0} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+D^{0} \rightarrow \pi^{+} K^{-} ,
+$ \\ $
+\bar{D}^{0} \rightarrow \pi^{0} \pi^{-} K^{+} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \mu^{+} \nu_{\mu} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{5654 & }34 & 34 \EOLP
+
+% \rn = 2
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow \mu^{-} \bar{\nu}_{\mu} D^{*0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{-} K^{+} ,
+D^{*0} \rightarrow \pi^{0} D^{0} ,
+$ \\ $
+D^{0} \rightarrow \pi^{0} \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \mu^{-} \bar{\nu}_{\mu} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{2935 & }32 & 66 \EOLP
+
+% \rn = 3
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow \mu^{-} \bar{\nu}_{\mu} D^{0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{-} K^{+} ,
+D^{0} \rightarrow \pi^{0} \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \mu^{-} \bar{\nu}_{\mu} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{614 & }26 & 92 \EOLP
+
+% \rn = 4
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow e^{-} \bar{\nu}_{e} D^{*0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{-} K^{+} ,
+D^{*0} \rightarrow \pi^{0} D^{0} ,
+$ \\ $
+D^{0} \rightarrow \pi^{0} \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow e^{-} \bar{\nu}_{e} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{3768 & }26 & 118 \EOLP
+
+% \rn = 5
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \mu^{+} \nu_{\mu} \bar{D}^{0} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+\bar{D}^{0} \rightarrow \pi^{0} \pi^{-} K^{+} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+D^{0} \rightarrow \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \mu^{+} \nu_{\mu} \pi^{0} \pi^{0} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{6529 & }25 & 143 \EOLP
+
+% \rn = 6
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow e^{+} \nu_{e} \bar{D}^{*0} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+\bar{D}^{*0} \rightarrow \pi^{0} \bar{D}^{0} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+D^{0} \rightarrow \pi^{+} K^{-} ,
+$ \\ $
+\bar{D}^{0} \rightarrow \pi^{0} \pi^{-} K^{+} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow e^{+} \nu_{e} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{6467 & }24 & 167 \EOLP
+
+% \rn = 7
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{-} K^{+} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+$ \\ $
+D^{0} \rightarrow \pi^{0} \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{2236 & }22 & 189 \EOLP
+
+% \rn = 8
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow e^{-} \bar{\nu}_{e} D^{*0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{-} K^{+} ,
+D^{*0} \rightarrow D^{0} \gamma ,
+$ \\ $
+D^{0} \rightarrow \pi^{0} \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow e^{-} \bar{\nu}_{e} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} K^{+} K^{-} \gamma 
+$) } & \topoTags{3908 & }21 & 210 \EOLP
+
+% \rn = 9
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \mu^{+} \nu_{\mu} \bar{D}^{0} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+\bar{D}^{0} \rightarrow \pi^{0} \pi^{-} K^{+} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+D^{0} \rightarrow \pi^{0} \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \mu^{+} \nu_{\mu} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{1804 & }20 & 230 \EOLP
+
+% \rn = 10
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow \mu^{-} \bar{\nu}_{\mu} D^{*0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{0} \pi^{-} K^{+} ,
+D^{*0} \rightarrow \pi^{0} D^{0} ,
+$ \\ $
+D^{0} \rightarrow \pi^{0} \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \mu^{-} \bar{\nu}_{\mu} \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{2285 & }18 & 248 \EOLP
+
+% \rn = 11
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \mu^{+} \nu_{\mu} \bar{D}^{*0} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+\bar{D}^{*0} \rightarrow \pi^{0} \bar{D}^{0} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+D^{0} \rightarrow \pi^{0} \pi^{+} K^{-} ,
+$ \\ $
+\bar{D}^{0} \rightarrow \pi^{0} \pi^{-} K^{+} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \mu^{+} \nu_{\mu} \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{3201 & }18 & 266 \EOLP
+
+% \rn = 12
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow e^{+} \nu_{e} \bar{D}^{*0} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+\bar{D}^{*0} \rightarrow \bar{D}^{0} \gamma ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+D^{0} \rightarrow \pi^{+} K^{-} ,
+$ \\ $
+\bar{D}^{0} \rightarrow \pi^{0} \pi^{-} K^{+} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow e^{+} \nu_{e} \pi^{0} \pi^{0} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} \gamma 
+$) } & \topoTags{1494 & }17 & 283 \EOLP
+
+% \rn = 13
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow e^{-} \bar{\nu}_{e} D^{0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{-} K^{+} ,
+D^{0} \rightarrow \pi^{0} \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow e^{-} \bar{\nu}_{e} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{5828 & }17 & 300 \EOLP
+
+% \rn = 14
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow \mu^{-} \bar{\nu}_{\mu} D^{*0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{-} K^{+} ,
+D^{*0} \rightarrow D^{0} \gamma ,
+$ \\ $
+D^{0} \rightarrow \pi^{0} \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \mu^{-} \bar{\nu}_{\mu} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} K^{+} K^{-} \gamma 
+$) } & \topoTags{1331 & }16 & 316 \EOLP
+
+% \rn = 15
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow e^{+} \nu_{e} \bar{D}^{0} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+\bar{D}^{0} \rightarrow \pi^{0} \pi^{-} K^{+} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+D^{0} \rightarrow \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow e^{+} \nu_{e} \pi^{0} \pi^{0} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{1897 & }15 & 331 \EOLP
+
+% \rn = 16
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow e^{+} \nu_{e} \bar{D}^{*0} \gamma^{F} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+\bar{D}^{*0} \rightarrow \pi^{0} \bar{D}^{0} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+D^{0} \rightarrow \pi^{+} K^{-} ,
+$ \\ $
+\bar{D}^{0} \rightarrow \pi^{0} \pi^{-} K^{+} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow e^{+} \nu_{e} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{F} 
+$) } & \topoTags{2468 & }14 & 345 \EOLP
+
+% \rn = 17
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow e^{-} \bar{\nu}_{e} D^{*0} \gamma^{F} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{-} K^{+} ,
+D^{*0} \rightarrow \pi^{0} D^{0} ,
+$ \\ $
+D^{0} \rightarrow \pi^{0} \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow e^{-} \bar{\nu}_{e} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} K^{+} K^{-} \gamma^{F} 
+$) } & \topoTags{4526 & }14 & 359 \EOLP
+
+% \rn = 18
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow e^{-} \bar{\nu}_{e} D^{*0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{0} \pi^{-} K^{+} ,
+D^{*0} \rightarrow \pi^{0} D^{0} ,
+$ \\ $
+D^{0} \rightarrow \pi^{0} \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow e^{-} \bar{\nu}_{e} \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{17175 & }14 & 373 \EOLP
+
+% \rn = 19
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{0} \pi^{-} K^{+} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+$ \\ $
+D^{0} \rightarrow \pi^{0} \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{22131 & }14 & 387 \EOLP
+
+% \rn = 20
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \mu^{+} \nu_{\mu} \bar{D}^{*0} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+\bar{D}^{*0} \rightarrow \bar{D}^{0} \gamma ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+D^{0} \rightarrow \pi^{+} K^{-} ,
+$ \\ $
+\bar{D}^{0} \rightarrow \pi^{0} \pi^{-} K^{+} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \mu^{+} \nu_{\mu} \pi^{0} \pi^{0} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} \gamma 
+$) } & \topoTags{19461 & }13 & 400 \EOLP
+
+% \rn = 21
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow e^{+} \nu_{e} \bar{D}^{*0} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+\bar{D}^{*0} \rightarrow \pi^{0} \bar{D}^{0} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+D^{0} \rightarrow \pi^{0} \pi^{+} K^{-} ,
+$ \\ $
+\bar{D}^{0} \rightarrow \pi^{0} \pi^{-} K^{+} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow e^{+} \nu_{e} \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{108 & }12 & 412 \EOLP
+
+% \rn = 22
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{0} \pi^{-} K^{+} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+$ \\ $
+D^{0} \rightarrow \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{3784 & }12 & 424 \EOLP
+
+% \rn = 23
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow \mu^{-} \bar{\nu}_{\mu} D^{0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{0} \pi^{-} K^{+} ,
+D^{0} \rightarrow \pi^{0} \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \mu^{-} \bar{\nu}_{\mu} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{10233 & }12 & 436 \EOLP
+
+% \rn = 24
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow \pi^{0} \pi^{-} \pi^{-} D^{*+} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{-} K^{+} ,
+D^{*+} \rightarrow \pi^{+} D^{0} ,
+$ \\ $
+D^{0} \rightarrow \pi^{0} \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{207 & }11 & 447 \EOLP
+
+% \rn = 25
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow \mu^{-} \bar{\nu}_{\mu} D^{*0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow K^{+} K^{-} ,
+D^{*0} \rightarrow \pi^{0} D^{0} ,
+$ \\ $
+D^{0} \rightarrow \pi^{0} \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \mu^{-} \bar{\nu}_{\mu} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} K^{+} K^{-} K^{-} 
+$) } & \topoTags{437 & }11 & 458 \EOLP
+
+% \rn = 26
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \pi^{0} \pi^{+} \pi^{+} \pi^{-} \bar{D}^{*0} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+\bar{D}^{*0} \rightarrow \pi^{0} \bar{D}^{0} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+D^{0} \rightarrow \pi^{+} K^{-} ,
+$ \\ $
+\bar{D}^{0} \rightarrow \pi^{0} \pi^{-} K^{+} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{2695 & }11 & 469 \EOLP
+
+% \rn = 27
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow e^{+} \nu_{e} \bar{D}^{*0} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+\bar{D}^{*0} \rightarrow \pi^{0} \bar{D}^{0} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+D^{0} \rightarrow K^{+} K^{-} ,
+$ \\ $
+\bar{D}^{0} \rightarrow \pi^{0} \pi^{-} K^{+} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow e^{+} \nu_{e} \pi^{0} \pi^{0} \pi^{0} \pi^{-} \pi^{-} K^{+} K^{+} K^{-} 
+$) } & \topoTags{3443 & }11 & 480 \EOLP
+
+% \rn = 28
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow e^{-} \bar{\nu}_{e} D^{0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{0} \pi^{-} K^{+} ,
+D^{0} \rightarrow \pi^{0} \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow e^{-} \bar{\nu}_{e} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{3277 & }10 & 490 \EOLP
+
+% \rn = 29
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \mu^{+} \nu_{\mu} \bar{D}^{*0} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+\bar{D}^{*0} \rightarrow \bar{D}^{0} \gamma ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+D^{0} \rightarrow K^{+} K^{-} ,
+$ \\ $
+\bar{D}^{0} \rightarrow \pi^{0} \pi^{-} K^{+} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \mu^{+} \nu_{\mu} \pi^{0} \pi^{0} \pi^{-} \pi^{-} K^{+} K^{+} K^{-} \gamma 
+$) } & \topoTags{4553 & }10 & 500 \EOLP
+
+% \rn = 30
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow e^{+} \nu_{e} \bar{D}^{*0} \gamma^{F} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+\bar{D}^{*0} \rightarrow \bar{D}^{0} \gamma ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+D^{0} \rightarrow \pi^{+} K^{-} ,
+$ \\ $
+\bar{D}^{0} \rightarrow \pi^{0} \pi^{-} K^{+} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow e^{+} \nu_{e} \pi^{0} \pi^{0} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{F} \gamma 
+$) } & \topoTags{12577 & }10 & 510 \EOLP
+
+% \rn = 31
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \mu^{+} \nu_{\mu} \bar{D}^{*0} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+\bar{D}^{*0} \rightarrow \pi^{0} \bar{D}^{0} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+D^{0} \rightarrow K^{+} K^{-} ,
+$ \\ $
+\bar{D}^{0} \rightarrow \pi^{0} \pi^{-} K^{+} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \mu^{+} \nu_{\mu} \pi^{0} \pi^{0} \pi^{0} \pi^{-} \pi^{-} K^{+} K^{+} K^{-} 
+$) } & \topoTags{3885 & }9 & 519 \EOLP
+
+% \rn = 32
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow \mu^{-} \bar{\nu}_{\mu} D^{0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{-} K^{+} ,
+D^{0} \rightarrow K^{-} a_{1}^{+} ,
+$ \\ $
+a_{1}^{+} \rightarrow \pi^{0} \rho^{+} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \mu^{-} \bar{\nu}_{\mu} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{7785 & }9 & 528 \EOLP
+
+% \rn = 33
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow \mu^{-} \bar{\nu}_{\mu} D^{*0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{-} K^{+} ,
+D^{*0} \rightarrow \pi^{0} D^{0} ,
+$ \\ $
+D^{0} \rightarrow e^{+} \nu_{e} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow e^{+} \nu_{e} \mu^{-} \bar{\nu}_{\mu} \pi^{0} \pi^{0} \pi^{+} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{11844 & }9 & 537 \EOLP
+
+% \rn = 34
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow \pi^{0} \pi^{+} \pi^{-} \pi^{-} D^{*0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{-} K^{+} ,
+D^{*0} \rightarrow \pi^{0} D^{0} ,
+$ \\ $
+D^{0} \rightarrow \pi^{0} \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{20843 & }9 & 546 \EOLP
+
+% \rn = 35
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow \pi^{+} \pi^{-} \pi^{-} D^{0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{-} K^{+} ,
+D^{0} \rightarrow \pi^{0} \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{52 & }8 & 554 \EOLP
+
+% \rn = 36
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow \mu^{-} \bar{\nu}_{\mu} D^{*0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{-} K^{+} ,
+D^{*0} \rightarrow \pi^{0} D^{0} ,
+$ \\ $
+D^{0} \rightarrow \rho^{+} K^{*-} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+K^{*-} \rightarrow \pi^{0} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \mu^{-} \bar{\nu}_{\mu} \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{742 & }8 & 562 \EOLP
+
+% \rn = 37
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \mu^{+} \nu_{\mu} \bar{D}^{*0} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+\bar{D}^{*0} \rightarrow \pi^{0} \bar{D}^{0} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+D^{0} \rightarrow \pi^{0} \pi^{+} K^{-} ,
+$ \\ $
+\bar{D}^{0} \rightarrow \pi^{-} K^{+} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \mu^{+} \nu_{\mu} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{743 & }8 & 570 \EOLP
+
+% \rn = 38
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow \mu^{-} \bar{\nu}_{\mu} D^{0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{-} K^{+} ,
+D^{0} \rightarrow \mu^{+} \nu_{\mu} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \mu^{+} \mu^{-} \nu_{\mu} \bar{\nu}_{\mu} \pi^{0} \pi^{+} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{985 & }8 & 578 \EOLP
+
+% \rn = 39
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow e^{-} \bar{\nu}_{e} D^{*0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{-} K^{+} \gamma^{F} ,
+D^{*0} \rightarrow \pi^{0} D^{0} ,
+$ \\ $
+D^{0} \rightarrow \pi^{0} \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow e^{-} \bar{\nu}_{e} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} K^{+} K^{-} \gamma^{F} 
+$) } & \topoTags{1050 & }8 & 586 \EOLP
+
+% \rn = 40
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow e^{-} \bar{\nu}_{e} D^{*0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow K^{+} K^{-} ,
+D^{*0} \rightarrow \pi^{0} D^{0} ,
+$ \\ $
+D^{0} \rightarrow \pi^{0} \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow e^{-} \bar{\nu}_{e} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} K^{+} K^{-} K^{-} 
+$) } & \topoTags{2551 & }8 & 594 \EOLP
+
+% \rn = 41
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \mu^{+} \nu_{\mu} \bar{D}^{*0} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+\bar{D}^{*0} \rightarrow \pi^{0} \bar{D}^{0} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+D^{0} \rightarrow \pi^{+} K^{-} ,
+$ \\ $
+\bar{D}^{0} \rightarrow K^{+} a_{1}^{-} ,
+a_{1}^{-} \rightarrow \rho^{0} \pi^{-} ,
+\rho^{0} \rightarrow \pi^{+} \pi^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \mu^{+} \nu_{\mu} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{4482 & }8 & 602 \EOLP
+
+% \rn = 42
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow e^{+} \nu_{e} \bar{D}^{*0} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+\bar{D}^{*0} \rightarrow \bar{D}^{0} \gamma ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+D^{0} \rightarrow \pi^{0} \pi^{+} K^{-} ,
+$ \\ $
+\bar{D}^{0} \rightarrow \pi^{0} \pi^{-} K^{+} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow e^{+} \nu_{e} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} \gamma 
+$) } & \topoTags{11568 & }8 & 610 \EOLP
+
+% \rn = 43
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{0} \pi^{-} K^{+} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+$ \\ $
+D^{0} \rightarrow K^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{+} K^{-} 
+$) } & \topoTags{27356 & }8 & 618 \EOLP
+
+% \rn = 44
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow \pi^{0} \pi^{+} \pi^{-} \pi^{-} D^{*0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{-} K^{+} ,
+D^{*0} \rightarrow D^{0} \gamma ,
+$ \\ $
+D^{0} \rightarrow \pi^{0} \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \pi^{-} K^{+} K^{-} \gamma 
+$) } & \topoTags{35962 & }8 & 626 \EOLP
+
+% \rn = 45
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \mu^{+} \nu_{\mu} \bar{D}^{*0} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+\bar{D}^{*0} \rightarrow \pi^{0} \bar{D}^{0} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+D^{0} \rightarrow \pi^{+} K^{-} ,
+$ \\ $
+\bar{D}^{0} \rightarrow \mu^{-} \bar{\nu}_{\mu} K^{+} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \mu^{+} \mu^{-} \nu_{\mu} \bar{\nu}_{\mu} \pi^{0} \pi^{0} \pi^{+} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{4341 & }7 & 633 \EOLP
+
+% \rn = 46
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow e^{+} \nu_{e} \bar{D}^{0} \gamma^{F} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+\bar{D}^{0} \rightarrow \pi^{0} \pi^{-} K^{+} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+D^{0} \rightarrow \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow e^{+} \nu_{e} \pi^{0} \pi^{0} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{F} 
+$) } & \topoTags{4419 & }7 & 640 \EOLP
+
+% \rn = 47
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow \mu^{-} \bar{\nu}_{\mu} D^{*0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{0} \pi^{-} K^{+} ,
+D^{*0} \rightarrow D^{0} \gamma ,
+$ \\ $
+D^{0} \rightarrow \pi^{0} \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \mu^{-} \bar{\nu}_{\mu} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} K^{+} K^{-} \gamma 
+$) } & \topoTags{4988 & }7 & 647 \EOLP
+
+% \rn = 48
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow \mu^{-} \bar{\nu}_{\mu} D^{0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{-} K^{+} ,
+D^{0} \rightarrow e^{+} \nu_{e} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow e^{+} \nu_{e} \mu^{-} \bar{\nu}_{\mu} \pi^{0} \pi^{+} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{5083 & }7 & 654 \EOLP
+
+% \rn = 49
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow e^{-} \bar{\nu}_{e} D^{*0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{-} K^{+} ,
+D^{*0} \rightarrow \pi^{0} D^{0} ,
+$ \\ $
+D^{0} \rightarrow \pi^{0} \pi^{0} \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow e^{-} \bar{\nu}_{e} \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{6648 & }7 & 661 \EOLP
+
+% \rn = 50
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \mu^{+} \nu_{\mu} \bar{D}^{*0} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+\bar{D}^{*0} \rightarrow \bar{D}^{0} \gamma ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+D^{0} \rightarrow \pi^{0} \pi^{+} K^{-} ,
+$ \\ $
+\bar{D}^{0} \rightarrow \pi^{0} \pi^{-} K^{+} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \mu^{+} \nu_{\mu} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} \gamma 
+$) } & \topoTags{8418 & }7 & 668 \EOLP
+
+% \rn = 51
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \mu^{+} \nu_{\mu} \bar{D}^{*0} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+\bar{D}^{*0} \rightarrow \pi^{0} \bar{D}^{0} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+D^{0} \rightarrow \pi^{+} K^{-} ,
+$ \\ $
+\bar{D}^{0} \rightarrow K^{+} a_{1}^{-} ,
+a_{1}^{-} \rightarrow \pi^{0} \rho^{-} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \mu^{+} \nu_{\mu} \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{9606 & }7 & 675 \EOLP
+
+% \rn = 52
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \mu^{+} \nu_{\mu} \bar{D}^{0} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+\bar{D}^{0} \rightarrow \mu^{-} \bar{\nu}_{\mu} K^{+} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+D^{0} \rightarrow \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \mu^{+} \mu^{-} \nu_{\mu} \bar{\nu}_{\mu} \pi^{0} \pi^{+} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{9681 & }7 & 682 \EOLP
+
+% \rn = 53
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow K^{+} K^{-} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+$ \\ $
+D^{0} \rightarrow \pi^{0} \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} K^{+} K^{-} K^{-} 
+$) } & \topoTags{14711 & }7 & 689 \EOLP
+
+% \rn = 54
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow \rho^{0} \pi^{-} D^{0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{0} \pi^{-} K^{+} ,
+\rho^{0} \rightarrow \pi^{+} \pi^{-} ,
+$ \\ $
+D^{0} \rightarrow \pi^{0} \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{16607 & }7 & 696 \EOLP
+
+% \rn = 55
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow \mu^{-} \bar{\nu}_{\mu} D^{*0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow e^{-} \bar{\nu}_{e} K^{+} \gamma^{F} ,
+D^{*0} \rightarrow \pi^{0} D^{0} ,
+$ \\ $
+D^{0} \rightarrow \pi^{0} \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow e^{-} \bar{\nu}_{e} \mu^{-} \bar{\nu}_{\mu} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} K^{+} K^{-} \gamma^{F} 
+$) } & \topoTags{24787 & }7 & 703 \EOLP
+
+% \rn = 56
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow e^{+} \nu_{e} \bar{D}^{*0} \gamma^{F} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+\bar{D}^{*0} \rightarrow \pi^{0} \bar{D}^{0} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+D^{0} \rightarrow K^{+} K^{-} ,
+$ \\ $
+\bar{D}^{0} \rightarrow \pi^{0} \pi^{-} K^{+} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow e^{+} \nu_{e} \pi^{0} \pi^{0} \pi^{0} \pi^{-} \pi^{-} K^{+} K^{+} K^{-} \gamma^{F} 
+$) } & \topoTags{1011 & }6 & 709 \EOLP
+
+% \rn = 57
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow e^{+} \nu_{e} \bar{D}^{0} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+\bar{D}^{0} \rightarrow \rho^{-} K^{*+} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+D^{0} \rightarrow \pi^{+} K^{-} ,
+$ \\ $
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+K^{*+} \rightarrow \pi^{0} K^{+} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow e^{+} \nu_{e} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{1069 & }6 & 715 \EOLP
+
+% \rn = 58
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow \mu^{-} \bar{\nu}_{\mu} D^{*0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{0} \pi^{-} K^{+} ,
+D^{*0} \rightarrow \pi^{0} D^{0} ,
+$ \\ $
+D^{0} \rightarrow \mu^{+} \nu_{\mu} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \mu^{+} \mu^{-} \nu_{\mu} \bar{\nu}_{\mu} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{1165 & }6 & 721 \EOLP
+
+% \rn = 59
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \pi^{0} \pi^{+} \pi^{+} D^{*-} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+D^{*-} \rightarrow \pi^{-} \bar{D}^{0} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+D^{0} \rightarrow \pi^{+} K^{-} ,
+$ \\ $
+\bar{D}^{0} \rightarrow \pi^{0} \pi^{-} K^{+} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{1178 & }6 & 727 \EOLP
+
+% \rn = 60
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow e^{+} \nu_{e} \bar{D}^{*0} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+\bar{D}^{*0} \rightarrow \pi^{0} \bar{D}^{0} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+D^{0} \rightarrow \pi^{+} K^{-} ,
+$ \\ $
+\bar{D}^{0} \rightarrow \pi^{0} \pi^{0} \pi^{-} K^{+} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow e^{+} \nu_{e} \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{1244 & }6 & 733 \EOLP
+
+% \rn = 61
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \mu^{+} \nu_{\mu} \bar{D}^{*0} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+\bar{D}^{*0} \rightarrow \pi^{0} \bar{D}^{0} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+D^{0} \rightarrow \pi^{+} K^{-} ,
+$ \\ $
+\bar{D}^{0} \rightarrow \pi^{+} \pi^{-} K^{*} ,
+K^{*} \rightarrow \pi^{-} K^{+} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \mu^{+} \nu_{\mu} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{1322 & }6 & 739 \EOLP
+
+% \rn = 62
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow \mu^{-} \bar{\nu}_{\mu} D^{0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{-} K^{+} ,
+D^{0} \rightarrow \rho^{+} K^{*-} ,
+$ \\ $
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+K^{*-} \rightarrow \pi^{0} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \mu^{-} \bar{\nu}_{\mu} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{1394 & }6 & 745 \EOLP
+
+% \rn = 63
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow \mu^{-} \bar{\nu}_{\mu} D^{*0} \gamma^{F} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{-} K^{+} ,
+D^{*0} \rightarrow \pi^{0} D^{0} ,
+$ \\ $
+D^{0} \rightarrow \pi^{0} \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \mu^{-} \bar{\nu}_{\mu} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} K^{+} K^{-} \gamma^{F} 
+$) } & \topoTags{1985 & }6 & 751 \EOLP
+
+% \rn = 64
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow e^{+} \nu_{e} \bar{D}^{*0} \gamma^{F} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+\bar{D}^{*0} \rightarrow \pi^{0} \bar{D}^{0} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+D^{0} \rightarrow \pi^{+} K^{-} ,
+$ \\ $
+\bar{D}^{0} \rightarrow \pi^{-} K^{+} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow e^{+} \nu_{e} \pi^{0} \pi^{0} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{F} 
+$) } & \topoTags{2419 & }6 & 757 \EOLP
+
+% \rn = 65
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \bar{D}^{*0} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+\bar{D}^{*0} \rightarrow \bar{D}^{0} \gamma ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+D^{0} \rightarrow \pi^{+} K^{-} ,
+$ \\ $
+\bar{D}^{0} \rightarrow \pi^{0} \pi^{-} K^{+} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \pi^{-} \pi^{-} K^{+} K^{-} \gamma 
+$) } & \topoTags{2570 & }6 & 763 \EOLP
+
+% \rn = 66
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow \mu^{-} \bar{\nu}_{\mu} D^{*0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{-} K^{+} \gamma^{F} ,
+D^{*0} \rightarrow \pi^{0} D^{0} ,
+$ \\ $
+D^{0} \rightarrow \pi^{0} \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \mu^{-} \bar{\nu}_{\mu} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} K^{+} K^{-} \gamma^{F} 
+$) } & \topoTags{4438 & }6 & 769 \EOLP
+
+% \rn = 67
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow e^{-} \bar{\nu}_{e} D^{*0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{-} K^{+} ,
+D^{*0} \rightarrow \pi^{0} D^{0} ,
+$ \\ $
+D^{0} \rightarrow \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow e^{-} \bar{\nu}_{e} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{4869 & }6 & 775 \EOLP
+
+% \rn = 68
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \pi^{0} \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{0} \pi^{-} K^{+} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+$ \\ $
+D^{0} \rightarrow \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{4870 & }6 & 781 \EOLP
+
+% \rn = 69
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \mu^{+} \nu_{\mu} \bar{D}^{*0} \gamma^{F} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+\bar{D}^{*0} \rightarrow \pi^{0} \bar{D}^{0} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+D^{0} \rightarrow \pi^{+} K^{-} ,
+$ \\ $
+\bar{D}^{0} \rightarrow \pi^{0} \pi^{-} K^{+} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \mu^{+} \nu_{\mu} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{F} 
+$) } & \topoTags{5019 & }6 & 787 \EOLP
+
+% \rn = 70
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow \mu^{-} \bar{\nu}_{\mu} D^{*0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{-} K^{+} ,
+D^{*0} \rightarrow \pi^{0} D^{0} ,
+$ \\ $
+D^{0} \rightarrow \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \mu^{-} \bar{\nu}_{\mu} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{6243 & }6 & 793 \EOLP
+
+% \rn = 71
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \mu^{+} \nu_{\mu} \bar{D}^{*0} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+\bar{D}^{*0} \rightarrow \pi^{0} \bar{D}^{0} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+D^{0} \rightarrow \pi^{+} K^{-} ,
+$ \\ $
+\bar{D}^{0} \rightarrow \rho^{-} K^{*+} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+K^{*+} \rightarrow \pi^{0} K^{+} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \mu^{+} \nu_{\mu} \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{8299 & }6 & 799 \EOLP
+
+% \rn = 72
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow e^{+} \nu_{e} \bar{D}^{0} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+\bar{D}^{0} \rightarrow e^{-} \bar{\nu}_{e} K^{+} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+D^{0} \rightarrow \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow e^{+} e^{-} \nu_{e} \bar{\nu}_{e} \pi^{0} \pi^{+} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{8791 & }6 & 805 \EOLP
+
+% \rn = 73
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow e^{+} \nu_{e} \bar{D}^{0} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+\bar{D}^{0} \rightarrow \pi^{0} \pi^{-} K^{+} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+D^{0} \rightarrow \pi^{0} \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow e^{+} \nu_{e} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{9457 & }6 & 811 \EOLP
+
+% \rn = 74
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow e^{-} \bar{\nu}_{e} D^{*0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{-} K^{+} ,
+D^{*0} \rightarrow \pi^{0} D^{0} ,
+$ \\ $
+D^{0} \rightarrow \mu^{+} \nu_{\mu} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow e^{-} \bar{\nu}_{e} \mu^{+} \nu_{\mu} \pi^{0} \pi^{0} \pi^{+} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{10002 & }6 & 817 \EOLP
+
+% \rn = 75
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow e^{+} \nu_{e} \bar{D}^{*0} \gamma^{F} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+\bar{D}^{*0} \rightarrow \pi^{0} \bar{D}^{0} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+D^{0} \rightarrow \pi^{0} \pi^{+} K^{-} ,
+$ \\ $
+\bar{D}^{0} \rightarrow \pi^{0} \pi^{0} \pi^{-} K^{+} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow e^{+} \nu_{e} \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{F} 
+$) } & \topoTags{10820 & }6 & 823 \EOLP
+
+% \rn = 76
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow \rho^{-} D^{*0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{0} \pi^{-} K^{+} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+$ \\ $
+D^{*0} \rightarrow \pi^{0} D^{0} ,
+D^{0} \rightarrow \pi^{0} \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{13901 & }6 & 829 \EOLP
+
+% \rn = 77
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow e^{-} \bar{\nu}_{e} D^{*0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{-} K^{+} ,
+D^{*0} \rightarrow D^{0} \gamma ,
+$ \\ $
+D^{0} \rightarrow \mu^{+} \nu_{\mu} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow e^{-} \bar{\nu}_{e} \mu^{+} \nu_{\mu} \pi^{0} \pi^{+} \pi^{-} K^{+} K^{-} \gamma 
+$) } & \topoTags{15605 & }6 & 835 \EOLP
+
+% \rn = 78
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow e^{-} \bar{\nu}_{e} D^{*0} \gamma^{F} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow K^{+} K^{-} ,
+D^{*0} \rightarrow \pi^{0} D^{0} ,
+$ \\ $
+D^{0} \rightarrow \pi^{0} \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow e^{-} \bar{\nu}_{e} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} K^{+} K^{-} K^{-} \gamma^{F} 
+$) } & \topoTags{16334 & }6 & 841 \EOLP
+
+% \rn = 79
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow \rho^{-} D^{*0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{-} K^{+} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+$ \\ $
+D^{*0} \rightarrow \pi^{0} D^{0} ,
+D^{0} \rightarrow \pi^{0} \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{19613 & }6 & 847 \EOLP
+
+% \rn = 80
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow \mu^{-} \bar{\nu}_{\mu} D^{*0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{-} K^{+} ,
+D^{*0} \rightarrow D^{0} \gamma ,
+$ \\ $
+D^{0} \rightarrow \pi^{0} \pi^{0} \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \mu^{-} \bar{\nu}_{\mu} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} K^{+} K^{-} \gamma 
+$) } & \topoTags{24993 & }6 & 853 \EOLP
+
+% \rn = 81
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \mu^{+} \nu_{\mu} \bar{D}^{0} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+\bar{D}^{0} \rightarrow K^{+} a_{1}^{-} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+D^{0} \rightarrow \pi^{+} K^{-} ,
+$ \\ $
+a_{1}^{-} \rightarrow \pi^{0} \rho^{-} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \mu^{+} \nu_{\mu} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{27901 & }6 & 859 \EOLP
+
+% \rn = 82
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow \mu^{-} \bar{\nu}_{\mu} D^{*0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{-} K^{+} ,
+D^{*0} \rightarrow D^{0} \gamma ,
+$ \\ $
+D^{0} \rightarrow \mu^{+} \nu_{\mu} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \mu^{+} \mu^{-} \nu_{\mu} \bar{\nu}_{\mu} \pi^{0} \pi^{+} \pi^{-} K^{+} K^{-} \gamma 
+$) } & \topoTags{118 & }5 & 864 \EOLP
+
+% \rn = 83
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow e^{-} \bar{\nu}_{e} D^{*0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{-} K^{+} ,
+D^{*0} \rightarrow \pi^{0} D^{0} ,
+$ \\ $
+D^{0} \rightarrow \pi^{+} \omega K^{-} ,
+\omega \rightarrow \pi^{0} \pi^{+} \pi^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow e^{-} \bar{\nu}_{e} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{359 & }5 & 869 \EOLP
+
+% \rn = 84
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow \mu^{-} \bar{\nu}_{\mu} D^{*0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{0} \pi^{-} K^{+} ,
+D^{*0} \rightarrow \pi^{0} D^{0} ,
+$ \\ $
+D^{0} \rightarrow \rho^{+} K^{*-} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+K^{*-} \rightarrow \pi^{0} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \mu^{-} \bar{\nu}_{\mu} \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{409 & }5 & 874 \EOLP
+
+% \rn = 85
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow e^{-} \bar{\nu}_{e} D^{*0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{-} K^{+} ,
+D^{*0} \rightarrow \pi^{0} D^{0} ,
+$ \\ $
+D^{0} \rightarrow \rho^{+} K^{*-} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+K^{*-} \rightarrow \pi^{0} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow e^{-} \bar{\nu}_{e} \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{836 & }5 & 879 \EOLP
+
+% \rn = 86
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \pi^{0} \pi^{+} \pi^{+} D^{*-} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+D^{*-} \rightarrow \pi^{0} D^{-} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+D^{0} \rightarrow \pi^{+} K^{-} ,
+$ \\ $
+D^{-} \rightarrow \mu^{-} \bar{\nu}_{\mu} K^{*} ,
+K^{*} \rightarrow \pi^{-} K^{+} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \mu^{-} \bar{\nu}_{\mu} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{2158 & }5 & 884 \EOLP
+
+% \rn = 87
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \mu^{+} \nu_{\mu} \bar{D}^{*0} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+\bar{D}^{*0} \rightarrow \pi^{0} \bar{D}^{0} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+D^{0} \rightarrow K^{+} K^{-} ,
+$ \\ $
+\bar{D}^{0} \rightarrow \pi^{-} K^{+} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \mu^{+} \nu_{\mu} \pi^{0} \pi^{0} \pi^{-} \pi^{-} K^{+} K^{+} K^{-} 
+$) } & \topoTags{2335 & }5 & 889 \EOLP
+
+% \rn = 88
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow e^{+} \nu_{e} \bar{D}^{*0} \gamma^{F} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+\bar{D}^{*0} \rightarrow \bar{D}^{0} \gamma ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+D^{0} \rightarrow \pi^{0} \pi^{+} K^{-} ,
+$ \\ $
+\bar{D}^{0} \rightarrow \pi^{0} \pi^{-} K^{+} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow e^{+} \nu_{e} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{F} \gamma 
+$) } & \topoTags{2774 & }5 & 894 \EOLP
+
+% \rn = 89
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow e^{-} \bar{\nu}_{e} D^{*0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{-} K^{+} ,
+D^{*0} \rightarrow D^{0} \gamma ,
+$ \\ $
+D^{0} \rightarrow \pi^{0} \pi^{0} \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow e^{-} \bar{\nu}_{e} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} K^{+} K^{-} \gamma 
+$) } & \topoTags{3032 & }5 & 899 \EOLP
+
+% \rn = 90
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow e^{+} \nu_{e} \bar{D}^{*0} \gamma^{F} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+\bar{D}^{*0} \rightarrow \pi^{0} \bar{D}^{0} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+D^{0} \rightarrow \mu^{+} \nu_{\mu} K^{-} ,
+$ \\ $
+\bar{D}^{0} \rightarrow \pi^{0} \pi^{-} K^{+} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow e^{+} \nu_{e} \mu^{+} \nu_{\mu} \pi^{0} \pi^{0} \pi^{0} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{F} 
+$) } & \topoTags{3132 & }5 & 904 \EOLP
+
+% \rn = 91
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow e^{-} \bar{\nu}_{e} D^{*0} \gamma^{F} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{0} \pi^{-} K^{+} ,
+D^{*0} \rightarrow \pi^{0} D^{0} ,
+$ \\ $
+D^{0} \rightarrow \pi^{0} \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow e^{-} \bar{\nu}_{e} \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} K^{+} K^{-} \gamma^{F} 
+$) } & \topoTags{3743 & }5 & 909 \EOLP
+
+% \rn = 92
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{*0} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{*0} \rightarrow \pi^{0} \bar{D}^{0} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+$ \\ $
+D^{0} \rightarrow \pi^{+} K^{-} ,
+\bar{D}^{0} \rightarrow \pi^{0} \pi^{-} K^{+} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{3867 & }5 & 914 \EOLP
+
+% \rn = 93
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{0} \pi^{-} K^{+} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+$ \\ $
+D^{0} \rightarrow \mu^{+} \nu_{\mu} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \mu^{+} \nu_{\mu} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{4685 & }5 & 919 \EOLP
+
+% \rn = 94
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{0} \pi^{+} \omega \bar{D}^{0} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+\rho^{0} \rightarrow \pi^{+} \pi^{-} ,
+\omega \rightarrow \pi^{0} \pi^{+} \pi^{-} ,
+\bar{D}^{0} \rightarrow \pi^{0} \pi^{-} K^{+} ,
+$ \\ $
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+D^{0} \rightarrow \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{4906 & }5 & 924 \EOLP
+
+% \rn = 95
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow \mu^{-} \bar{\nu}_{\mu} D^{0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{-} K^{+} ,
+D^{0} \rightarrow \pi^{0} \pi^{0} \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \mu^{-} \bar{\nu}_{\mu} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{5282 & }5 & 929 \EOLP
+
+% \rn = 96
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow \pi^{0} \pi^{+} \pi^{-} \pi^{-} D^{*0} \gamma^{F} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{-} K^{+} ,
+D^{*0} \rightarrow \pi^{0} D^{0} ,
+$ \\ $
+D^{0} \rightarrow \pi^{0} \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{F} 
+$) } & \topoTags{5331 & }5 & 934 \EOLP
+
+% \rn = 97
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow \rho^{-} D^{0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{0} \pi^{-} K^{+} ,
+\rho^{-} \rightarrow \pi^{0} \pi^{-} ,
+$ \\ $
+D^{0} \rightarrow \pi^{+} K^{-} \gamma^{F} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} \pi^{-} K^{+} K^{-} \gamma^{F} 
+$) } & \topoTags{6433 & }5 & 939 \EOLP
+
+% \rn = 98
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow \pi^{-} \omega \omega D^{0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{0} \pi^{-} K^{+} ,
+\omega \rightarrow \pi^{0} \pi^{+} \pi^{-} ,
+$ \\ $
+\omega \rightarrow \pi^{0} \pi^{+} \pi^{-} ,
+D^{0} \rightarrow \pi^{0} \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{+} \pi^{+} \pi^{-} \pi^{-} \pi^{-} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{7328 & }5 & 944 \EOLP
+
+% \rn = 99
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow \mu^{-} \bar{\nu}_{\mu} D^{*0} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{0} \pi^{-} K^{+} ,
+D^{*0} \rightarrow \pi^{0} D^{0} ,
+$ \\ $
+D^{0} \rightarrow \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \mu^{-} \bar{\nu}_{\mu} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} K^{+} K^{-} 
+$) } & \topoTags{7483 & }5 & 949 \EOLP
+
+% \rn = 100
+\rn & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow B^{+} B^{-} ,
+B^{+} \rightarrow \rho^{+} \bar{D}^{0} ,
+B^{-} \rightarrow e^{-} \bar{\nu}_{e} D^{0} \gamma^{F} ,
+\rho^{+} \rightarrow \pi^{0} \pi^{+} ,
+\bar{D}^{0} \rightarrow \pi^{0} \pi^{-} K^{+} ,
+D^{0} \rightarrow \pi^{0} \pi^{+} K^{-} 
+$ \\ ($
+\Upsilon(4S) \dashrightarrow e^{-} \bar{\nu}_{e} \pi^{0} \pi^{0} \pi^{0} \pi^{+} \pi^{+} \pi^{-} K^{+} K^{-} \gamma^{F} 
+$) } & \topoTags{7519 & }5 & 954 \EOLP
+
+rest & \makecell[l]{ $ 
+\Upsilon(4S) \rightarrow \rm{others \  (76062 \  in \  total)}
+$ \\ ($
+\Upsilon(4S) \dashrightarrow \rm{corresponding\ to\ others}
+$) } & \topoTags{--- & }81836 & 82790 \\ \hline
+
+\end{longtable}
+\end{document}

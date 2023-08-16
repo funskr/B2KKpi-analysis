@@ -1,0 +1,1021 @@
+
+Decay trees and their respective initial-final states:
+
+rowNo:  1	iDcyTr:  5654	nEtr:  34	nCEtr:  34
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> mu+ nu_mu anti-D*0  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  anti-D*0 --> pi0 anti-D0  &  1
+  4  &  rho- --> pi0 pi-  &  2
+  5  &  D0 --> pi+ K-  &  2
+  6  &  anti-D0 --> pi0 pi- K+  &  3
+( Upsilon(4S) ---> mu+ nu_mu pi0 pi0 pi0 pi+ pi- pi- K+ K- )
+
+rowNo:  2	iDcyTr:  2935	nEtr:  32	nCEtr:  66
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> mu- anti-nu_mu D*0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi- K+  &  1
+  5  &  D*0 --> pi0 D0  &  2
+  6  &  D0 --> pi0 pi+ K-  &  5
+( Upsilon(4S) ---> mu- anti-nu_mu pi0 pi0 pi0 pi+ pi+ pi- K+ K- )
+
+rowNo:  3	iDcyTr:  614	nEtr:  26	nCEtr:  92
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> mu- anti-nu_mu D0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi- K+  &  1
+  5  &  D0 --> pi0 pi+ K-  &  2
+( Upsilon(4S) ---> mu- anti-nu_mu pi0 pi0 pi+ pi+ pi- K+ K- )
+
+rowNo:  4	iDcyTr:  3768	nEtr:  26	nCEtr:  118
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> e- anti-nu_e D*0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi- K+  &  1
+  5  &  D*0 --> pi0 D0  &  2
+  6  &  D0 --> pi0 pi+ K-  &  5
+( Upsilon(4S) ---> e- anti-nu_e pi0 pi0 pi0 pi+ pi+ pi- K+ K- )
+
+rowNo:  5	iDcyTr:  6529	nEtr:  25	nCEtr:  143
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> mu+ nu_mu anti-D0  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  anti-D0 --> pi0 pi- K+  &  1
+  4  &  rho- --> pi0 pi-  &  2
+  5  &  D0 --> pi+ K-  &  2
+( Upsilon(4S) ---> mu+ nu_mu pi0 pi0 pi+ pi- pi- K+ K- )
+
+rowNo:  6	iDcyTr:  6467	nEtr:  24	nCEtr:  167
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> e+ nu_e anti-D*0  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  anti-D*0 --> pi0 anti-D0  &  1
+  4  &  rho- --> pi0 pi-  &  2
+  5  &  D0 --> pi+ K-  &  2
+  6  &  anti-D0 --> pi0 pi- K+  &  3
+( Upsilon(4S) ---> e+ nu_e pi0 pi0 pi0 pi+ pi- pi- K+ K- )
+
+rowNo:  7	iDcyTr:  2236	nEtr:  22	nCEtr:  189
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi- K+  &  1
+  5  &  rho- --> pi0 pi-  &  2
+  6  &  D0 --> pi0 pi+ K-  &  2
+( Upsilon(4S) ---> pi0 pi0 pi0 pi+ pi+ pi- pi- K+ K- )
+
+rowNo:  8	iDcyTr:  3908	nEtr:  21	nCEtr:  210
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> e- anti-nu_e D*0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi- K+  &  1
+  5  &  D*0 --> D0 gamma  &  2
+  6  &  D0 --> pi0 pi+ K-  &  5
+( Upsilon(4S) ---> e- anti-nu_e pi0 pi0 pi+ pi+ pi- K+ K- gamma )
+
+rowNo:  9	iDcyTr:  1804	nEtr:  20	nCEtr:  230
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> mu+ nu_mu anti-D0  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  anti-D0 --> pi0 pi- K+  &  1
+  4  &  rho- --> pi0 pi-  &  2
+  5  &  D0 --> pi0 pi+ K-  &  2
+( Upsilon(4S) ---> mu+ nu_mu pi0 pi0 pi0 pi+ pi- pi- K+ K- )
+
+rowNo:  10	iDcyTr:  2285	nEtr:  18	nCEtr:  248
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> mu- anti-nu_mu D*0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi0 pi- K+  &  1
+  5  &  D*0 --> pi0 D0  &  2
+  6  &  D0 --> pi0 pi+ K-  &  5
+( Upsilon(4S) ---> mu- anti-nu_mu pi0 pi0 pi0 pi0 pi+ pi+ pi- K+ K- )
+
+rowNo:  11	iDcyTr:  3201	nEtr:  18	nCEtr:  266
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> mu+ nu_mu anti-D*0  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  anti-D*0 --> pi0 anti-D0  &  1
+  4  &  rho- --> pi0 pi-  &  2
+  5  &  D0 --> pi0 pi+ K-  &  2
+  6  &  anti-D0 --> pi0 pi- K+  &  3
+( Upsilon(4S) ---> mu+ nu_mu pi0 pi0 pi0 pi0 pi+ pi- pi- K+ K- )
+
+rowNo:  12	iDcyTr:  1494	nEtr:  17	nCEtr:  283
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> e+ nu_e anti-D*0  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  anti-D*0 --> anti-D0 gamma  &  1
+  4  &  rho- --> pi0 pi-  &  2
+  5  &  D0 --> pi+ K-  &  2
+  6  &  anti-D0 --> pi0 pi- K+  &  3
+( Upsilon(4S) ---> e+ nu_e pi0 pi0 pi+ pi- pi- K+ K- gamma )
+
+rowNo:  13	iDcyTr:  5828	nEtr:  17	nCEtr:  300
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> e- anti-nu_e D0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi- K+  &  1
+  5  &  D0 --> pi0 pi+ K-  &  2
+( Upsilon(4S) ---> e- anti-nu_e pi0 pi0 pi+ pi+ pi- K+ K- )
+
+rowNo:  14	iDcyTr:  1331	nEtr:  16	nCEtr:  316
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> mu- anti-nu_mu D*0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi- K+  &  1
+  5  &  D*0 --> D0 gamma  &  2
+  6  &  D0 --> pi0 pi+ K-  &  5
+( Upsilon(4S) ---> mu- anti-nu_mu pi0 pi0 pi+ pi+ pi- K+ K- gamma )
+
+rowNo:  15	iDcyTr:  1897	nEtr:  15	nCEtr:  331
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> e+ nu_e anti-D0  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  anti-D0 --> pi0 pi- K+  &  1
+  4  &  rho- --> pi0 pi-  &  2
+  5  &  D0 --> pi+ K-  &  2
+( Upsilon(4S) ---> e+ nu_e pi0 pi0 pi+ pi- pi- K+ K- )
+
+rowNo:  16	iDcyTr:  2468	nEtr:  14	nCEtr:  345
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> e+ nu_e anti-D*0 gammaF  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  anti-D*0 --> pi0 anti-D0  &  1
+  4  &  rho- --> pi0 pi-  &  2
+  5  &  D0 --> pi+ K-  &  2
+  6  &  anti-D0 --> pi0 pi- K+  &  3
+( Upsilon(4S) ---> e+ nu_e pi0 pi0 pi0 pi+ pi- pi- K+ K- gammaF )
+
+rowNo:  17	iDcyTr:  4526	nEtr:  14	nCEtr:  359
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> e- anti-nu_e D*0 gammaF  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi- K+  &  1
+  5  &  D*0 --> pi0 D0  &  2
+  6  &  D0 --> pi0 pi+ K-  &  5
+( Upsilon(4S) ---> e- anti-nu_e pi0 pi0 pi0 pi+ pi+ pi- K+ K- gammaF )
+
+rowNo:  18	iDcyTr:  17175	nEtr:  14	nCEtr:  373
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> e- anti-nu_e D*0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi0 pi- K+  &  1
+  5  &  D*0 --> pi0 D0  &  2
+  6  &  D0 --> pi0 pi+ K-  &  5
+( Upsilon(4S) ---> e- anti-nu_e pi0 pi0 pi0 pi0 pi+ pi+ pi- K+ K- )
+
+rowNo:  19	iDcyTr:  22131	nEtr:  14	nCEtr:  387
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi0 pi- K+  &  1
+  5  &  rho- --> pi0 pi-  &  2
+  6  &  D0 --> pi0 pi+ K-  &  2
+( Upsilon(4S) ---> pi0 pi0 pi0 pi0 pi+ pi+ pi- pi- K+ K- )
+
+rowNo:  20	iDcyTr:  19461	nEtr:  13	nCEtr:  400
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> mu+ nu_mu anti-D*0  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  anti-D*0 --> anti-D0 gamma  &  1
+  4  &  rho- --> pi0 pi-  &  2
+  5  &  D0 --> pi+ K-  &  2
+  6  &  anti-D0 --> pi0 pi- K+  &  3
+( Upsilon(4S) ---> mu+ nu_mu pi0 pi0 pi+ pi- pi- K+ K- gamma )
+
+rowNo:  21	iDcyTr:  108	nEtr:  12	nCEtr:  412
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> e+ nu_e anti-D*0  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  anti-D*0 --> pi0 anti-D0  &  1
+  4  &  rho- --> pi0 pi-  &  2
+  5  &  D0 --> pi0 pi+ K-  &  2
+  6  &  anti-D0 --> pi0 pi- K+  &  3
+( Upsilon(4S) ---> e+ nu_e pi0 pi0 pi0 pi0 pi+ pi- pi- K+ K- )
+
+rowNo:  22	iDcyTr:  3784	nEtr:  12	nCEtr:  424
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi0 pi- K+  &  1
+  5  &  rho- --> pi0 pi-  &  2
+  6  &  D0 --> pi+ K-  &  2
+( Upsilon(4S) ---> pi0 pi0 pi0 pi+ pi+ pi- pi- K+ K- )
+
+rowNo:  23	iDcyTr:  10233	nEtr:  12	nCEtr:  436
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> mu- anti-nu_mu D0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi0 pi- K+  &  1
+  5  &  D0 --> pi0 pi+ K-  &  2
+( Upsilon(4S) ---> mu- anti-nu_mu pi0 pi0 pi0 pi+ pi+ pi- K+ K- )
+
+rowNo:  24	iDcyTr:  207	nEtr:  11	nCEtr:  447
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> pi0 pi- pi- D*+  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi- K+  &  1
+  5  &  D*+ --> pi+ D0  &  2
+  6  &  D0 --> pi0 pi+ K-  &  5
+( Upsilon(4S) ---> pi0 pi0 pi0 pi+ pi+ pi+ pi- pi- pi- K+ K- )
+
+rowNo:  25	iDcyTr:  437	nEtr:  11	nCEtr:  458
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> mu- anti-nu_mu D*0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> K+ K-  &  1
+  5  &  D*0 --> pi0 D0  &  2
+  6  &  D0 --> pi0 pi+ K-  &  5
+( Upsilon(4S) ---> mu- anti-nu_mu pi0 pi0 pi0 pi+ pi+ K+ K- K- )
+
+rowNo:  26	iDcyTr:  2695	nEtr:  11	nCEtr:  469
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> pi0 pi+ pi+ pi- anti-D*0  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  anti-D*0 --> pi0 anti-D0  &  1
+  4  &  rho- --> pi0 pi-  &  2
+  5  &  D0 --> pi+ K-  &  2
+  6  &  anti-D0 --> pi0 pi- K+  &  3
+( Upsilon(4S) ---> pi0 pi0 pi0 pi0 pi+ pi+ pi+ pi- pi- pi- K+ K- )
+
+rowNo:  27	iDcyTr:  3443	nEtr:  11	nCEtr:  480
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> e+ nu_e anti-D*0  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  anti-D*0 --> pi0 anti-D0  &  1
+  4  &  rho- --> pi0 pi-  &  2
+  5  &  D0 --> K+ K-  &  2
+  6  &  anti-D0 --> pi0 pi- K+  &  3
+( Upsilon(4S) ---> e+ nu_e pi0 pi0 pi0 pi- pi- K+ K+ K- )
+
+rowNo:  28	iDcyTr:  3277	nEtr:  10	nCEtr:  490
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> e- anti-nu_e D0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi0 pi- K+  &  1
+  5  &  D0 --> pi0 pi+ K-  &  2
+( Upsilon(4S) ---> e- anti-nu_e pi0 pi0 pi0 pi+ pi+ pi- K+ K- )
+
+rowNo:  29	iDcyTr:  4553	nEtr:  10	nCEtr:  500
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> mu+ nu_mu anti-D*0  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  anti-D*0 --> anti-D0 gamma  &  1
+  4  &  rho- --> pi0 pi-  &  2
+  5  &  D0 --> K+ K-  &  2
+  6  &  anti-D0 --> pi0 pi- K+  &  3
+( Upsilon(4S) ---> mu+ nu_mu pi0 pi0 pi- pi- K+ K+ K- gamma )
+
+rowNo:  30	iDcyTr:  12577	nEtr:  10	nCEtr:  510
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> e+ nu_e anti-D*0 gammaF  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  anti-D*0 --> anti-D0 gamma  &  1
+  4  &  rho- --> pi0 pi-  &  2
+  5  &  D0 --> pi+ K-  &  2
+  6  &  anti-D0 --> pi0 pi- K+  &  3
+( Upsilon(4S) ---> e+ nu_e pi0 pi0 pi+ pi- pi- K+ K- gammaF gamma )
+
+rowNo:  31	iDcyTr:  3885	nEtr:  9	nCEtr:  519
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> mu+ nu_mu anti-D*0  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  anti-D*0 --> pi0 anti-D0  &  1
+  4  &  rho- --> pi0 pi-  &  2
+  5  &  D0 --> K+ K-  &  2
+  6  &  anti-D0 --> pi0 pi- K+  &  3
+( Upsilon(4S) ---> mu+ nu_mu pi0 pi0 pi0 pi- pi- K+ K+ K- )
+
+rowNo:  32	iDcyTr:  7785	nEtr:  9	nCEtr:  528
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> mu- anti-nu_mu D0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi- K+  &  1
+  5  &  D0 --> K- a_1+  &  2
+  6  &  a_1+ --> pi0 rho+  &  5
+  7  &  rho+ --> pi0 pi+  &  6
+( Upsilon(4S) ---> mu- anti-nu_mu pi0 pi0 pi0 pi+ pi+ pi- K+ K- )
+
+rowNo:  33	iDcyTr:  11844	nEtr:  9	nCEtr:  537
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> mu- anti-nu_mu D*0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi- K+  &  1
+  5  &  D*0 --> pi0 D0  &  2
+  6  &  D0 --> e+ nu_e K-  &  5
+( Upsilon(4S) ---> e+ nu_e mu- anti-nu_mu pi0 pi0 pi+ pi- K+ K- )
+
+rowNo:  34	iDcyTr:  20843	nEtr:  9	nCEtr:  546
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> pi0 pi+ pi- pi- D*0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi- K+  &  1
+  5  &  D*0 --> pi0 D0  &  2
+  6  &  D0 --> pi0 pi+ K-  &  5
+( Upsilon(4S) ---> pi0 pi0 pi0 pi0 pi+ pi+ pi+ pi- pi- pi- K+ K- )
+
+rowNo:  35	iDcyTr:  52	nEtr:  8	nCEtr:  554
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> pi+ pi- pi- D0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi- K+  &  1
+  5  &  D0 --> pi0 pi+ K-  &  2
+( Upsilon(4S) ---> pi0 pi0 pi+ pi+ pi+ pi- pi- pi- K+ K- )
+
+rowNo:  36	iDcyTr:  742	nEtr:  8	nCEtr:  562
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> mu- anti-nu_mu D*0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi- K+  &  1
+  5  &  D*0 --> pi0 D0  &  2
+  6  &  D0 --> rho+ K*-  &  5
+  7  &  rho+ --> pi0 pi+  &  6
+  8  &  K*- --> pi0 K-  &  6
+( Upsilon(4S) ---> mu- anti-nu_mu pi0 pi0 pi0 pi0 pi+ pi+ pi- K+ K- )
+
+rowNo:  37	iDcyTr:  743	nEtr:  8	nCEtr:  570
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> mu+ nu_mu anti-D*0  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  anti-D*0 --> pi0 anti-D0  &  1
+  4  &  rho- --> pi0 pi-  &  2
+  5  &  D0 --> pi0 pi+ K-  &  2
+  6  &  anti-D0 --> pi- K+  &  3
+( Upsilon(4S) ---> mu+ nu_mu pi0 pi0 pi0 pi+ pi- pi- K+ K- )
+
+rowNo:  38	iDcyTr:  985	nEtr:  8	nCEtr:  578
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> mu- anti-nu_mu D0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi- K+  &  1
+  5  &  D0 --> mu+ nu_mu K-  &  2
+( Upsilon(4S) ---> mu+ mu- nu_mu anti-nu_mu pi0 pi+ pi- K+ K- )
+
+rowNo:  39	iDcyTr:  1050	nEtr:  8	nCEtr:  586
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> e- anti-nu_e D*0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi- K+ gammaF  &  1
+  5  &  D*0 --> pi0 D0  &  2
+  6  &  D0 --> pi0 pi+ K-  &  5
+( Upsilon(4S) ---> e- anti-nu_e pi0 pi0 pi0 pi+ pi+ pi- K+ K- gammaF )
+
+rowNo:  40	iDcyTr:  2551	nEtr:  8	nCEtr:  594
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> e- anti-nu_e D*0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> K+ K-  &  1
+  5  &  D*0 --> pi0 D0  &  2
+  6  &  D0 --> pi0 pi+ K-  &  5
+( Upsilon(4S) ---> e- anti-nu_e pi0 pi0 pi0 pi+ pi+ K+ K- K- )
+
+rowNo:  41	iDcyTr:  4482	nEtr:  8	nCEtr:  602
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> mu+ nu_mu anti-D*0  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  anti-D*0 --> pi0 anti-D0  &  1
+  4  &  rho- --> pi0 pi-  &  2
+  5  &  D0 --> pi+ K-  &  2
+  6  &  anti-D0 --> K+ a_1-  &  3
+  7  &  a_1- --> rho0 pi-  &  6
+  8  &  rho0 --> pi+ pi-  &  7
+( Upsilon(4S) ---> mu+ nu_mu pi0 pi0 pi+ pi+ pi- pi- pi- K+ K- )
+
+rowNo:  42	iDcyTr:  11568	nEtr:  8	nCEtr:  610
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> e+ nu_e anti-D*0  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  anti-D*0 --> anti-D0 gamma  &  1
+  4  &  rho- --> pi0 pi-  &  2
+  5  &  D0 --> pi0 pi+ K-  &  2
+  6  &  anti-D0 --> pi0 pi- K+  &  3
+( Upsilon(4S) ---> e+ nu_e pi0 pi0 pi0 pi+ pi- pi- K+ K- gamma )
+
+rowNo:  43	iDcyTr:  27356	nEtr:  8	nCEtr:  618
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi0 pi- K+  &  1
+  5  &  rho- --> pi0 pi-  &  2
+  6  &  D0 --> K+ K-  &  2
+( Upsilon(4S) ---> pi0 pi0 pi0 pi+ pi- pi- K+ K+ K- )
+
+rowNo:  44	iDcyTr:  35962	nEtr:  8	nCEtr:  626
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> pi0 pi+ pi- pi- D*0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi- K+  &  1
+  5  &  D*0 --> D0 gamma  &  2
+  6  &  D0 --> pi0 pi+ K-  &  5
+( Upsilon(4S) ---> pi0 pi0 pi0 pi+ pi+ pi+ pi- pi- pi- K+ K- gamma )
+
+rowNo:  45	iDcyTr:  4341	nEtr:  7	nCEtr:  633
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> mu+ nu_mu anti-D*0  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  anti-D*0 --> pi0 anti-D0  &  1
+  4  &  rho- --> pi0 pi-  &  2
+  5  &  D0 --> pi+ K-  &  2
+  6  &  anti-D0 --> mu- anti-nu_mu K+  &  3
+( Upsilon(4S) ---> mu+ mu- nu_mu anti-nu_mu pi0 pi0 pi+ pi- K+ K- )
+
+rowNo:  46	iDcyTr:  4419	nEtr:  7	nCEtr:  640
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> e+ nu_e anti-D0 gammaF  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  anti-D0 --> pi0 pi- K+  &  1
+  4  &  rho- --> pi0 pi-  &  2
+  5  &  D0 --> pi+ K-  &  2
+( Upsilon(4S) ---> e+ nu_e pi0 pi0 pi+ pi- pi- K+ K- gammaF )
+
+rowNo:  47	iDcyTr:  4988	nEtr:  7	nCEtr:  647
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> mu- anti-nu_mu D*0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi0 pi- K+  &  1
+  5  &  D*0 --> D0 gamma  &  2
+  6  &  D0 --> pi0 pi+ K-  &  5
+( Upsilon(4S) ---> mu- anti-nu_mu pi0 pi0 pi0 pi+ pi+ pi- K+ K- gamma )
+
+rowNo:  48	iDcyTr:  5083	nEtr:  7	nCEtr:  654
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> mu- anti-nu_mu D0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi- K+  &  1
+  5  &  D0 --> e+ nu_e K-  &  2
+( Upsilon(4S) ---> e+ nu_e mu- anti-nu_mu pi0 pi+ pi- K+ K- )
+
+rowNo:  49	iDcyTr:  6648	nEtr:  7	nCEtr:  661
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> e- anti-nu_e D*0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi- K+  &  1
+  5  &  D*0 --> pi0 D0  &  2
+  6  &  D0 --> pi0 pi0 pi+ K-  &  5
+( Upsilon(4S) ---> e- anti-nu_e pi0 pi0 pi0 pi0 pi+ pi+ pi- K+ K- )
+
+rowNo:  50	iDcyTr:  8418	nEtr:  7	nCEtr:  668
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> mu+ nu_mu anti-D*0  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  anti-D*0 --> anti-D0 gamma  &  1
+  4  &  rho- --> pi0 pi-  &  2
+  5  &  D0 --> pi0 pi+ K-  &  2
+  6  &  anti-D0 --> pi0 pi- K+  &  3
+( Upsilon(4S) ---> mu+ nu_mu pi0 pi0 pi0 pi+ pi- pi- K+ K- gamma )
+
+rowNo:  51	iDcyTr:  9606	nEtr:  7	nCEtr:  675
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> mu+ nu_mu anti-D*0  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  anti-D*0 --> pi0 anti-D0  &  1
+  4  &  rho- --> pi0 pi-  &  2
+  5  &  D0 --> pi+ K-  &  2
+  6  &  anti-D0 --> K+ a_1-  &  3
+  7  &  a_1- --> pi0 rho-  &  6
+  8  &  rho- --> pi0 pi-  &  7
+( Upsilon(4S) ---> mu+ nu_mu pi0 pi0 pi0 pi0 pi+ pi- pi- K+ K- )
+
+rowNo:  52	iDcyTr:  9681	nEtr:  7	nCEtr:  682
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> mu+ nu_mu anti-D0  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  anti-D0 --> mu- anti-nu_mu K+  &  1
+  4  &  rho- --> pi0 pi-  &  2
+  5  &  D0 --> pi+ K-  &  2
+( Upsilon(4S) ---> mu+ mu- nu_mu anti-nu_mu pi0 pi+ pi- K+ K- )
+
+rowNo:  53	iDcyTr:  14711	nEtr:  7	nCEtr:  689
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> K+ K-  &  1
+  5  &  rho- --> pi0 pi-  &  2
+  6  &  D0 --> pi0 pi+ K-  &  2
+( Upsilon(4S) ---> pi0 pi0 pi0 pi+ pi+ pi- K+ K- K- )
+
+rowNo:  54	iDcyTr:  16607	nEtr:  7	nCEtr:  696
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> rho0 pi- D0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi0 pi- K+  &  1
+  5  &  rho0 --> pi+ pi-  &  2
+  6  &  D0 --> pi0 pi+ K-  &  2
+( Upsilon(4S) ---> pi0 pi0 pi0 pi+ pi+ pi+ pi- pi- pi- K+ K- )
+
+rowNo:  55	iDcyTr:  24787	nEtr:  7	nCEtr:  703
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> mu- anti-nu_mu D*0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> e- anti-nu_e K+ gammaF  &  1
+  5  &  D*0 --> pi0 D0  &  2
+  6  &  D0 --> pi0 pi+ K-  &  5
+( Upsilon(4S) ---> e- anti-nu_e mu- anti-nu_mu pi0 pi0 pi0 pi+ pi+ K+ K- gammaF )
+
+rowNo:  56	iDcyTr:  1011	nEtr:  6	nCEtr:  709
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> e+ nu_e anti-D*0 gammaF  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  anti-D*0 --> pi0 anti-D0  &  1
+  4  &  rho- --> pi0 pi-  &  2
+  5  &  D0 --> K+ K-  &  2
+  6  &  anti-D0 --> pi0 pi- K+  &  3
+( Upsilon(4S) ---> e+ nu_e pi0 pi0 pi0 pi- pi- K+ K+ K- gammaF )
+
+rowNo:  57	iDcyTr:  1069	nEtr:  6	nCEtr:  715
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> e+ nu_e anti-D0  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  anti-D0 --> rho- K*+  &  1
+  4  &  rho- --> pi0 pi-  &  2
+  5  &  D0 --> pi+ K-  &  2
+  6  &  rho- --> pi0 pi-  &  3
+  7  &  K*+ --> pi0 K+  &  3
+( Upsilon(4S) ---> e+ nu_e pi0 pi0 pi0 pi+ pi- pi- K+ K- )
+
+rowNo:  58	iDcyTr:  1165	nEtr:  6	nCEtr:  721
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> mu- anti-nu_mu D*0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi0 pi- K+  &  1
+  5  &  D*0 --> pi0 D0  &  2
+  6  &  D0 --> mu+ nu_mu K-  &  5
+( Upsilon(4S) ---> mu+ mu- nu_mu anti-nu_mu pi0 pi0 pi0 pi+ pi- K+ K- )
+
+rowNo:  59	iDcyTr:  1178	nEtr:  6	nCEtr:  727
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> pi0 pi+ pi+ D*-  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  D*- --> pi- anti-D0  &  1
+  4  &  rho- --> pi0 pi-  &  2
+  5  &  D0 --> pi+ K-  &  2
+  6  &  anti-D0 --> pi0 pi- K+  &  3
+( Upsilon(4S) ---> pi0 pi0 pi0 pi+ pi+ pi+ pi- pi- pi- K+ K- )
+
+rowNo:  60	iDcyTr:  1244	nEtr:  6	nCEtr:  733
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> e+ nu_e anti-D*0  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  anti-D*0 --> pi0 anti-D0  &  1
+  4  &  rho- --> pi0 pi-  &  2
+  5  &  D0 --> pi+ K-  &  2
+  6  &  anti-D0 --> pi0 pi0 pi- K+  &  3
+( Upsilon(4S) ---> e+ nu_e pi0 pi0 pi0 pi0 pi+ pi- pi- K+ K- )
+
+rowNo:  61	iDcyTr:  1322	nEtr:  6	nCEtr:  739
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> mu+ nu_mu anti-D*0  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  anti-D*0 --> pi0 anti-D0  &  1
+  4  &  rho- --> pi0 pi-  &  2
+  5  &  D0 --> pi+ K-  &  2
+  6  &  anti-D0 --> pi+ pi- K*0  &  3
+  7  &  K*0 --> pi- K+  &  6
+( Upsilon(4S) ---> mu+ nu_mu pi0 pi0 pi+ pi+ pi- pi- pi- K+ K- )
+
+rowNo:  62	iDcyTr:  1394	nEtr:  6	nCEtr:  745
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> mu- anti-nu_mu D0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi- K+  &  1
+  5  &  D0 --> rho+ K*-  &  2
+  6  &  rho+ --> pi0 pi+  &  5
+  7  &  K*- --> pi0 K-  &  5
+( Upsilon(4S) ---> mu- anti-nu_mu pi0 pi0 pi0 pi+ pi+ pi- K+ K- )
+
+rowNo:  63	iDcyTr:  1985	nEtr:  6	nCEtr:  751
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> mu- anti-nu_mu D*0 gammaF  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi- K+  &  1
+  5  &  D*0 --> pi0 D0  &  2
+  6  &  D0 --> pi0 pi+ K-  &  5
+( Upsilon(4S) ---> mu- anti-nu_mu pi0 pi0 pi0 pi+ pi+ pi- K+ K- gammaF )
+
+rowNo:  64	iDcyTr:  2419	nEtr:  6	nCEtr:  757
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> e+ nu_e anti-D*0 gammaF  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  anti-D*0 --> pi0 anti-D0  &  1
+  4  &  rho- --> pi0 pi-  &  2
+  5  &  D0 --> pi+ K-  &  2
+  6  &  anti-D0 --> pi- K+  &  3
+( Upsilon(4S) ---> e+ nu_e pi0 pi0 pi+ pi- pi- K+ K- gammaF )
+
+rowNo:  65	iDcyTr:  2570	nEtr:  6	nCEtr:  763
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> pi+ pi+ pi+ pi- pi- anti-D*0  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  anti-D*0 --> anti-D0 gamma  &  1
+  4  &  rho- --> pi0 pi-  &  2
+  5  &  D0 --> pi+ K-  &  2
+  6  &  anti-D0 --> pi0 pi- K+  &  3
+( Upsilon(4S) ---> pi0 pi0 pi+ pi+ pi+ pi+ pi- pi- pi- pi- K+ K- gamma )
+
+rowNo:  66	iDcyTr:  4438	nEtr:  6	nCEtr:  769
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> mu- anti-nu_mu D*0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi- K+ gammaF  &  1
+  5  &  D*0 --> pi0 D0  &  2
+  6  &  D0 --> pi0 pi+ K-  &  5
+( Upsilon(4S) ---> mu- anti-nu_mu pi0 pi0 pi0 pi+ pi+ pi- K+ K- gammaF )
+
+rowNo:  67	iDcyTr:  4869	nEtr:  6	nCEtr:  775
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> e- anti-nu_e D*0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi- K+  &  1
+  5  &  D*0 --> pi0 D0  &  2
+  6  &  D0 --> pi+ K-  &  5
+( Upsilon(4S) ---> e- anti-nu_e pi0 pi0 pi+ pi+ pi- K+ K- )
+
+rowNo:  68	iDcyTr:  4870	nEtr:  6	nCEtr:  781
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> pi0 rho+ anti-D0  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi0 pi- K+  &  1
+  5  &  rho- --> pi0 pi-  &  2
+  6  &  D0 --> pi+ K-  &  2
+( Upsilon(4S) ---> pi0 pi0 pi0 pi0 pi+ pi+ pi- pi- K+ K- )
+
+rowNo:  69	iDcyTr:  5019	nEtr:  6	nCEtr:  787
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> mu+ nu_mu anti-D*0 gammaF  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  anti-D*0 --> pi0 anti-D0  &  1
+  4  &  rho- --> pi0 pi-  &  2
+  5  &  D0 --> pi+ K-  &  2
+  6  &  anti-D0 --> pi0 pi- K+  &  3
+( Upsilon(4S) ---> mu+ nu_mu pi0 pi0 pi0 pi+ pi- pi- K+ K- gammaF )
+
+rowNo:  70	iDcyTr:  6243	nEtr:  6	nCEtr:  793
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> mu- anti-nu_mu D*0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi- K+  &  1
+  5  &  D*0 --> pi0 D0  &  2
+  6  &  D0 --> pi+ K-  &  5
+( Upsilon(4S) ---> mu- anti-nu_mu pi0 pi0 pi+ pi+ pi- K+ K- )
+
+rowNo:  71	iDcyTr:  8299	nEtr:  6	nCEtr:  799
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> mu+ nu_mu anti-D*0  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  anti-D*0 --> pi0 anti-D0  &  1
+  4  &  rho- --> pi0 pi-  &  2
+  5  &  D0 --> pi+ K-  &  2
+  6  &  anti-D0 --> rho- K*+  &  3
+  7  &  rho- --> pi0 pi-  &  6
+  8  &  K*+ --> pi0 K+  &  6
+( Upsilon(4S) ---> mu+ nu_mu pi0 pi0 pi0 pi0 pi+ pi- pi- K+ K- )
+
+rowNo:  72	iDcyTr:  8791	nEtr:  6	nCEtr:  805
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> e+ nu_e anti-D0  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  anti-D0 --> e- anti-nu_e K+  &  1
+  4  &  rho- --> pi0 pi-  &  2
+  5  &  D0 --> pi+ K-  &  2
+( Upsilon(4S) ---> e+ e- nu_e anti-nu_e pi0 pi+ pi- K+ K- )
+
+rowNo:  73	iDcyTr:  9457	nEtr:  6	nCEtr:  811
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> e+ nu_e anti-D0  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  anti-D0 --> pi0 pi- K+  &  1
+  4  &  rho- --> pi0 pi-  &  2
+  5  &  D0 --> pi0 pi+ K-  &  2
+( Upsilon(4S) ---> e+ nu_e pi0 pi0 pi0 pi+ pi- pi- K+ K- )
+
+rowNo:  74	iDcyTr:  10002	nEtr:  6	nCEtr:  817
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> e- anti-nu_e D*0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi- K+  &  1
+  5  &  D*0 --> pi0 D0  &  2
+  6  &  D0 --> mu+ nu_mu K-  &  5
+( Upsilon(4S) ---> e- anti-nu_e mu+ nu_mu pi0 pi0 pi+ pi- K+ K- )
+
+rowNo:  75	iDcyTr:  10820	nEtr:  6	nCEtr:  823
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> e+ nu_e anti-D*0 gammaF  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  anti-D*0 --> pi0 anti-D0  &  1
+  4  &  rho- --> pi0 pi-  &  2
+  5  &  D0 --> pi0 pi+ K-  &  2
+  6  &  anti-D0 --> pi0 pi0 pi- K+  &  3
+( Upsilon(4S) ---> e+ nu_e pi0 pi0 pi0 pi0 pi0 pi+ pi- pi- K+ K- gammaF )
+
+rowNo:  76	iDcyTr:  13901	nEtr:  6	nCEtr:  829
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> rho- D*0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi0 pi- K+  &  1
+  5  &  rho- --> pi0 pi-  &  2
+  6  &  D*0 --> pi0 D0  &  2
+  7  &  D0 --> pi0 pi+ K-  &  6
+( Upsilon(4S) ---> pi0 pi0 pi0 pi0 pi0 pi+ pi+ pi- pi- K+ K- )
+
+rowNo:  77	iDcyTr:  15605	nEtr:  6	nCEtr:  835
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> e- anti-nu_e D*0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi- K+  &  1
+  5  &  D*0 --> D0 gamma  &  2
+  6  &  D0 --> mu+ nu_mu K-  &  5
+( Upsilon(4S) ---> e- anti-nu_e mu+ nu_mu pi0 pi+ pi- K+ K- gamma )
+
+rowNo:  78	iDcyTr:  16334	nEtr:  6	nCEtr:  841
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> e- anti-nu_e D*0 gammaF  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> K+ K-  &  1
+  5  &  D*0 --> pi0 D0  &  2
+  6  &  D0 --> pi0 pi+ K-  &  5
+( Upsilon(4S) ---> e- anti-nu_e pi0 pi0 pi0 pi+ pi+ K+ K- K- gammaF )
+
+rowNo:  79	iDcyTr:  19613	nEtr:  6	nCEtr:  847
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> rho- D*0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi- K+  &  1
+  5  &  rho- --> pi0 pi-  &  2
+  6  &  D*0 --> pi0 D0  &  2
+  7  &  D0 --> pi0 pi+ K-  &  6
+( Upsilon(4S) ---> pi0 pi0 pi0 pi0 pi+ pi+ pi- pi- K+ K- )
+
+rowNo:  80	iDcyTr:  24993	nEtr:  6	nCEtr:  853
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> mu- anti-nu_mu D*0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi- K+  &  1
+  5  &  D*0 --> D0 gamma  &  2
+  6  &  D0 --> pi0 pi0 pi+ K-  &  5
+( Upsilon(4S) ---> mu- anti-nu_mu pi0 pi0 pi0 pi+ pi+ pi- K+ K- gamma )
+
+rowNo:  81	iDcyTr:  27901	nEtr:  6	nCEtr:  859
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> mu+ nu_mu anti-D0  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  anti-D0 --> K+ a_1-  &  1
+  4  &  rho- --> pi0 pi-  &  2
+  5  &  D0 --> pi+ K-  &  2
+  6  &  a_1- --> pi0 rho-  &  3
+  7  &  rho- --> pi0 pi-  &  6
+( Upsilon(4S) ---> mu+ nu_mu pi0 pi0 pi0 pi+ pi- pi- K+ K- )
+
+rowNo:  82	iDcyTr:  118	nEtr:  5	nCEtr:  864
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> mu- anti-nu_mu D*0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi- K+  &  1
+  5  &  D*0 --> D0 gamma  &  2
+  6  &  D0 --> mu+ nu_mu K-  &  5
+( Upsilon(4S) ---> mu+ mu- nu_mu anti-nu_mu pi0 pi+ pi- K+ K- gamma )
+
+rowNo:  83	iDcyTr:  359	nEtr:  5	nCEtr:  869
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> e- anti-nu_e D*0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi- K+  &  1
+  5  &  D*0 --> pi0 D0  &  2
+  6  &  D0 --> pi+ omega K-  &  5
+  7  &  omega --> pi0 pi+ pi-  &  6
+( Upsilon(4S) ---> e- anti-nu_e pi0 pi0 pi0 pi+ pi+ pi+ pi- pi- K+ K- )
+
+rowNo:  84	iDcyTr:  409	nEtr:  5	nCEtr:  874
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> mu- anti-nu_mu D*0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi0 pi- K+  &  1
+  5  &  D*0 --> pi0 D0  &  2
+  6  &  D0 --> rho+ K*-  &  5
+  7  &  rho+ --> pi0 pi+  &  6
+  8  &  K*- --> pi0 K-  &  6
+( Upsilon(4S) ---> mu- anti-nu_mu pi0 pi0 pi0 pi0 pi0 pi+ pi+ pi- K+ K- )
+
+rowNo:  85	iDcyTr:  836	nEtr:  5	nCEtr:  879
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> e- anti-nu_e D*0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi- K+  &  1
+  5  &  D*0 --> pi0 D0  &  2
+  6  &  D0 --> rho+ K*-  &  5
+  7  &  rho+ --> pi0 pi+  &  6
+  8  &  K*- --> pi0 K-  &  6
+( Upsilon(4S) ---> e- anti-nu_e pi0 pi0 pi0 pi0 pi+ pi+ pi- K+ K- )
+
+rowNo:  86	iDcyTr:  2158	nEtr:  5	nCEtr:  884
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> pi0 pi+ pi+ D*-  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  D*- --> pi0 D-  &  1
+  4  &  rho- --> pi0 pi-  &  2
+  5  &  D0 --> pi+ K-  &  2
+  6  &  D- --> mu- anti-nu_mu K*0  &  3
+  7  &  K*0 --> pi- K+  &  6
+( Upsilon(4S) ---> mu- anti-nu_mu pi0 pi0 pi0 pi+ pi+ pi+ pi- pi- K+ K- )
+
+rowNo:  87	iDcyTr:  2335	nEtr:  5	nCEtr:  889
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> mu+ nu_mu anti-D*0  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  anti-D*0 --> pi0 anti-D0  &  1
+  4  &  rho- --> pi0 pi-  &  2
+  5  &  D0 --> K+ K-  &  2
+  6  &  anti-D0 --> pi- K+  &  3
+( Upsilon(4S) ---> mu+ nu_mu pi0 pi0 pi- pi- K+ K+ K- )
+
+rowNo:  88	iDcyTr:  2774	nEtr:  5	nCEtr:  894
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> e+ nu_e anti-D*0 gammaF  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  anti-D*0 --> anti-D0 gamma  &  1
+  4  &  rho- --> pi0 pi-  &  2
+  5  &  D0 --> pi0 pi+ K-  &  2
+  6  &  anti-D0 --> pi0 pi- K+  &  3
+( Upsilon(4S) ---> e+ nu_e pi0 pi0 pi0 pi+ pi- pi- K+ K- gammaF gamma )
+
+rowNo:  89	iDcyTr:  3032	nEtr:  5	nCEtr:  899
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> e- anti-nu_e D*0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi- K+  &  1
+  5  &  D*0 --> D0 gamma  &  2
+  6  &  D0 --> pi0 pi0 pi+ K-  &  5
+( Upsilon(4S) ---> e- anti-nu_e pi0 pi0 pi0 pi+ pi+ pi- K+ K- gamma )
+
+rowNo:  90	iDcyTr:  3132	nEtr:  5	nCEtr:  904
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> e+ nu_e anti-D*0 gammaF  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  anti-D*0 --> pi0 anti-D0  &  1
+  4  &  rho- --> pi0 pi-  &  2
+  5  &  D0 --> mu+ nu_mu K-  &  2
+  6  &  anti-D0 --> pi0 pi- K+  &  3
+( Upsilon(4S) ---> e+ nu_e mu+ nu_mu pi0 pi0 pi0 pi- pi- K+ K- gammaF )
+
+rowNo:  91	iDcyTr:  3743	nEtr:  5	nCEtr:  909
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> e- anti-nu_e D*0 gammaF  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi0 pi- K+  &  1
+  5  &  D*0 --> pi0 D0  &  2
+  6  &  D0 --> pi0 pi+ K-  &  5
+( Upsilon(4S) ---> e- anti-nu_e pi0 pi0 pi0 pi0 pi+ pi+ pi- K+ K- gammaF )
+
+rowNo:  92	iDcyTr:  3867	nEtr:  5	nCEtr:  914
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D*0  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D*0 --> pi0 anti-D0  &  1
+  5  &  rho- --> pi0 pi-  &  2
+  6  &  D0 --> pi+ K-  &  2
+  7  &  anti-D0 --> pi0 pi- K+  &  4
+( Upsilon(4S) ---> pi0 pi0 pi0 pi0 pi+ pi+ pi- pi- K+ K- )
+
+rowNo:  93	iDcyTr:  4685	nEtr:  5	nCEtr:  919
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi0 pi- K+  &  1
+  5  &  rho- --> pi0 pi-  &  2
+  6  &  D0 --> mu+ nu_mu K-  &  2
+( Upsilon(4S) ---> mu+ nu_mu pi0 pi0 pi0 pi+ pi- pi- K+ K- )
+
+rowNo:  94	iDcyTr:  4906	nEtr:  5	nCEtr:  924
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho0 pi+ omega anti-D0  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  rho0 --> pi+ pi-  &  1
+  4  &  omega --> pi0 pi+ pi-  &  1
+  5  &  anti-D0 --> pi0 pi- K+  &  1
+  6  &  rho- --> pi0 pi-  &  2
+  7  &  D0 --> pi+ K-  &  2
+( Upsilon(4S) ---> pi0 pi0 pi0 pi+ pi+ pi+ pi+ pi- pi- pi- pi- K+ K- )
+
+rowNo:  95	iDcyTr:  5282	nEtr:  5	nCEtr:  929
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> mu- anti-nu_mu D0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi- K+  &  1
+  5  &  D0 --> pi0 pi0 pi+ K-  &  2
+( Upsilon(4S) ---> mu- anti-nu_mu pi0 pi0 pi0 pi+ pi+ pi- K+ K- )
+
+rowNo:  96	iDcyTr:  5331	nEtr:  5	nCEtr:  934
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> pi0 pi+ pi- pi- D*0 gammaF  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi- K+  &  1
+  5  &  D*0 --> pi0 D0  &  2
+  6  &  D0 --> pi0 pi+ K-  &  5
+( Upsilon(4S) ---> pi0 pi0 pi0 pi0 pi+ pi+ pi+ pi- pi- pi- K+ K- gammaF )
+
+rowNo:  97	iDcyTr:  6433	nEtr:  5	nCEtr:  939
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> rho- D0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi0 pi- K+  &  1
+  5  &  rho- --> pi0 pi-  &  2
+  6  &  D0 --> pi+ K- gammaF  &  2
+( Upsilon(4S) ---> pi0 pi0 pi0 pi+ pi+ pi- pi- K+ K- gammaF )
+
+rowNo:  98	iDcyTr:  7328	nEtr:  5	nCEtr:  944
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> pi- omega omega D0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi0 pi- K+  &  1
+  5  &  omega --> pi0 pi+ pi-  &  2
+  6  &  omega --> pi0 pi+ pi-  &  2
+  7  &  D0 --> pi0 pi+ K-  &  2
+( Upsilon(4S) ---> pi0 pi0 pi0 pi0 pi0 pi+ pi+ pi+ pi+ pi- pi- pi- pi- K+ K- )
+
+rowNo:  99	iDcyTr:  7483	nEtr:  5	nCEtr:  949
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> mu- anti-nu_mu D*0  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi0 pi- K+  &  1
+  5  &  D*0 --> pi0 D0  &  2
+  6  &  D0 --> pi+ K-  &  5
+( Upsilon(4S) ---> mu- anti-nu_mu pi0 pi0 pi0 pi+ pi+ pi- K+ K- )
+
+rowNo:  100	iDcyTr:  7519	nEtr:  5	nCEtr:  954
+  0  &  Upsilon(4S) --> B+ B-  &  -1
+  1  &  B+ --> rho+ anti-D0  &  0
+  2  &  B- --> e- anti-nu_e D0 gammaF  &  0
+  3  &  rho+ --> pi0 pi+  &  1
+  4  &  anti-D0 --> pi0 pi- K+  &  1
+  5  &  D0 --> pi0 pi+ K-  &  2
+( Upsilon(4S) ---> e- anti-nu_e pi0 pi0 pi0 pi+ pi+ pi- K+ K- gammaF )
+
+rowNo:  rest	iDcyTr:  ---	nEtr:  81836	nCEtr:  82790
+  Upsilon(4S) --> others (76062 in total)
+( Upsilon(4S) ---> corresponding to others )
+
+
+Decay branches of B0:
+
+
+Cascade decay branches of B0 (only the first ten hierarchies are involved):
+
