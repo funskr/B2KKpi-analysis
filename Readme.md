@@ -40,7 +40,7 @@ basf2 version: `release-06-01-12`
 			- clusterReg=3: E>0.1 GeV
 		- cluster shape: cluseterE9E21>0.9
 	- $\pi^0$
-		- the mass window used now:  $0.111<M_{\pi_{0}}<0.153 GeV/c^2$, invariant mass between m_mean +- 3sigma.
+		- the mass window used now: $0.111 \lt M_{\pi_{0}} \lt 0.153 \rm~GeV/c^2$, invariant mass between m_mean +- 3sigma.
         - $|\cos\theta_{helicity}|<0.95$
 
 ### Best $B^0$ candidate selection
