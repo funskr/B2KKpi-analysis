@@ -12,10 +12,11 @@ basf2 version: `release-06-01-12`
 
 ## Update logs
 
-2023 | 
-------- | 
-[202308](./notes/log/202308.md) | 
-[202309](./notes/log/202309.md) | 
+Time | Description |
+------- | ------- |
+[202308](./notes/log/202308.md) |  The first month to log
+[202309](./notes/log/202309.md) |  
+
 
 
 ## Selection criteria
@@ -23,6 +24,7 @@ basf2 version: `release-06-01-12`
 ### Preliminary selections
 
 [The distribution of different variables](./notes/preliminary_selections.md)
+
 
 - kaon selection
 	- kaonID>0.2
@@ -59,9 +61,7 @@ We used the [MVA package](https://software.belle2.org/development/sphinx/mva/doc
 
 ## Flavor Tag
 
-used the signal MC to do flavor tag, the result is good.
-
-
+We also used the method indroduced in [basf2 sofeware website](https://software.belle2.org/development/sphinx/online_book/basf2/flavor_tagging.html)
 
 
 ## Study of background from generic BBbar
