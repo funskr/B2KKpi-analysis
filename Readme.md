@@ -10,22 +10,17 @@ basf2 version: `release-06-01-12`
 - [ ] use git to manager my analysis files
 - [ ] Amplitude analysis
 
-## Update
+## Update logs
 
-### 2023.8.16
-
-- changed the kaonID selections
-- removed the selections of gamma angle, changed it to cosin of helicity angle of gammas
-- clean up the root macro of make sample (`sample.C`)
-- retrained the cs FBDT weight files
+2023 | 
+------- | 
+[202308](./notes/log/202308.md) | 
+[202309](./notes/log/202309.md) | 
 
 
 ## Selection criteria
 
-
-
 ### Preliminary selections
-
 
 [The distribution of different variables](./notes/preliminary_selections.md)
 
@@ -46,43 +41,30 @@ basf2 version: `release-06-01-12`
 ### Best $B^0$ candidate selection
 
 We used two variables to select the best $B^0$ candidate: 
-
 - $\pi^0$ mass constrained chi2 
 - chiProb of $B^0$ vertex fit chi2
 
+Selection strategy:
+- Firstly, we select the $B^0$ candidate whose $\pi^0$ with lowest chi2. 
+- If there are still multi $B^0$ candidate, we select the $B^0$ candidate with higher chiProb.
 
-## continuum suppression
+## Continuum suppression
 
-MC sample: MC 15 run-indepent qqbar
+MC sample: MC 15 run-indepent qqbar sample
 
+We used FBDT to do continuum suppression, which is introduced in the [basf2 website](https://software.belle2.org/development/sphinx/online_book/basf2/cs.html).
 
-![test](./plots/cs/png/dis_cosTBz.png)
+We used the [MVA package](https://software.belle2.org/development/sphinx/mva/doc/index-01-mva.html) in basf2 to mix signal and background sample, and evaluate the result of training.
 
 
 ## Flavor Tag
 
 used the signal MC to do flavor tag, the result is good.
 
-generic MC sample: MC15ri_mixed_1abinv
-
-### to do
-- [ ] run generic MC with flavor tag, check the qrMC
-	- store the topology information when run the generic MC
 
 
 
 ## Study of background from generic BBbar
-
-
-$$
-M_{Inv} = \sqrt{E^2 - p^2}
-$$
-
-The energy of kaon from the variable manager is from what? Should I assume the mass of candidate to be the mass of kaon and then calculate the energy of kaon?
-
-
-### to do
-- [ ] check the distribution of invariant mass of the two Kaon system, and with hypothesis that one of the kaon is a pion
 
 
 
