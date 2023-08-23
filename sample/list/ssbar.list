@@ -1,4 +1,6 @@
 #cs FBDT train
-/home/belle2/yuanmk/data/B2KKpi/B2KKpi_ssbar_20230808_23/sub00/*.root
-/home/belle2/yuanmk/data/B2KKpi/B2KKpi_ssbar_20230808_23/sub01/*.root
-#/home/belle2/yuanmk/analysis/B2KKpi/topoana/ssbar_MC.root
+#/home/belle2/yuanmk/data/B2KKpi/B2KKpi_ssbar_20230808_23/sub00/*.root
+#/home/belle2/yuanmk/data/B2KKpi/B2KKpi_ssbar_20230808_23/sub01/*.root
+# analysis
+/home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_ssbar_20230821/sub00/*.root
+/home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_ssbar_20230821/sub01/*.root

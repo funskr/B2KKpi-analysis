@@ -8,54 +8,29 @@ void draw_hist(TH1D* hist,string file, string branch){
 
     chain -> Add(file.c_str());
     //set variables
-    Double_t dr, dz;
-    chain->SetBranchAddress("dr", &dr);
-    chain->SetBranchAddress("dz", &dz);
+    Double_t ContProb;
+    chain->SetBranchAddress("ContProb", &ContProb);
+    Int_t flag_candidate;
+    chain->SetBranchAddress("flag_candidate", &flag_candidate);
 
-    Double_t FBDT_qrCombined;
-    chain->SetBranchAddress("FBDT_qrCombined", &FBDT_qrCombined);  
-    Double_t pi0_daughterAngle_0_1;
-    chain->SetBranchAddress("pi0_daughterAngle_0_1", &pi0_daughterAngle_0_1);
-
-    Double_t Kp_px, Kp_py, Kp_pz, Kp_E;
-    chain->SetBranchAddress("Kp_px", &Kp_px);
-    chain->SetBranchAddress("Kp_py", &Kp_py);
-    chain->SetBranchAddress("Kp_pz", &Kp_pz);
-    chain->SetBranchAddress("Kp_E", &Kp_E);
-
-    Double_t pi0_px, pi0_py, pi0_pz, pi0_E;
-    chain->SetBranchAddress("pi0_px", &pi0_px);
-    chain->SetBranchAddress("pi0_py", &pi0_py);
-    chain->SetBranchAddress("pi0_pz", &pi0_pz);
-    chain->SetBranchAddress("pi0_E", &pi0_E);
+    Double_t InvM_KpPi0;
+    chain->SetBranchAddress("InvM_KpPi0", &InvM_KpPi0);
+    Double_t InvM_KmPi0;
+    chain->SetBranchAddress("InvM_KmPi0", &InvM_KmPi0);
 
     //draw on hist
     Double_t Kp_E_s = 0; Double_t pi0_E_s = 0;
     Double_t E_tot = 0; Double_t px_tot = 0; Double_t py_tot = 0; Double_t pz_tot = 0;
-    Double_t InvM_KpPi0 = 0;
     const Double_t mass_K = 0.493677;
     Int_t nentries = chain->GetEntries();
     //cout<<"Km_E:pi0_E_s"<<endl;
     for(Int_t i=0; i < nentries; i++){
         chain->GetEntry(i);
-        if(dr>0.04) continue;
-        if(fabs(dz)>0.2) continue;
-        if(FBDT_qrCombined>0.72) continue;
-        if(pi0_daughterAngle_0_1>0.4) continue;
-
-        //if(InvM_KK > 1.849 && InvM_KK < 1.879) continue;
-
-        Kp_E_s = sqrt(Kp_px*Kp_px + Kp_px*Kp_px + Kp_px*Kp_px + mass_K * mass_K);
-        pi0_E_s = sqrt(pi0_px*pi0_px + pi0_py*pi0_py + pi0_pz*pi0_pz + mass_K * mass_K);
-        E_tot = Kp_E + pi0_E;
-
-        px_tot = Kp_px + pi0_px;
-        py_tot = Kp_py + pi0_py;
-        pz_tot = Kp_pz + pi0_pz;
-
-        InvM_KpPi0 = sqrt(E_tot*E_tot - (px_tot*px_tot + py_tot*py_tot + pz_tot*pz_tot));
+        if(flag_candidate==0) continue;
+        if(ContProb>0.4) continue;
         
         hist->Fill(InvM_KpPi0);
+        hist->Fill(InvM_KmPi0);
     }
 }
 
@@ -83,12 +58,13 @@ void dis_mkpi0(){
     TH1D *hsigMC=new TH1D("hsigMC", "hsigMC", xbins, xmin, xmax);
     hsigMC->SetLineColor(kBlue);
     hsigMC->SetLineWidth(2);
-    draw_hist(hsigMC,"/home/belle2/yuanmk/data/B2KKpi/sigMC/root/sigMC_sample.root", "B0");
+    draw_hist(hsigMC,"/home/belle2/yuanmk/data/B2KKpi/sample/ana/sigMC_sample.root", "B0");
 
     TH1D *hbbbar=new TH1D("hbbbar", "hbbbar", xbins, xmin, xmax);
     hbbbar->SetLineColor(kRed);
     hbbbar->SetLineWidth(2);
-    draw_hist(hbbbar,"/home/belle2/yuanmk/data/B2KKpi/BBbar/BBar_sample.root","B0");
+    draw_hist(hbbbar,"/home/belle2/yuanmk/data/B2KKpi/sample/ana/mixed_sample.root","B0");
+    draw_hist(hbbbar,"/home/belle2/yuanmk/data/B2KKpi/sample/ana/charged_sample.root","B0");
 
     mbc->cd();
     //gPad->SetLogy();
@@ -103,7 +79,7 @@ void dis_mkpi0(){
     //hsigMC->Scale(1/hsigMC->GetEntries());
     hbbbar->Scale(scale);
 
-    hsigMC->GetXaxis()->SetTitle("M_{K^{+}#pi^{0}}/(GeV/c^{2})");
+    hsigMC->GetXaxis()->SetTitle("M_{K^{#pm}#pi^{0}}/(GeV/c^{2})");
     hsigMC->GetYaxis()->SetTitle(ytitle);
     hsigMC->GetXaxis()->SetTitleOffset(0.90);
     hsigMC->GetYaxis()->SetTitleOffset(1.20);
@@ -132,10 +108,6 @@ void dis_mkpi0(){
     xy2->SetLineColor(kBlue);xy2->SetLineWidth(2);
     //xy2->Draw();
 
-    //mbc->SaveAs("/home/belle2/yuanmk/analysis/B2KKpi/sigMC/plots/png/dis_Mbc.png");
-    //mbc->SaveAs("/home/belle2/yuanmk/analysis/B2KKpi/sigMC/plots/pdf/dis_Mbc.pdf");
-    mbc->SaveAs("./dis_mkppi0.pdf");
-
-    //cout<<"truely identified:"<<hsigMC->GetEntries()<<endl;
-    //cout<<"misidentified:"<<hmisid->GetEntries()<<endl;
+    mbc->SaveAs("/home/belle2/yuanmk/analysis/B2KKpi/plots/bkg_bbar/pdf/dis_mkpi0.pdf");
+    mbc->SaveAs("/home/belle2/yuanmk/analysis/B2KKpi/plots/bkg_bbar/png/dis_mkpi0.png");
 }

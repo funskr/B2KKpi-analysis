@@ -1,3 +1,8 @@
 vertex_chi2
-chiSqrd
-gamma_coshelicity
+#ContProb
+isContinuumEvent
+deltaE
+Mbc
+isSignal
+mcPDG
+momtherPDG

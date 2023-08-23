@@ -17,7 +17,17 @@ Time | Description |
 [202308](./notes/log/202308.md) |  The first month to log
 [202309](./notes/log/202309.md) |  
 
+<details><summary>
+ conda channel (experimental)
+</summary><p>
 
+A pre-built conda package (Linux only) is also provided, just run following
+command to install it.
+```
+conda config --add channels jiangyi15
+conda install tf-pwa
+```
+</p></details>
 
 ## Selection criteria
 
@@ -39,6 +49,10 @@ Time | Description |
 	- $\pi^0$
 		- the mass window used now: $0.111 \lt M_{\pi_{0}} \lt 0.153 \rm~GeV/c^2$, invariant mass between m_mean +- 3sigma.
         - $|\cos\theta_{helicity}|<0.95$
+- $B^0$
+  - vertex fit
+  - delta E
+  - Mbc
 
 ### Best $B^0$ candidate selection
 
@@ -66,6 +80,6 @@ We also used the method indroduced in [basf2 sofeware website](https://software.
 
 ## Study of background from generic BBbar
 
+Following the note from belle, we will remove the background from D meson decay, and do the fit.
 
-
-
+But in the B2Kpipi0 analysis of BARBAR experiment, they do not remove the background from D, and considered this source of background in amplitude fit. 

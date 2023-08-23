@@ -52,6 +52,14 @@ void combine_sample(vector<string> list, string branch, string output, vector<st
     chain->SetBranchAddress("Km_pz", &Km_pz);
     chain->SetBranchAddress("Km_E", &Km_E);
 
+    Double_t pi0_px, pi0_py, pi0_pz, pi0_E;
+    chain->SetBranchAddress("pi0_px", &pi0_px);
+    chain->SetBranchAddress("pi0_py", &pi0_py);
+    chain->SetBranchAddress("pi0_pz", &pi0_pz);
+    chain->SetBranchAddress("pi0_E", &pi0_E);
+
+    Double_t ContProb;
+    chain->SetBranchAddress("ContProb", &ContProb);
 
     //*****************************
     TTree* tree =  new TTree("B0", " ");
@@ -64,20 +72,34 @@ void combine_sample(vector<string> list, string branch, string output, vector<st
         tree->Branch(var_str[i].c_str(), &var_new[i], var_str_tmp.c_str());
     }
 
-    Double_t InvM_KK;
-    tree->Branch("InvM_KK", &InvM_KK, "InvM_KK/D");
+    Double_t InvM_KpKm;
+    tree->Branch("InvM_KpKm", &InvM_KpKm, "InvM_KpKm/D");
 
     Double_t InvM_KpPim, InvM_KmPip;
     tree->Branch("InvM_KpPim", &InvM_KpPim, "InvM_KpPim/D");
     tree->Branch("InvM_KmPip", &InvM_KmPip, "InvM_KmPip/D");
+
+    Double_t InvM_KpPi0, InvM_KmPi0;
+    tree->Branch("InvM_KpPi0", &InvM_KpPi0, "InvM_KpPi0/D");
+    tree->Branch("InvM_KmPi0", &InvM_KmPi0, "InvM_KmPi0/D");
+
+    Double_t ContProb_trans;
+    tree->Branch("ContProb_trans", &ContProb_trans, "ContProb_trans/D");
+    Double_t ContProb_new;
+    tree->Branch("ContProb", &ContProb_new, "ContProb/D");
 
     Int_t flag_candidate;
     tree->Branch("flag_candidate", &flag_candidate, "flag_candidate/I"); 
 
     //Double_t Kp_E_s = 0; Double_t Km_E_s = 0;
     Double_t pip_E = 0; Double_t pim_E = 0;
-    Double_t px_tot = 0; Double_t py_tot = 0; Double_t pz_tot = 0;
-    Double_t E_KpPim = 0; Double_t E_KmPip = 0; Double_t E_tot = 0;
+    Double_t px_KpKm = 0; Double_t py_KpKm = 0; Double_t pz_KpKm = 0;
+    Double_t px_KpPi0 = 0; Double_t py_KpPi0 = 0; Double_t pz_KpPi0 = 0;
+    Double_t px_KmPi0 = 0; Double_t py_KmPi0 = 0; Double_t pz_KmPi0 = 0;
+
+    Double_t E_KpPim = 0; Double_t E_KmPip = 0; Double_t E_KpKm = 0;
+    Double_t E_KpPi0 = 0; Double_t E_KmPi0 = 0;
+
     const Double_t mass_pi = 0.1349768;
 
     //entrys to be deleted
@@ -150,19 +172,38 @@ void combine_sample(vector<string> list, string branch, string output, vector<st
 
         E_KpPim = Kp_E + pim_E;
         E_KmPip = Km_E + pip_E;
-        E_tot = Km_E + Kp_E;
+        E_KpPi0 = Kp_E + pi0_E;
+        E_KmPi0 = Km_E + pi0_E;
+        E_KpKm = Km_E + Kp_E;
 
-        px_tot = Kp_px + Km_px;
-        py_tot = Kp_py + Km_py;
-        pz_tot = Kp_pz + Km_pz;
+        px_KpKm = Kp_px + Km_px;
+        py_KpKm = Kp_py + Km_py;
+        pz_KpKm = Kp_pz + Km_pz;
 
-        InvM_KpPim = sqrt(E_KpPim*E_KpPim - (px_tot*px_tot + py_tot*py_tot + pz_tot*pz_tot));
-        InvM_KmPip = sqrt(E_KmPip*E_KmPip - (px_tot*px_tot + py_tot*py_tot + pz_tot*pz_tot));
-        InvM_KK = sqrt(E_tot*E_tot - (px_tot*px_tot + py_tot*py_tot + pz_tot*pz_tot));
+        px_KpPi0 = Kp_px + pi0_px;
+        py_KpPi0 = Kp_py + pi0_py;
+        pz_KpPi0 = Kp_pz + pi0_pz;
+
+        px_KmPi0 = Km_px + pi0_px;
+        py_KmPi0 = Km_py + pi0_py;
+        pz_KmPi0 = Km_pz + pi0_pz;
+
+        InvM_KpPim = sqrt(E_KpPim*E_KpPim - (px_KpKm*px_KpKm + py_KpKm*py_KpKm + pz_KpKm*pz_KpKm));
+        InvM_KmPip = sqrt(E_KmPip*E_KmPip - (px_KpKm*px_KpKm + py_KpKm*py_KpKm + pz_KpKm*pz_KpKm));
+        InvM_KpKm = sqrt(E_KpKm*E_KpKm - (px_KpKm*px_KpKm + py_KpKm*py_KpKm + pz_KpKm*pz_KpKm));
+        InvM_KpPi0 = sqrt(E_KpPi0*E_KpPi0 - (px_KpPi0*px_KpPi0 + py_KpPi0*py_KpPi0 + pz_KpPi0*pz_KpPi0));
+        InvM_KmPi0 = sqrt(E_KmPi0*E_KmPi0 - (px_KmPi0*px_KmPi0 + py_KmPi0*py_KmPi0 + pz_KmPi0*pz_KmPi0));
 
         for(int j=0; j<num_var; j++){
             var_new[j] = var[j];
         }
+
+        ContProb_new = ContProb;
+        if(ContProb<0.4)
+            ContProb_trans = log10((ContProb-0)/(0.4-ContProb));
+        else
+            ContProb_trans = -9;
+
         tree->Fill();
     }
 
@@ -253,7 +294,6 @@ void sample(){
     string root_list_tmp;
     vector<string> var_list_combine;
 
-
     vector<string> root_list;
     vector<string> var_list;
     
@@ -276,7 +316,7 @@ void sample(){
             var_list_tmp = "./var/" + var_list_combine[j];
             load_vec_string(var_list_tmp, var_list);
         }
-
+        //cout<<var_list_tmp<<endl;
         //test
         for(auto &x : root_list) cout<<x<<endl;
         //for(auto &x : var_list) cout<<x<<endl;

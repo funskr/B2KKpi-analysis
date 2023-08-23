@@ -6,14 +6,14 @@
 #include "TAxis.h"
 using namespace RooFit;
  
-void fit_mkk()
+void fit_mkppim()
 {
    // S e t u p   m o d e l
    // ---------------------
     // Declare variables x,mean,sigma with associated name, title, initial value and allowed range
-    Double_t xmin = 1.84, xmax = 1.89;
+    Double_t xmin = 1.80, xmax = 1.92;
 
-    RooRealVar x("InvM_KpKm", "InvM_KpKm", xmin, xmax);
+    RooRealVar x("InvM_KpPim", "InvM_KpPim", xmin, xmax);
     RooRealVar mean("mean", "mean of gaussians", 1.86, 1.84, 1.89);
     RooRealVar sigma("sigma", "width of gaussians", 0.01, 0, 10);
 
@@ -56,7 +56,7 @@ void fit_mkk()
    // Fit pdf to data
    model.fitTo(data, PrintLevel(-1));
 
-   RooPlot *xframe = x.frame(Title("Fit to M_{K^{+}K^{-}}"));
+   RooPlot *xframe = x.frame(Title("Fit to M_{K^{+}#pi^{-}}"));
    data.plotOn(xframe);
    model.plotOn(xframe);
    model.plotOn(xframe, Components(bkg), LineStyle(kDashed));
@@ -73,7 +73,7 @@ void fit_mkk()
    c->cd();
    gPad->SetLeftMargin(0.15);
    xframe->GetYaxis()->SetTitleOffset(1.6);
-   xframe->GetXaxis()->SetTitle("M_{K^{+}K^{-}}/(GeV/c^{2})");
+   xframe->GetXaxis()->SetTitle("M_{K^{+}#pi^{-}}/(GeV/c^{2})");
    xframe->Draw();
 
     Double_t ymax = xframe->GetMaximum();
@@ -98,8 +98,8 @@ void fit_mkk()
     xy2->SetLineColor(kRed);xy2->SetLineWidth(2);
     xy2->Draw();
 
-    cout<<"mKK constrain: "<<mean.getValV()-4.68*sigma.getValV()<<" < m_KK < "<<mean.getValV()+4.68*sigma.getValV()<<endl;
+    cout<<"mKppim constrain: "<<mean.getValV()-4.68*sigma.getValV()<<" < mKppim < "<<mean.getValV()+4.68*sigma.getValV()<<endl;
 
-    c->SaveAs("/home/belle2/yuanmk/analysis/B2KKpi/plots/bkg_bbar/pdf/mkk_fit.pdf");
-    c->SaveAs("/home/belle2/yuanmk/analysis/B2KKpi/plots/bkg_bbar/png/mkk_fit.png");
+    c->SaveAs("/home/belle2/yuanmk/analysis/B2KKpi/plots/bkg_bbar/pdf/mkppim_fit.pdf");
+    c->SaveAs("/home/belle2/yuanmk/analysis/B2KKpi/plots/bkg_bbar/png/mkppim_fit.png");
 }

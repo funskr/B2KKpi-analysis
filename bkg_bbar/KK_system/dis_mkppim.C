@@ -8,30 +8,12 @@ void draw_hist(TH1D* hist,string file, string branch){
 
     chain -> Add(file.c_str());
     //set variables
-    Double_t dr, dz;
-    chain->SetBranchAddress("dr", &dr);
-    chain->SetBranchAddress("dz", &dz);
-
-    Double_t Kp_px, Kp_py, Kp_pz, Kp_E;
-    chain->SetBranchAddress("Kp_px", &Kp_px);
-    chain->SetBranchAddress("Kp_py", &Kp_py);
-    chain->SetBranchAddress("Kp_pz", &Kp_pz);
-    chain->SetBranchAddress("Kp_E", &Kp_E);
-
-    Double_t Km_px, Km_py, Km_pz, Km_E;
-    chain->SetBranchAddress("Km_px", &Km_px);
-    chain->SetBranchAddress("Km_py", &Km_py);
-    chain->SetBranchAddress("Km_pz", &Km_pz);
-    chain->SetBranchAddress("Km_E", &Km_E);
-
-    Double_t pi0_daughterAngle_0_1;
-    chain->SetBranchAddress("pi0_daughterAngle_0_1", &pi0_daughterAngle_0_1);
+    Double_t InvM_KpPim;
+    chain->SetBranchAddress("InvM_KpPim", &InvM_KpPim);
+    Double_t InvM_KmPip;
+    chain->SetBranchAddress("InvM_KmPip", &InvM_KmPip);
 
     //draw on hist
-    Double_t pip_E = 0; Double_t pim_E = 0;
-    Double_t px_tot = 0; Double_t py_tot = 0; Double_t pz_tot = 0;
-    Double_t E_Kppim = 0; Double_t E_Kmpip = 0; Double_t InvM_Kppim = 0; Double_t InvM_Kmpip = 0;
-    Double_t InvM_KK = 0; Double_t E_tot = 0;
     const Double_t mass_pi = 0.1349768;
     Int_t nentries = chain->GetEntries();
 

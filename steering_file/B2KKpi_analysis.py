@@ -14,10 +14,13 @@ from variables.MCGenTopo import mc_gen_topo
 
 #filenumber = sys.argv[1]
 
+#sigMC
 #inputfile="/home/belle2/yuanmk/data/B2KKpi/sigMC/mdst/*.root"
+#outputfile="/home/belle2/yuanmk/data/B2KKpi/sigMC/root/B2KKpi_all.root"
+#for gbasf2
 inputfile=""
 outputfile="B2KKpi.root"
-#outputfile="/home/belle2/yuanmk/data/B2KKpi/sigMC/root/B2KKpi_all.root"
+
 #/home/belle2/yuanmk/data/B2KKpi/sigMC/root
 #create path
 main = b2.Path()
@@ -130,7 +133,8 @@ b_vars += ft.flavor_tagging
 vm.addAlias("momtherPDG","genMotherPDG")
 fs_vars = vc.pid + vc.track + vc.track_hits + standard_vars
 
-kaon_vars = vc.pid + standard_vars + ["momtherPDG"]
+kaon_vars = vc.pid + standard_vars 
+kaon_vars += ['momtherPDG', 'mcPDG']
 b_vars += vu.create_aliases_for_selected(
     kaon_vars,
     "B0 -> ^K+ ^K- [pi0 -> gamma gamma]",
@@ -143,6 +147,7 @@ b_vars += ['chiSqrd']
 pi0_vars = []
 pi0_vars += ['InvM', 'daughterDiffOfPhi(0,1)', 'daughterAngle(0,1)', 'chiSqrd']
 pi0_vars += standard_vars
+pi0_vars += ['momtherPDG', 'mcPDG']
 b_vars += vu.create_aliases_for_selected(
     pi0_vars,
     "B0 -> K+ K- [^pi0 -> gamma gamma]",
@@ -153,6 +158,7 @@ gamma_pi0_vars = []
 gamma_pi0_vars += ['clusterTheta', 'clusterPhi']
 gamma_pi0_vars += ['clusterE', 'clusterE1E9', 'clusterReg']
 gamma_pi0_vars += ['clusterTiming' ,'clusterErrorTiming']
+gamma_pi0_vars += ['momtherPDG', 'mcPDG']
 b_vars += vu.create_aliases_for_selected(
     gamma_pi0_vars,
     "B0 -> K+ K- [pi0 -> ^gamma ^gamma]",
@@ -173,6 +179,7 @@ vm.addAlias("gamma_coshelicity","cosHelicityAngle(2, 0)")
 b_vars += ["gamma_coshelicity"]
 
 #PDG for topology analysis
+b_vars += ['momtherPDG', 'mcPDG']
 b_vars += mc_gen_topo(200)
 
 #variable for continuum suppression
