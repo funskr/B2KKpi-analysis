@@ -33,3 +33,99 @@ load file: /home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_uubar_20230821/sub02/
 load file: /home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_uubar_20230821/sub03/*.root
 load file: /home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_uubar_20230821/sub04/*.root
 load file: /home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_uubar_20230821/sub05/*.root
+2000586
+/home/belle2/yuanmk/data/B2KKpi/sample/ana/uubar_sample.root: file outputed
+ddbar.list
+B0
+/home/belle2/yuanmk/data/B2KKpi/sample/ana/ddbar_sample.root
+./list/ddbar.list: file load successfully
+var.config: file load successfully
+./var/selection.var: file load successfully
+./var/kaon.var: file load successfully
+./var/pion.var: file load successfully
+/home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_ddbar_20230821/sub00/*.root
+/home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_ddbar_20230821/sub01/*.root
+load file: /home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_ddbar_20230821/sub00/*.root
+load file: /home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_ddbar_20230821/sub01/*.root
+322959
+/home/belle2/yuanmk/data/B2KKpi/sample/ana/ddbar_sample.root: file outputed
+ssbar.list
+B0
+/home/belle2/yuanmk/data/B2KKpi/sample/ana/ssbar_sample.root
+./list/ssbar.list: file load successfully
+var.config: file load successfully
+./var/selection.var: file load successfully
+./var/kaon.var: file load successfully
+./var/pion.var: file load successfully
+/home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_ssbar_20230821/sub00/*.root
+/home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_ssbar_20230821/sub01/*.root
+load file: /home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_ssbar_20230821/sub00/*.root
+load file: /home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_ssbar_20230821/sub01/*.root
+1733976
+/home/belle2/yuanmk/data/B2KKpi/sample/ana/ssbar_sample.root: file outputed
+ccbar.list
+B0
+/home/belle2/yuanmk/data/B2KKpi/sample/ana/ccbar_sample.root
+./list/ccbar.list: file load successfully
+var.config: file load successfully
+./var/selection.var: file load successfully
+./var/kaon.var: file load successfully
+./var/pion.var: file load successfully
+/home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_ccbar_20230821/sub00/*.root
+/home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_ccbar_20230821/sub01/*.root
+/home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_ccbar_20230821/sub02/*.root
+/home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_ccbar_20230821/sub03/*.root
+/home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_ccbar_20230821/sub04/*.root
+/home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_ccbar_20230821/sub05/*.root
+load file: /home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_ccbar_20230821/sub00/*.root
+load file: /home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_ccbar_20230821/sub01/*.root
+load file: /home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_ccbar_20230821/sub02/*.root
+load file: /home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_ccbar_20230821/sub03/*.root
+load file: /home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_ccbar_20230821/sub04/*.root
+load file: /home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_ccbar_20230821/sub05/*.root
+1542353
+/home/belle2/yuanmk/data/B2KKpi/sample/ana/ccbar_sample.root: file outputed
+mixed.list
+B0
+/home/belle2/yuanmk/data/B2KKpi/sample/ana/mixed_sample.root
+./list/mixed.list: file load successfully
+var.config: file load successfully
+./var/selection.var: file load successfully
+./var/kaon.var: file load successfully
+./var/pion.var: file load successfully
+/home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_mixed_20230821/sub00/*.root
+/home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_mixed_20230821/sub01/*.root
+/home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_mixed_20230821/sub02/*.root
+/home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_mixed_20230821/sub03/*.root
+/home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_mixed_20230821/sub04/*.root
+/home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_mixed_20230821/sub05/*.root
+load file: /home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_mixed_20230821/sub00/*.root
+load file: /home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_mixed_20230821/sub01/*.root
+load file: /home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_mixed_20230821/sub02/*.root
+load file: /home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_mixed_20230821/sub03/*.root
+load file: /home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_mixed_20230821/sub04/*.root
+load file: /home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_mixed_20230821/sub05/*.root
+61277
+/home/belle2/yuanmk/data/B2KKpi/sample/ana/mixed_sample.root: file outputed
+charged.list
+B0
+/home/belle2/yuanmk/data/B2KKpi/sample/ana/charged_sample.root
+./list/charged.list: file load successfully
+var.config: file load successfully
+./var/selection.var: file load successfully
+./var/kaon.var: file load successfully
+./var/pion.var: file load successfully
+/home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_charged_20230821/sub00/*.root
+/home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_charged_20230821/sub01/*.root
+/home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_charged_20230821/sub02/*.root
+/home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_charged_20230821/sub03/*.root
+/home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_charged_20230821/sub04/*.root
+/home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_charged_20230821/sub05/*.root
+load file: /home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_charged_20230821/sub00/*.root
+load file: /home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_charged_20230821/sub01/*.root
+load file: /home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_charged_20230821/sub02/*.root
+load file: /home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_charged_20230821/sub03/*.root
+load file: /home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_charged_20230821/sub04/*.root
+load file: /home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_charged_20230821/sub05/*.root
+99869
+/home/belle2/yuanmk/data/B2KKpi/sample/ana/charged_sample.root: file outputed

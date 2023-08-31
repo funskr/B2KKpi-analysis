@@ -7,8 +7,9 @@ basf2 version: `release-06-01-12`
 
 ## TO DO
 
-- [ ] use git to manager my analysis files
+- [x] use git to manager my analysis files
 - [ ] add flavor tag
+- [ ] study the correlation between variables
 - [ ] Amplitude analysis
 
 ## Update logs
@@ -72,10 +73,15 @@ We used FBDT to do continuum suppression, which is introduced in the [basf2 webs
 
 We used the [MVA package](https://software.belle2.org/development/sphinx/mva/doc/index-01-mva.html) in basf2 to mix signal and background sample, and evaluate the result of training.
 
+The cut of continuum suppression output: $ContProb < 0.4$.
+
+To do fit process, transform this variable: $ContProb_{TRAN} = log(\frac{ContProb-0}{0.4-ContProb})$.
 
 ## Flavor Tag
 
 We also used the method indroduced in [basf2 sofeware website](https://software.belle2.org/development/sphinx/online_book/basf2/flavor_tagging.html)
+
+We add a cut on the output of flavor tag: $q \cdot r_{FBDT} < 0.89$
 
 
 ## Study of background from generic BBbar
@@ -83,3 +89,15 @@ We also used the method indroduced in [basf2 sofeware website](https://software.
 Following the note from belle, we will remove the background from D meson decay, and do the fit.
 
 But in the B2Kpipi0 analysis of BARBAR experiment, they do not remove the background from D, and considered this source of background in amplitude fit. 
+
+## Fit to MC sample
+
+### correlation between $\Delta E$ and $ContProb_{TRAN}$
+
+Component | Correlation factor
+---------|---------
+Truth-matched signal      | -0.51%
+SCF signal                | -0.10%  
+Continuum $q\bar{q}$      | 0.99%
+Generic B sample        | -1.66%
+peaking from B sample   | 0.88%

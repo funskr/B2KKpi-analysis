@@ -7,16 +7,18 @@ void cut_flow(){
 
     cout<<"cut flow for signal MC"<<endl;
     cout<<"cut:eff:scf"<<endl;
-    string cut[3] = {
+    const int cut_num = 4;
+    string cut[cut_num] = {
     "flag_candidate==1",
     "&&ContProb<0.4",
-    "&&!(InvM_KpKm > 1.8484 && InvM_KpKm < 1.8806)&&!(InvM_KmPip > 1.8408 && InvM_KmPip < 1.8875)&&!(InvM_KpPim > 1.8408 && InvM_KpPim < 1.8875)"
+    "&&!(InvM_KpKm > 1.8484 && InvM_KpKm < 1.8806)&&!(InvM_KmPip > 1.8408 && InvM_KmPip < 1.8875)&&!(InvM_KpPim > 1.8408 && InvM_KpPim < 1.8875)",
+    "&&FBDT_qrCombined<0.89"
     };
-    string name[3] = {"fundemental", "continuum suppression", "charm veto"};
-    double eff[3]; double scf[3];
+    string name[cut_num] = {"fundemental", "continuum suppression", "charm veto", "flavor tag"};
+    double eff[cut_num]; double scf[cut_num];
     string cuts = "";
     double gennum = 1e+5;
-    for(int i=0; i<3; i++){
+    for(int i=0; i<cut_num; i++){
         cuts += cut[i];
         string cuts_true = cuts + "&&isSignal==1";
 

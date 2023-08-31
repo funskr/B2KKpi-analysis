@@ -1,10 +1,12 @@
 #include "RooRealVar.h"
 #include "RooDataSet.h"
 #include "RooGaussian.h"
+//#include <RooStats/CorrelationHistFactory.h>
 #include "TCanvas.h"
 #include "RooPlot.h"
 #include "TAxis.h"
 using namespace RooFit;
+using namespace RooStats;
 
 void fit_truth_matched_signal(){
 
@@ -62,6 +64,7 @@ void fit_truth_matched_signal(){
 
     string cuts;
     cuts = "ContProb<0.4&&flag_candidate==1&&";
+    cuts += "FBDT_qrCombined<0.89&&";
     cuts += "(!(InvM_KpKm>1.8484&&InvM_KpKm<1.8806))&&";
     cuts += "(!(InvM_KmPip > 1.8408 && InvM_KmPip < 1.8875))&&";
     cuts += "(!(InvM_KpPim > 1.8408 && InvM_KpPim < 1.8875))&&";
@@ -71,7 +74,11 @@ void fit_truth_matched_signal(){
 
     //RooDataSet* data = model_final.generate(RooArgSet(de, cp), 10000);
     RooDataSet data("data"," ", tree, RooArgSet(de, cp));
+
+    //CorrelationHistFactory factory(data);
+
     model_final.fitTo(data);
+    cout<<"Correlation between deltaE and ContProb: "<<data.correlation(de, cp)<<endl;
 
     RooPlot *frame_de = de.frame(Title(" "));
     data.plotOn(frame_de);

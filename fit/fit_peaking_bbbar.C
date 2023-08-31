@@ -29,18 +29,20 @@ void fit_peaking_bbbar(){
     //*******************pdf of FBDT' *******************
     RooRealVar cp("ContProb_trans", "ContProb_trans", xmin_cp, xmax_cp);
 
-    RooRealVar mean1_cp("mean1_cp", "mean of first bifurgauss", 1.24365e-01, -10, 10);
-    RooRealVar sigmaL1_cp("sigmaL1_cp", " ", 4.53023e-01, -10, 10);
-    RooRealVar sigmaR1_cp("sigmaR1_cp", " ", 9.83091e-01, -10, 10);
-    RooBifurGauss bfgauss1_cp("bfgauss1_cp", "bf gauss 1 for ContProb_trans", cp, mean1_cp, sigmaL1_cp, sigmaR1_cp);
+    RooRealVar mean_cp("mean_cp", "mean of first bifurgauss", 1.24365e-01, -10, 10);
+    RooRealVar sigmaL_cp("sigmaL_cp", " ", 4.53023e-01, -10, 10);
+    RooRealVar sigmaR_cp("sigmaR_cp", " ", 9.83091e-01, -10, 10);
+    RooBifurGauss model_cp("model_cp", "bf gauss 1 for ContProb_trans", cp, mean_cp, sigmaL_cp, sigmaR_cp);
 
+    /*
     RooRealVar mean2_cp("mean2_cp", "mean of first bifurgauss", 1.24365e-01, -10, 10);
     RooRealVar sigmaL2_cp("sigmaL2_cp", " ", 4.53023e-01, -10, 10);
     RooRealVar sigmaR2_cp("sigmaR2_cp", " ", 9.83091e-01, -10, 10);
     RooBifurGauss bfgauss2_cp("bfgauss2_cp", "bf gauss 1 for ContProb_trans", cp, mean2_cp, sigmaL2_cp, sigmaR2_cp);
 
     RooRealVar f_cp("f_cp", "", 2.99761e-01, 0., 1);
-    RooAddPdf model_cp("model_cp", "model for ContProb_trans", RooArgList(bfgauss1_cp, bfgauss2_cp), f_cp);
+    */
+    //RooAddPdf model_cp("model_cp", "model for ContProb_trans", bfgauss1_cp);
 
     //2 D dimensional model
     RooProdPdf model_final("model_final", "model_final", RooArgSet(model_de, model_cp));
@@ -52,6 +54,7 @@ void fit_peaking_bbbar(){
 
     string cuts;
     cuts = "ContProb<0.4&&flag_candidate==1&&";
+    cuts += "FBDT_qrCombined<0.89&&";
     cuts += "(!(InvM_KpKm>1.8484&&InvM_KpKm<1.8806))&&";
     cuts += "(!(InvM_KmPip > 1.8408 && InvM_KmPip < 1.8875))&&";
     cuts += "(!(InvM_KpPim > 1.8408 && InvM_KpPim < 1.8875))&&";
@@ -63,6 +66,7 @@ void fit_peaking_bbbar(){
     //RooDataSet* data = model_final.generate(RooArgSet(de, cp), 10000);
     RooDataSet data("data"," ", tree, RooArgSet(de, cp));
     model_final.fitTo(data);
+    cout<<"Correlation between deltaE and ContProb: "<<data.correlation(de, cp)<<endl;
 
     RooPlot *frame_de = de.frame(Title(" "));
     data.plotOn(frame_de);
@@ -73,8 +77,8 @@ void fit_peaking_bbbar(){
     RooPlot *frame_cp = cp.frame(Title(" "));
     data.plotOn(frame_cp);
     model_cp.plotOn(frame_cp);
-    model_cp.plotOn(frame_cp, Components(bfgauss1_cp), LineStyle(kDashed), LineColor(kRed));
-    model_cp.plotOn(frame_cp, Components(bfgauss2_cp), LineStyle(kDashed), LineColor(kGreen));
+    //model_cp.plotOn(frame_cp, Components(bfgauss1_cp), LineStyle(kDashed), LineColor(kRed));
+    //model_cp.plotOn(frame_cp, Components(bfgauss2_cp), LineStyle(kDashed), LineColor(kGreen));
 
     // Draw all frames on a canvas
     TCanvas *c = new TCanvas("c1", "c1", 1600, 600);
@@ -84,7 +88,7 @@ void fit_peaking_bbbar(){
     frame_de->GetYaxis()->SetTitleOffset(1.6);
     frame_de->GetXaxis()->SetTitle("#Delta E");
     frame_de->GetYaxis()->SetTitle("Events");
-    frame_de->Draw(); 
+    frame_de->Draw();
 
     //draw the output
     Double_t ymax_de = frame_de->GetMaximum();
@@ -110,19 +114,19 @@ void fit_peaking_bbbar(){
     Double_t ymax_cp = frame_cp->GetMaximum();
     TPaveText *pt_cp = new TPaveText(xmin_cp+0.02*(xmax_cp-xmin_cp), ymax_cp*0.65, xmin_cp+0.32*(xmax_cp-xmin_cp), ymax_cp*0.95);
     
-    string str_mean1_cp = "mean1_cp = " + to_string(mean1_cp.getValV()) + " #pm " + to_string(mean1_cp.getError());
-    string str_sigmaL1_cp = "sigmaL1_cp = " + to_string(sigmaL1_cp.getValV()) + " #pm " + to_string(sigmaL1_cp.getError());
-    string str_sigmaR1_cp = "sigmaR1_cp = " + to_string(sigmaR1_cp.getValV()) + " #pm " + to_string(sigmaR1_cp.getError());
-    string str_mean2_cp = "mean2_cp = " + to_string(mean2_cp.getValV()) + " #pm " + to_string(mean2_cp.getError());
-    string str_sigmaL2_cp = "sigmaL2_cp = " + to_string(sigmaL2_cp.getValV()) + " #pm " + to_string(sigmaL2_cp.getError());
-    string str_sigmaR2_cp = "sigmaR2_cp = " + to_string(sigmaR2_cp.getValV()) + " #pm " + to_string(sigmaR2_cp.getError());
+    string str_mean_cp = "mean_cp = " + to_string(mean_cp.getValV()) + " #pm " + to_string(mean_cp.getError());
+    string str_sigmaL_cp = "sigmaL_cp = " + to_string(sigmaL_cp.getValV()) + " #pm " + to_string(sigmaL_cp.getError());
+    string str_sigmaR_cp = "sigmaR_cp = " + to_string(sigmaR_cp.getValV()) + " #pm " + to_string(sigmaR_cp.getError());
+    //string str_mean2_cp = "mean2_cp = " + to_string(mean2_cp.getValV()) + " #pm " + to_string(mean2_cp.getError());
+    //string str_sigmaL2_cp = "sigmaL2_cp = " + to_string(sigmaL2_cp.getValV()) + " #pm " + to_string(sigmaL2_cp.getError());
+    //string str_sigmaR2_cp = "sigmaR2_cp = " + to_string(sigmaR2_cp.getValV()) + " #pm " + to_string(sigmaR2_cp.getError());
 
-    pt_cp->AddText(str_mean1_cp.c_str());
-    pt_cp->AddText(str_sigmaL1_cp.c_str());
-    pt_cp->AddText(str_sigmaR1_cp.c_str());
-    pt_cp->AddText(str_mean2_cp.c_str());
-    pt_cp->AddText(str_sigmaL2_cp.c_str());
-    pt_cp->AddText(str_sigmaR2_cp.c_str());    
+    pt_cp->AddText(str_mean_cp.c_str());
+    pt_cp->AddText(str_sigmaL_cp.c_str());
+    pt_cp->AddText(str_sigmaR_cp.c_str());
+    //pt_cp->AddText(str_mean2_cp.c_str());
+    //pt_cp->AddText(str_sigmaL2_cp.c_str());
+    //pt_cp->AddText(str_sigmaR2_cp.c_str());    
     pt_cp->Draw();
 
     c->SaveAs("/home/belle2/yuanmk/analysis/B2KKpi/plots/fit_MC/pdf/fit_peaking_bbbar.pdf");

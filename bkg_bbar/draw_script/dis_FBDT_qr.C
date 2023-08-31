@@ -14,10 +14,29 @@ void draw_hist(TH1D* hist,string address, string file, string variable, int flag
     Double_t qrMC;
     chain->SetBranchAddress("qrMC", &qrMC);
 
+    Int_t flag_candidate;
+    chain->SetBranchAddress("flag_candidate", &flag_candidate);
+    Double_t ContProb;
+    chain->SetBranchAddress("ContProb", &ContProb);
+
+    Double_t InvM_KpKm;
+    chain->SetBranchAddress("InvM_KpKm", &InvM_KpKm);
+    Double_t InvM_KpPim;
+    chain->SetBranchAddress("InvM_KpPim", &InvM_KpPim);
+    Double_t InvM_KmPip;
+    chain->SetBranchAddress("InvM_KmPip", &InvM_KmPip);
+
     //draw on hist
     Int_t nentries = chain->GetEntries();
     for(Int_t i=0; i < nentries; i++){
         chain->GetEntry(i);
+        if(flag_candidate==0) continue;
+        if(ContProb>0.4) continue;
+
+        if(InvM_KpKm > 1.8484 && InvM_KpKm < 1.8806) continue;
+
+        if(InvM_KmPip > 1.8408 && InvM_KmPip < 1.8875) continue;
+        if(InvM_KpPim > 1.8408 && InvM_KpPim < 1.8875) continue;
         //cout<<"qrMC:"<<qrMC<<endl;
         if(flag == 1){
             if(qrMC == -1){
@@ -67,17 +86,17 @@ void dis_FBDT_qr(){
     TH1D *h_B0=new TH1D("h_B0", "h_B0", xbins, xmin, xmax);
     h_B0->SetLineColor(kRed);
     h_B0->SetLineWidth(2);
-    draw_hist(h_B0,"/home/belle2/yuanmk/data/B2KKpi/sample/mixed_sample.root","B0","FBDT_qrCombined", 1);
+    draw_hist(h_B0,"/home/belle2/yuanmk/data/B2KKpi/sample/ana/mixed_sample.root","B0","FBDT_qrCombined", 1);
 
     TH1D *h_B0bar=new TH1D("h_B0bar", "h_B0bar", xbins, xmin, xmax);
     h_B0bar->SetLineColor(kBlue);
     h_B0bar->SetLineWidth(2);
-    draw_hist(h_B0bar,"/home/belle2/yuanmk/data/B2KKpi/sample/mixed_sample.root","B0","FBDT_qrCombined", 2);
+    draw_hist(h_B0bar,"/home/belle2/yuanmk/data/B2KKpi/sample/ana/mixed_sample.root","B0","FBDT_qrCombined", 2);
 
     TH1D *h_other=new TH1D("h_other", "h_other", xbins, xmin, xmax);
     h_other->SetLineColor(kGreen);
     h_other->SetLineWidth(2);
-    draw_hist(h_other,"/home/belle2/yuanmk/data/B2KKpi/sample/mixed_sample.root","B0","FBDT_qrCombined", 3);
+    draw_hist(h_other,"/home/belle2/yuanmk/data/B2KKpi/sample/ana/mixed_sample.root","B0","FBDT_qrCombined", 3);
 
     mbc->cd();
     //gPad->SetLogy();
