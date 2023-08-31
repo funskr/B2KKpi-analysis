@@ -52,6 +52,6 @@ void count_eff(){
     }
     Double_t cs_eff = (cs.before_cut-cs.after_cut)/cs.before_cut;
 
-    cout<<"signal eff loss:"<<(sigMC.before_cut-sigMC.after_cut)/sigMC.before_cut<<endl;
+    cout<<"signal remain efficiency:"<<sigMC.after_cut/sigMC.before_cut<<endl;
     cout<<"continuum suppression efficiency: "<<cs_eff<<endl;
 }

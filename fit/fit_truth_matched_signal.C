@@ -8,8 +8,11 @@ using namespace RooFit;
 
 void fit_truth_matched_signal(){
 
+    const Double_t xmin_de = -0.3; const Double_t xmax_de = 0.15;
+    const Double_t xmin_cp = -4; const Double_t xmax_cp = 4;
+
     //***************pdf of deltaE****************
-    RooRealVar de("deltaE", "deltaE", -0.3, 0.15);
+    RooRealVar de("deltaE", "deltaE", xmin_de, xmax_de);
 
     //crystal ball function
     RooRealVar mean_de("mean_de", "mean for the ", -1.84397e-02, -100, 100);
@@ -29,7 +32,7 @@ void fit_truth_matched_signal(){
     RooAddPdf model_de("model_de", "model for deltaE", RooArgList(CB_de, CBbfgauss), f_de);
 
     //*******************pdf of FBDT' *******************
-    RooRealVar cp("ContProb_trans", "ContProb_trans", -4, 4);
+    RooRealVar cp("ContProb_trans", "ContProb_trans", xmin_cp, xmax_cp);
 
     RooRealVar mean1("mean1", "mean of first bifurgauss", -1.07054e+00, -10, 10);
     RooRealVar sigmaL1("sigmaL1", " ", 1.90164e-06, -10, 10);
@@ -73,10 +76,15 @@ void fit_truth_matched_signal(){
     RooPlot *frame_de = de.frame(Title(" "));
     data.plotOn(frame_de);
     model_de.plotOn(frame_de);
+    model_de.plotOn(frame_de, Components(CB_de), LineStyle(kDashed), LineColor(kRed));
+    model_de.plotOn(frame_de, Components(CBbfgauss), LineStyle(kDashed), LineColor(kGreen));
 
     RooPlot *frame_cp = cp.frame(Title(" "));
     data.plotOn(frame_cp);
     model_cp.plotOn(frame_cp);
+    model_cp.plotOn(frame_cp, Components(bfgauss1), LineStyle(kDashed), LineColor(kRed));
+    model_cp.plotOn(frame_cp, Components(bfgauss2), LineStyle(kDashed), LineColor(kGreen));
+    model_cp.plotOn(frame_cp, Components(bfgauss3), LineStyle(kDashed), LineColor(kViolet));
 
     // Draw all frames on a canvas
     TCanvas *c = new TCanvas("c1", "c1", 1600, 600);
@@ -88,11 +96,74 @@ void fit_truth_matched_signal(){
     frame_de->GetYaxis()->SetTitle("Events");
     frame_de->Draw(); 
 
+    //draw the output
+    Double_t ymax_de = frame_de->GetMaximum();
+    TPaveText *pt_de = new TPaveText(xmin_de+0.02*(xmax_de-xmin_de), ymax_de*0.65, xmin_de+0.3*(xmax_de-xmin_de), ymax_de*0.95);
+    string str_mean_de = "mean_de = " + to_string(mean_de.getValV()) + " #pm " + to_string(mean_de.getError());
+    string str_CBSigma_de = "CBSigma_de = " + to_string(CBSigma_de.getValV()) + " #pm " + to_string(CBSigma_de.getError());
+    string str_CBAlpha_de = "CBAlpha_de = " + to_string(CBAlpha_de.getValV()) + " #pm " + to_string(CBAlpha_de.getError());
+    string str_CBN_de = "CBN_de = " + to_string(CBN_de.getValV()) + " #pm " + to_string(CBN_de.getError());
+
+    string str_sigmaL_de = "sigmaL_de = " + to_string(sigmaL_de.getValV()) + " #pm " + to_string(sigmaL_de.getError());
+    string str_sigmaR_de = "sigmaR_de = " + to_string(sigmaR_de.getValV()) + " #pm " + to_string(sigmaR_de.getError());
+
+    string str_f_de = "f_de = " + to_string(f_de.getValV()) + " #pm " + to_string(f_de.getError());
+
+    pt_de->AddText(str_mean_de.c_str());
+    pt_de->AddText(str_CBSigma_de.c_str());
+    pt_de->AddText(str_CBAlpha_de.c_str());
+    pt_de->AddText(str_CBN_de.c_str());
+    pt_de->AddText(str_sigmaL_de.c_str());
+    pt_de->AddText(str_sigmaR_de.c_str());
+    pt_de->Draw();
+
     c->cd(2);
     frame_cp->GetYaxis()->SetTitleOffset(1.6);
     frame_cp->GetXaxis()->SetTitle("ContProb_trans");
     frame_cp->GetYaxis()->SetTitle("Events");
     frame_cp->Draw(); 
 
-    c->SaveAs("./test.pdf");
+    //draw the output
+    Double_t ymax_cp = frame_cp->GetMaximum();
+    TPaveText *pt_cp = new TPaveText(xmin_cp+0.60*(xmax_cp-xmin_cp), ymax_cp*0.65, xmin_cp+0.9*(xmax_cp-xmin_cp), ymax_cp*0.95);
+    
+    Double_t diff1 = mean2.getValV() - mean1.getValV();
+    Double_t diff1_err = sqrt(pow(mean1.getError(),2) + pow(mean2.getError(),2));
+    string str_diff1 = "diff1 = " + to_string(diff1) + " #pm " + to_string(diff1_err);
+
+    Double_t diff2 = mean3.getValV() - mean1.getValV();
+    Double_t diff2_err = sqrt(pow(mean3.getError(),2) + pow(mean1.getError(),2));
+    string str_diff2 = "diff2 = " + to_string(diff2) + " #pm " + to_string(diff2_err);
+
+    Double_t ratio1 = sigmaL2.getValV() / sigmaL1.getValV();
+    Double_t ratio1_err = sqrt(pow(ratio1/sigmaL2.getValV()*sigmaL2.getError(),2) + pow(ratio1/sigmaL1.getValV()*sigmaL1.getError(),2));
+    string str_ratio1 = "ratio1 = " + to_string(ratio1) + " #pm " + to_string(ratio1_err);
+
+    Double_t ratio2 = sigmaR2.getValV() / sigmaR1.getValV();
+    Double_t ratio2_err = sqrt(pow(ratio2/sigmaR2.getValV()*sigmaR2.getError(),2) + pow(ratio2/sigmaR1.getValV()*sigmaR1.getError(),2));
+    string str_ratio2 = "ratio2 = " + to_string(ratio2) + " #pm " + to_string(ratio2_err);
+
+    Double_t ratio3 = sigmaL3.getValV() / sigmaL1.getValV();
+    Double_t ratio3_err = sqrt(pow(ratio3/sigmaL1.getValV()*sigmaL1.getError(),2) + pow(ratio3/sigmaL3.getValV()*sigmaL3.getError(),2));
+    string str_ratio3 = "ratio3 = " + to_string(ratio3) + " #pm " + to_string(ratio3_err);
+
+    Double_t ratio4 = sigmaR3.getValV() / sigmaR1.getValV();
+    Double_t ratio4_err = sqrt(pow(ratio4/sigmaR3.getValV()*sigmaR3.getError(),2) + pow(ratio4/sigmaR1.getValV()*sigmaR1.getError(),2));
+    string str_ratio4 = "ratio4 = " + to_string(ratio4) + " #pm " + to_string(ratio4_err);
+
+    string str_f_cp1 = "f_cp1 = " + to_string(f_cp1.getValV()) + " #pm " + to_string(f_cp1.getError());
+    string str_f_cp2 = "f_cp2 = " + to_string(f_cp2.getValV()) + " #pm " + to_string(f_cp2.getError());
+
+    pt_cp->AddText(str_diff1.c_str());
+    pt_cp->AddText(str_diff2.c_str());
+    pt_cp->AddText(str_ratio1.c_str());
+    pt_cp->AddText(str_ratio2.c_str());
+    pt_cp->AddText(str_ratio3.c_str());
+    pt_cp->AddText(str_ratio4.c_str());
+    pt_cp->AddText(str_f_cp1.c_str());
+    pt_cp->AddText(str_f_cp2.c_str());
+    pt_cp->Draw();
+
+    c->SaveAs("/home/belle2/yuanmk/analysis/B2KKpi/plots/fit_MC/pdf/fit_truth_matched_signal.pdf");
+    c->SaveAs("/home/belle2/yuanmk/analysis/B2KKpi/plots/fit_MC/png/fit_truth_matched_signal.png");
 }

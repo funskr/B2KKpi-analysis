@@ -26,7 +26,7 @@ outputfile="B2KKpi.root"
 main = b2.Path()
 
 #set analysis global tag (needed for flavor tagging)
-#b2.conditions.prepend_globaltag(ma.getAnalysisGlobaltag())
+#b2.conditions.prepend_globaltag("data_reprocessing_proc13_snapshotAt20220728")
 
 ma.inputMdstList(
     filelist=[inputfile],
@@ -76,7 +76,7 @@ ma.reconstructDecay(
 #daughterAngle(0,1)<0.9
 ma.reconstructDecay(
     "B0 -> K+:pre K-:pre pi0:loose",
-    cut="[-0.30 < deltaE < 0.15] and [5.23 < Mbc < 5.289]",
+    cut="[-0.50 < deltaE < 0.50] and [5.10 < Mbc < 5.30]",
     #candidate_limit=-1,
     path=main
 )

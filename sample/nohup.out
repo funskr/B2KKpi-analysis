@@ -1,0 +1,35 @@
+
+Processing sample.C...
+config file load successfully
+sigMC.list
+B0
+/home/belle2/yuanmk/data/B2KKpi/sample/ana/sigMC_sample.root
+./list/sigMC.list: file load successfully
+var.config: file load successfully
+./var/selection.var: file load successfully
+./var/kaon.var: file load successfully
+./var/pion.var: file load successfully
+/home/belle2/yuanmk/data/B2KKpi/sigMC/root/B2KKpi_all.root
+load file: /home/belle2/yuanmk/data/B2KKpi/sigMC/root/B2KKpi_all.root
+43192
+/home/belle2/yuanmk/data/B2KKpi/sample/ana/sigMC_sample.root: file outputed
+uubar.list
+B0
+/home/belle2/yuanmk/data/B2KKpi/sample/ana/uubar_sample.root
+./list/uubar.list: file load successfully
+var.config: file load successfully
+./var/selection.var: file load successfully
+./var/kaon.var: file load successfully
+./var/pion.var: file load successfully
+/home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_uubar_20230821/sub00/*.root
+/home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_uubar_20230821/sub01/*.root
+/home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_uubar_20230821/sub02/*.root
+/home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_uubar_20230821/sub03/*.root
+/home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_uubar_20230821/sub04/*.root
+/home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_uubar_20230821/sub05/*.root
+load file: /home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_uubar_20230821/sub00/*.root
+load file: /home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_uubar_20230821/sub01/*.root
+load file: /home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_uubar_20230821/sub02/*.root
+load file: /home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_uubar_20230821/sub03/*.root
+load file: /home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_uubar_20230821/sub04/*.root
+load file: /home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_uubar_20230821/sub05/*.root

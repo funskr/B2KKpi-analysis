@@ -3,12 +3,16 @@ void cut_flow(){
 
     TChain* chain = new TChain("B0");
 
-    chain->Add("/home/belle2/yuanmk/data/B2KKpi/sigMC/root/sigMC_sample.root");
+    chain->Add("/home/belle2/yuanmk/data/B2KKpi/sample/ana/sigMC_sample.root");
 
     cout<<"cut flow for signal MC"<<endl;
     cout<<"cut:eff:scf"<<endl;
-    string cut[3] = {"dr<0.04&&fabs(dz)<0.2&&pi0_daughterAngle_0_1<0.5&&flag_candidate==1", "&&FBDT_qrCombined<0.72", "&&!(InvM_KK>1.849&&InvM_KK<1.879)"};
-    string name[3] = {"fundemental", "FBDT", "mkk veto"};
+    string cut[3] = {
+    "flag_candidate==1",
+    "&&ContProb<0.4",
+    "&&!(InvM_KpKm > 1.8484 && InvM_KpKm < 1.8806)&&!(InvM_KmPip > 1.8408 && InvM_KmPip < 1.8875)&&!(InvM_KpPim > 1.8408 && InvM_KpPim < 1.8875)"
+    };
+    string name[3] = {"fundemental", "continuum suppression", "charm veto"};
     double eff[3]; double scf[3];
     string cuts = "";
     double gennum = 1e+5;

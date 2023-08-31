@@ -38,6 +38,7 @@ void draw_hist(TH1D* hist,string address, string file, string variable, bool fla
     //draw on hist
     Int_t nentries = chain->GetEntries();
     Int_t count_signal = 0;
+    Int_t count_peaking = 0;
     for(Int_t i=0; i < nentries; i++){
         chain->GetEntry(i);
         if(flag_candidate==0) continue;
@@ -49,14 +50,14 @@ void draw_hist(TH1D* hist,string address, string file, string variable, bool fla
         if(InvM_KpPim > 1.8408 && InvM_KpPim < 1.8875) continue;
 
         if((abs(mcPDG) == 511 || abs(mcPDG) == 521) && pi0_mcPDG == 111 && Kp_mcPDG == 321 && Km_mcPDG == -321){
-            //cout<<"signal"<<endl;
+            cout<<"signal"<<endl;
             count_signal++;
             continue;
         }
 
         if((abs(mcPDG) == 511 || abs(mcPDG) == 521) && pi0_mcPDG == 111 && (Kp_mcPDG == 211 || Km_mcPDG == -211)){
             cout<<"peeking background"<<endl;
-            //count_signal++;
+            count_peaking++;
             continue;
         }
 
@@ -70,6 +71,7 @@ void draw_hist(TH1D* hist,string address, string file, string variable, bool fla
         }
     }
     cout<<count_signal<<endl;
+    cout<<count_peaking<<endl;
 }
 
 void dis_Mbc(){

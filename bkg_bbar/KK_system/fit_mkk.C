@@ -35,7 +35,7 @@ void fit_mkk()
    RooRealVar c0("c0","coefficient #0", 0, -1, 1) ;
    RooRealVar c1("c1","coefficient #1", 0, -1, 1) ;
    //RooRealVar c2("c2","coefficient #2",-0.1, 0,5.) ; 
-   RooChebychev bkg("bkg","background p.d.f.", x, RooArgSet(c0,c1)) ;
+   RooChebychev bkg("bkg","background p.d.f.", x, RooArgSet(c0,c1));
    //RooPolynomial bkg("bkg","background p.d.f.", mpi0,RooArgSet(c0,c1)) ;
  
    //RooRealVar nsig("nsig", "#signal events", 200, 0., 1E+6);

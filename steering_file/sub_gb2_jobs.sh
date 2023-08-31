@@ -12,6 +12,7 @@ do
        list="./list/"${list}
        echo $project $list
        
-       gbasf2 B2KKpi_analysis.py -p ${project} --input_dslist ${list} -f FBDT_cs_weight.root -s release-06-01-12 --force
+       gbasf2 B2KKpi_analysis.py -p ${project} --input_dslist ${list} -f FBDT_cs_weight.root -s release-05-02-20 --force
+       #mc analized under boss version release-06-01-12
 
 done

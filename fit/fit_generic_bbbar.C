@@ -6,7 +6,7 @@
 #include "TAxis.h"
 using namespace RooFit;
 
-void fit_qqbar(){
+void fit_generic_bbbar(){
 
     const Double_t xmin_de = -0.3; const Double_t xmax_de = 0.15;
     const Double_t xmin_cp = -4; const Double_t xmax_cp = 4;
@@ -42,16 +42,16 @@ void fit_qqbar(){
 
     //load data
     TChain* chain = new TChain("B0");
-    chain->Add("/home/belle2/yuanmk/data/B2KKpi/sample/ana/uubar_sample.root");
-    chain->Add("/home/belle2/yuanmk/data/B2KKpi/sample/ana/ddbar_sample.root");
-    chain->Add("/home/belle2/yuanmk/data/B2KKpi/sample/ana/ssbar_sample.root");
-    chain->Add("/home/belle2/yuanmk/data/B2KKpi/sample/ana/ccbar_sample.root");
+    chain->Add("/home/belle2/yuanmk/data/B2KKpi/sample/ana/mixed_sample.root");
+    chain->Add("/home/belle2/yuanmk/data/B2KKpi/sample/ana/charged_sample.root");
 
     string cuts;
     cuts = "ContProb<0.4&&flag_candidate==1&&";
     cuts += "(!(InvM_KpKm>1.8484&&InvM_KpKm<1.8806))&&";
     cuts += "(!(InvM_KmPip > 1.8408 && InvM_KmPip < 1.8875))&&";
-    cuts += "(!(InvM_KpPim > 1.8408 && InvM_KpPim < 1.8875))";
+    cuts += "(!(InvM_KpPim > 1.8408 && InvM_KpPim < 1.8875))&&";
+    cuts += "(!(abs(mcPDG) == 511 && pi0_mcPDG == 111 && Kp_mcPDG == 321 && Km_mcPDG == -321))&&";
+    cuts += "(!(abs(mcPDG) == 511 && pi0_mcPDG == 111 && (Kp_mcPDG == 211 || Km_mcPDG == -211)))";
     //cuts += "isSignal==1";
 
     TTree* tree = chain->CopyTree(cuts.c_str());
@@ -116,6 +116,6 @@ void fit_qqbar(){
     pt_cp->AddText(str_f_cp.c_str());
     pt_cp->Draw();
 
-    c->SaveAs("/home/belle2/yuanmk/analysis/B2KKpi/plots/fit_MC/pdf/fit_qqbar.pdf");
-    c->SaveAs("/home/belle2/yuanmk/analysis/B2KKpi/plots/fit_MC/png/fit_qqbar.png");
+    c->SaveAs("/home/belle2/yuanmk/analysis/B2KKpi/plots/fit_MC/pdf/fit_generic_bbbar.pdf");
+    c->SaveAs("/home/belle2/yuanmk/analysis/B2KKpi/plots/fit_MC/png/fit_generic_bbbar.png");
 }

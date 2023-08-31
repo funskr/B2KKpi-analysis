@@ -8,14 +8,14 @@ basf2 version: `release-06-01-12`
 ## TO DO
 
 - [ ] use git to manager my analysis files
+- [ ] add flavor tag
 - [ ] Amplitude analysis
 
 ## Update logs
 
 Time | Description |
 ------- | ------- |
-[202308](./notes/log/202308.md) |  The first month to log
-[202309](./notes/log/202309.md) |  
+[2023](./notes/log/2023.md) |  The first month to log
 
 <details><summary>
  conda channel (experimental)

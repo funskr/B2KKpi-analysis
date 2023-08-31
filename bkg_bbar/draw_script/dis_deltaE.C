@@ -42,18 +42,18 @@ void draw_hist(TH1D* hist,string address, string file, string variable, bool fla
         if(flag_candidate==0) continue;
         if(ContProb>0.4) continue;
         
-        if(InvM_KpKm > 1.8484 && InvM_KpKm < 1.8806) continue;
+        //if(InvM_KpKm > 1.8484 && InvM_KpKm < 1.8806) continue;
 
-        if(InvM_KmPip > 1.8408 && InvM_KmPip < 1.8875) continue;
-        if(InvM_KpPim > 1.8408 && InvM_KpPim < 1.8875) continue;
+        //if(InvM_KmPip > 1.8408 && InvM_KmPip < 1.8875) continue;
+        //if(InvM_KpPim > 1.8408 && InvM_KpPim < 1.8875) continue;
 
-        if((abs(mcPDG) == 511 || abs(mcPDG) == 521) && pi0_mcPDG == 111 && Kp_mcPDG == 321 && Km_mcPDG == -321){
-            //cout<<"signal"<<endl;
+        if(abs(mcPDG) == 511 && pi0_mcPDG == 111 && Kp_mcPDG == 321 && Km_mcPDG == -321){
+            cout<<"signal"<<endl;
             count_signal++;
             continue;
         }
 
-        if((abs(mcPDG) == 511 || abs(mcPDG) == 521) && pi0_mcPDG == 111 && (Kp_mcPDG == 211 || Km_mcPDG == -211)){
+        if(abs(mcPDG) == 511 && pi0_mcPDG == 111 && (Kp_mcPDG == 211 || Km_mcPDG == -211)){
             cout<<"peeking background"<<endl;
             //count_signal++;
             continue;

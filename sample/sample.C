@@ -1,4 +1,3 @@
-
 void combine_sample(vector<string> list, string branch, string output, vector<string> var_str){
     TChain* chain = new TChain(branch.c_str());
 
@@ -40,6 +39,7 @@ void combine_sample(vector<string> list, string branch, string output, vector<st
     chain->SetBranchAddress("Kp_kaonID", &Kp_kaonID);
     chain->SetBranchAddress("Km_kaonID", &Km_kaonID);
 
+    //the variables used here will not be stored in the new tree
     Double_t Kp_px, Kp_py, Kp_pz, Kp_E;
     chain->SetBranchAddress("Kp_px", &Kp_px);
     chain->SetBranchAddress("Kp_py", &Kp_py);
