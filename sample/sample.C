@@ -7,12 +7,39 @@ void combine_sample(vector<string> list, string branch, string output, vector<st
     }
 
     //copy trees
-    const int num_var = var_str.size();
-    vector<Double_t> var; 
-    var.resize(var_str.size());
-    for(int i=0; i<num_var; i++){
+    const int num_pdg = 200;
+    int num_var = var_str.size();
+    for(int i = 0; i < var_str.size(); ++i){
+        if(var_str[i] == "MCGenPDG" || var_str[i] == "MCGenMothIndex")
+            num_var = var_str.size() - 2;
+    }
+
+    vector<Double_t> var;
+    var.resize(num_var);
+
+    vector<Double_t> var_pdg;
+    var_pdg.resize(num_pdg*2);
+
+    int index_var = 0;
+    for(int i=0; i<var_str.size(); i++){
         //var.push_back(0);
-        chain->SetBranchAddress(var_str[i].c_str(), &var[i]);
+        if(var_str[i] == "MCGenPDG" ){
+            for(int j = 0; j < num_pdg; j++){
+                string var_pdg_str = var_str[i] + "_" + to_string(j);
+                chain->SetBranchAddress(var_pdg_str.c_str(), &var_pdg[j]);
+            }
+        }
+        else if(var_str[i] == "MCGenMothIndex"){
+            for(int j = num_pdg; j < num_pdg*2; j++){
+                string var_pdg_str = var_str[i] + "_" + to_string(j-num_pdg);
+                chain->SetBranchAddress(var_pdg_str.c_str(), &var_pdg[j]);
+            }
+        }
+        else{
+            chain->SetBranchAddress(var_str[i].c_str(), &var[index_var]);
+            index_var++;
+        }
+            
     }
 
     //cuts
@@ -65,11 +92,36 @@ void combine_sample(vector<string> list, string branch, string output, vector<st
     TTree* tree =  new TTree("B0", " ");
     //copyed trees
     vector<Double_t> var_new;
-    var_new.resize(var_str.size());
-    for(int i=0; i<num_var; i++){
+    var_new.resize(num_var);
+
+    vector<Double_t> var_pdg_new;
+    var_pdg_new.resize(num_pdg*2);
+
+    index_var = 0;
+    for(int i=0; i<var_str.size(); i++){
         //var_new.push_back(0);
-        string var_str_tmp = var_str[i]+"/D";
-        tree->Branch(var_str[i].c_str(), &var_new[i], var_str_tmp.c_str());
+
+        if(var_str[i] == "MCGenPDG" ){
+            for(int j = 0; j < num_pdg; j++){
+                string var_pdg_new_str = var_str[i] + "_" + to_string(j);
+                string var_pdg_new_str_tmp= var_pdg_new_str + "/D";
+                tree->Branch(var_pdg_new_str.c_str(), &var_pdg_new[j], var_pdg_new_str_tmp.c_str());
+            }
+        }
+        else if( var_str[i] == "MCGenMothIndex"){
+            for(int j = num_pdg; j < num_pdg*2; j++){
+                string var_pdg_new_str = var_str[i] + "_" + to_string(j-num_pdg);
+                string var_pdg_new_str_tmp= var_pdg_new_str + "/D";
+                tree->Branch(var_pdg_new_str.c_str(), &var_pdg_new[j], var_pdg_new_str_tmp.c_str());
+            }
+        }
+        else{
+            string var_str_tmp = var_str[i]+"/D";
+            tree->Branch(var_str[i].c_str(), &var_new[index_var], var_str_tmp.c_str());
+            index_var++;
+        }
+        //string var_str_tmp = var_str[i]+"/D";
+        //tree->Branch(var_str[i].c_str(), &var_new[i], var_str_tmp.c_str());
     }
 
     Double_t InvM_KpKm;
@@ -196,6 +248,11 @@ void combine_sample(vector<string> list, string branch, string output, vector<st
 
         for(int j=0; j<num_var; j++){
             var_new[j] = var[j];
+        }
+
+        for(int j=0; j<2*num_pdg; j++){
+            var_pdg_new[j] = var_pdg[j];
+            //cout<<var_pdg[j]<<endl;
         }
 
         ContProb_new = ContProb;

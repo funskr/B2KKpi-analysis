@@ -13,3 +13,12 @@ ssbar.list:B0:/home/belle2/yuanmk/data/B2KKpi/sample/ana/ssbar_sample.root
 ccbar.list:B0:/home/belle2/yuanmk/data/B2KKpi/sample/ana/ccbar_sample.root
 mixed.list:B0:/home/belle2/yuanmk/data/B2KKpi/sample/ana/mixed_sample.root
 charged.list:B0:/home/belle2/yuanmk/data/B2KKpi/sample/ana/charged_sample.root
+#sigMC.list:B0:./test.root
+#fundemental variable plus pdg variables
+#sigMC.list:B0:/home/belle2/yuanmk/data/B2KKpi/sample/fdm_pdg/sigMC_sample.root
+#uubar.list:B0:/home/belle2/yuanmk/data/B2KKpi/sample/fdm_pdg/uubar_sample.root
+#ddbar.list:B0:/home/belle2/yuanmk/data/B2KKpi/sample/fdm_pdg/ddbar_sample.root
+#ssbar.list:B0:/home/belle2/yuanmk/data/B2KKpi/sample/fdm_pdg/ssbar_sample.root
+#ccbar.list:B0:/home/belle2/yuanmk/data/B2KKpi/sample/fdm_pdg/ccbar_sample.root
+#mixed.list:B0:/home/belle2/yuanmk/data/B2KKpi/sample/fdm_pdg/mixed_sample.root
+#charged.list:B0:/home/belle2/yuanmk/data/B2KKpi/sample/fdm_pdg/charged_sample.root

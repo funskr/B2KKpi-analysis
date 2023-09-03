@@ -6,9 +6,16 @@
 #/home/belle2/yuanmk/data/B2KKpi/B2KKpi_ccbar_20230808_23/sub04/*.root
 #/home/belle2/yuanmk/data/B2KKpi/B2KKpi_ccbar_20230808_23/sub05/*.root
 # analysis
-/home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_ccbar_20230821/sub00/*.root
-/home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_ccbar_20230821/sub01/*.root
-/home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_ccbar_20230821/sub02/*.root
-/home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_ccbar_20230821/sub03/*.root
-/home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_ccbar_20230821/sub04/*.root
-/home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_ccbar_20230821/sub05/*.root
+#/home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_ccbar_20230821/sub00/*.root
+#/home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_ccbar_20230821/sub01/*.root
+#/home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_ccbar_20230821/sub02/*.root
+#/home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_ccbar_20230821/sub03/*.root
+#/home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_ccbar_20230821/sub04/*.root
+#/home/belle2/yuanmk/data/B2KKpi/20230821/B2KKpi_ccbar_20230821/sub05/*.root
+# loose deltaE and Mbc cut
+/home/belle2/yuanmk/data/B2KKpi/20230830/B2KKpi_ccbar_20230830/sub00/*.root
+/home/belle2/yuanmk/data/B2KKpi/20230830/B2KKpi_ccbar_20230830/sub01/*.root
+/home/belle2/yuanmk/data/B2KKpi/20230830/B2KKpi_ccbar_20230830/sub02/*.root
+/home/belle2/yuanmk/data/B2KKpi/20230830/B2KKpi_ccbar_20230830/sub03/*.root
+/home/belle2/yuanmk/data/B2KKpi/20230830/B2KKpi_ccbar_20230830/sub04/*.root
+/home/belle2/yuanmk/data/B2KKpi/20230830/B2KKpi_ccbar_20230830/sub05/*.root

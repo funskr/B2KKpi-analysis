@@ -14,7 +14,7 @@ filenumber = sys.argv[1]
 main = b2.Path()
 
 # Define number of events and experiment number
-main.add_module('EventInfoSetter', expList=1003, runList=0, evtNumList=1000)
+main.add_module('EventInfoSetter', expList=1003, runList=0, evtNumList=10000)
 
 # Generate B0B0bar events
 ge.add_evtgen_generator(
@@ -30,7 +30,7 @@ si.add_simulation(path=main)
 re.add_reconstruction(path=main)
 
 # Create the mDST output file
-mdst.add_mdst_output(path=main, filename=f'./B2KKpi_signalMC_{filenumber}.root')
+mdst.add_mdst_output(path=main, filename=f'/home/belle2/yuanmk/data/B2KKpi/sigMC/mdst_new/B2KKpi_signalMC_{filenumber}.root')
 #{filenumber}
 #add the progress module
 #main.add_module('Progress', maxN=3)

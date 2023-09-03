@@ -1,16 +1,31 @@
 
 # Study of decay $B^0(\bar{B^{0}})\to K^+K^-\pi^0$
 
-😀😄😄
+😀😄🧑‍💻😺
 
 basf2 version: `release-06-01-12`
 
 ## TO DO
 
+<details><summary>
+2023.8
+</summary>
+
 - [x] use git to manager my analysis files
-- [ ] add flavor tag
-- [ ] study the correlation between variables
+- [x] add flavor tag
+- [x] study the correlation between variables
+</details>
+
+<details><summary>
+2023.9
+</summary>
+
+- [ ] give a brief report on charmless group
+- [ ] generate more signal MC sample
+- [ ] toy 2d fit
+- [ ] fit to data and get branching fraction
 - [ ] Amplitude analysis
+</details>
 
 ## Update logs
 
@@ -18,17 +33,7 @@ Time | Description |
 ------- | ------- |
 [2023](./notes/log/2023.md) |  The first month to log
 
-<details><summary>
- conda channel (experimental)
-</summary><p>
 
-A pre-built conda package (Linux only) is also provided, just run following
-command to install it.
-```
-conda config --add channels jiangyi15
-conda install tf-pwa
-```
-</p></details>
 
 ## Selection criteria
 
@@ -88,7 +93,21 @@ We add a cut on the output of flavor tag: $q \cdot r_{FBDT} < 0.89$
 
 Following the note from belle, we will remove the background from D meson decay, and do the fit.
 
+### charm veto
+
+
+
 But in the B2Kpipi0 analysis of BARBAR experiment, they do not remove the background from D, and considered this source of background in amplitude fit. 
+
+## Cut Flow
+
+
+cut | sigMC efficiency/% | SCF/% | Background number ($1~ab^{-1}$)
+---------|----------|---------|---------
+ fundemental | 35.70 | 8.76 | $3.93\times10^6$
+ continuum suppression | 30.97 | 6.72 | $2.93\times10^5$
+ charm veto | 29.93 | 6.84 | $2.81\times10^5$
+ flavor tag | 29.72 | 6.85 | $2.76\times10^5$
 
 ## Fit to MC sample
 
@@ -101,3 +120,13 @@ SCF signal                | -0.10%
 Continuum $q\bar{q}$      | 0.99%
 Generic B sample        | -1.66%
 peaking from B sample   | 0.88%
+
+### fit model of different sample
+
+Component | $\Delta E$ | $ContProb_{TRAN}$
+---------|---------|--------|
+Truth-matched signal      | -0.51% |
+SCF signal                | -0.10% | 
+Continuum $q\bar{q}$      | 0.99% |
+Generic B sample        | -1.66% |
+peaking from B sample   | 0.88% |
